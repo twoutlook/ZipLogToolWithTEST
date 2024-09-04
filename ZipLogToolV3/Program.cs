@@ -16,7 +16,7 @@ namespace ZipLogTool
             // Set console output to UTF-8 to handle Chinese characters correctly
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            string ZipLogToolVer = "0.9.3"; // Incremented version
+            string ZipLogToolVer = "0.12.0_2024-09-04 16:00"; // Incremented version
 
             var zipLogCore = new ZipLogCore(2);
             var zipLogUtil = new ZipLogUtil(2);
@@ -120,10 +120,5 @@ namespace ZipLogTool
             //Console.WriteLine("   是比較 {to} 才刪除, 不包含剛好 60天, 而是在此之前。");
         }
 
-        static void RunWithDefaultConfig(ZipLogCore zipLogCore, string version)
-        {
-            string defaultConfig = "config.ini";
-            zipLogCore.RunRule(version, defaultConfig, zipLogCore.Rule003ProcessPaths);
-        }
     }
 }
