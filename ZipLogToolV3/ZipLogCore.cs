@@ -14,24 +14,45 @@ namespace ZipLogTool
 
     public class ZipLogCore
     {
-        private string iniFilePath = "config.ini";
-        private string tempIniFilePath = "temp_config.ini";
-        private string logPath = "logs";
-        private int N;
-        private int M;
-        private int P;
-        private int Q;
-
+        public string iniFilePath = "config.ini";
+        //private string tempIniFilePath = "temp_config.ini";
+        public static string logPath = "logs";
+        public static int N;
+        public static int M;
+        //private int P;
+        public static int Q;
+        public static bool IS_Q = false;
+        public static IniData data;
         // Declare the cmdOutput field correctly
         private CmdOutput cmdOutput;
 
         // Constructor to initialize cmdOutput
         public ZipLogCore(int verbosityLevel)
         {
+            ZipLogCore.data = ParseIniFile();
+            var pathsSection = data["Paths"];
+            //var logSettings = data["LogSettings"];
+
+            var optionsSection = data["Options"];
+            N = int.Parse(optionsSection["N"]);
+            M = int.Parse(optionsSection["M"]);
+            //P = int.Parse(optionsSection["P"]);
+            try
+            {
+                Q = int.Parse(optionsSection["Q"]);
+                IS_Q = true;
+            }
+            catch (Exception ex)
+            {
+                IS_Q = false;
+                //沒設視為0
+            }
+            //ConfigureLogSettings(data);
+
             // Initialize cmdOutput with the verbosity level
             cmdOutput = new CmdOutput(verbosityLevel);
         }
-        private void Rule003DeleteOldZipFiles_GOOD(string baseDir, int qMonths, StreamWriter logWriter)
+         private void Rule003DeleteOldZipFiles(string baseDir, int qMonths, StreamWriter logWriter)
         {
             logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
             cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
@@ -45,75 +66,14 @@ namespace ZipLogTool
             int totalDays = qMonths * 30;
             DateTime deleteBeforeDate = DateTime.Now.AddDays(-totalDays);
 
-            logWriter.WriteLine($"Rule003: Threshold date for ZIP file deletion is {deleteBeforeDate.ToString("yyyy-MM-dd")} ({totalDays} days ago)");
+            //logWriter.WriteLine($"Rule003: Threshold date for ZIP file deletion is {deleteBeforeDate.ToString("yyyy-MM-dd")} ({totalDays} days ago)");
             cmdOutput.WriteLine(1, $"Rule003: Threshold date for ZIP file deletion is {deleteBeforeDate.ToString("yyyy-MM-dd")} ({totalDays} days ago)");
 
             var zipFiles = Directory.GetFiles(baseDir, "*.zip", SearchOption.TopDirectoryOnly).ToList();
 
             if (zipFiles.Count > 0)
             {
-                logWriter.WriteLine("Rule003: Checking the following ZIP files for deletion:");
-                cmdOutput.WriteLine(1, "Rule003: Checking the following ZIP files for deletion:");
-                foreach (var zipFile in zipFiles)
-                {
-                    string zipFileName = Path.GetFileName(zipFile);
-                    DateTime zipFileDate;
-
-                    // Assuming the ZIP file names are in the format {from}_{to}.zip or {from}_{to}_{x}.zip
-                    // Extract the 'to' date from the file name (before any underscore or .zip)
-                    string toDateString = zipFileName.Split('_').Last().Split('.')[0];
-
-                    if (DateTime.TryParseExact(toDateString, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out zipFileDate))
-                    {
-                        logWriter.WriteLine($"  - {zipFile}");
-
-                        if (zipFileDate < deleteBeforeDate)
-                        {
-                            int daysOld = (DateTime.Now - zipFileDate).Days;
-
-                            File.Delete(zipFile);
-                            logWriter.WriteLine($"  - [ZIP File] {zipFile} deleted (Age: {daysOld} days)");
-                            cmdOutput.WriteLine(1, $"  - [ZIP File] {zipFile} deleted (Age: {daysOld} days)");
-                        }
-                    }
-                    else
-                    {
-                        logWriter.WriteLine($"  - {zipFile} (Skipped: Could not parse 'to' date)");
-                        cmdOutput.WriteLine(1, $"  - {zipFile} (Skipped: Could not parse 'to' date)");
-                    }
-                }
-            }
-            else
-            {
-                logWriter.WriteLine($"Rule003: No old ZIP files found for deletion in ({baseDir}).");
-                cmdOutput.WriteLine(1, $"Rule003: No old ZIP files found for deletion in ({baseDir}).");
-            }
-
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [End]\n");
-            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [End]\n");
-        }
-        private void Rule003DeleteOldZipFiles(string baseDir, int qMonths, StreamWriter logWriter)
-        {
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
-            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
-
-            if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
-            {
-                logWriter.WriteLine($"Rule003: Invalid or non-existent directory: {baseDir}. Skipping deletion!");
-                return;
-            }
-
-            int totalDays = qMonths * 30;
-            DateTime deleteBeforeDate = DateTime.Now.AddDays(-totalDays);
-
-            logWriter.WriteLine($"Rule003: Threshold date for ZIP file deletion is {deleteBeforeDate.ToString("yyyy-MM-dd")} ({totalDays} days ago)");
-            cmdOutput.WriteLine(1, $"Rule003: Threshold date for ZIP file deletion is {deleteBeforeDate.ToString("yyyy-MM-dd")} ({totalDays} days ago)");
-
-            var zipFiles = Directory.GetFiles(baseDir, "*.zip", SearchOption.TopDirectoryOnly).ToList();
-
-            if (zipFiles.Count > 0)
-            {
-                logWriter.WriteLine("Rule003: Checking the following ZIP files for deletion:");
+                //logWriter.WriteLine("Rule003: Checking the following ZIP files for deletion:");
                 cmdOutput.WriteLine(1, "Rule003: Checking the following ZIP files for deletion:");
                 foreach (var zipFile in zipFiles)
                 {
@@ -127,13 +87,18 @@ namespace ZipLogTool
                     if (DateTime.TryParseExact(toDateString, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out zipFileDate))
                     {
                         int fileAgeInDays = (DateTime.Now - zipFileDate).Days;
-                        logWriter.WriteLine($"  - {zipFile} (Age: {fileAgeInDays} days)");
+                       
 
                         if (zipFileDate < deleteBeforeDate)
                         {
                             File.Delete(zipFile);
-                            logWriter.WriteLine($"  - [ZIP File] {zipFile} deleted (Age: {fileAgeInDays} days)");
+                            //logWriter.WriteLine($"  - [ZIP File] {zipFile} deleted (Age: {fileAgeInDays} days)");
                             cmdOutput.WriteLine(1, $"  - [ZIP File] {zipFile} deleted (Age: {fileAgeInDays} days)");
+                            logWriter.WriteLine($"  - {zipFile} (Age: {fileAgeInDays} days) deleted");
+                        }
+                        else
+                        {
+                            logWriter.WriteLine($"  - {zipFile} (Age: {fileAgeInDays} days)");
                         }
                     }
                     else
@@ -153,75 +118,9 @@ namespace ZipLogTool
             cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [End]\n");
         }
 
-        private void Rule003DeleteOldFoldersOrFiles_XXX(string pathKey, string baseDir, StreamWriter logWriter)
-        {
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old folders or files in: {pathKey} => {baseDir} [Start]");
-            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old folders or files in: {pathKey} => {baseDir} [Start]");
-
-            if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
-            {
-                logWriter.WriteLine($"Rule003: Invalid or non-existent directory: {baseDir}. Skipping deletion!");
-                return;
-            }
-
-            int totalDays = P + (Q * 30);
-            DateTime finalDeleteDate = DateTime.Now.AddDays(-totalDays);
-
-            logWriter.WriteLine($"Rule003: Threshold date for deletion is {finalDeleteDate.ToString("yyyy-MM-dd")} ({P + 30 * Q} days ago)");
-            cmdOutput.WriteLine(1, $"Rule003: Threshold date for deletion is {finalDeleteDate.ToString("yyyy-MM-dd")} ({P + 30 * Q} days ago)");
-
-            var entries = Directory.GetFileSystemEntries(baseDir, "*", SearchOption.TopDirectoryOnly).ToList();
-
-            if (entries.Count > 0)
-            {
-                logWriter.WriteLine("Rule003: Checking the following folders or files for deletion:");
-                cmdOutput.WriteLine(1, "Rule003: Checking the following folders or files for deletion:");
-                foreach (var entry in entries)
-                {
-                    string entryName = Path.GetFileName(entry);
-                    DateTime entryDate;
-
-                    if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out entryDate))
-                    {
-                        logWriter.WriteLine($"  - {entry}");
-
-                        if (entryDate < finalDeleteDate)
-                        {
-                            int daysOld = (DateTime.Now - entryDate).Days;
-
-                            if (Directory.Exists(entry))
-                            {
-                                Directory.Delete(entry, true);
-                                logWriter.WriteLine($"  - [Folder] {entry} deleted (Age: {daysOld} days)");
-                                cmdOutput.WriteLine(1, $"  - [Folder] {entry} deleted (Age: {daysOld} days)");
-                            }
-                            else
-                            {
-                                File.Delete(entry);
-                                logWriter.WriteLine($"  - [File] {entry} deleted (Age: {daysOld} days)");
-                                cmdOutput.WriteLine(1, $"  - [File] {entry} deleted (Age: {daysOld} days)");
-                            }
-                        }
-                    }
-                    else
-                    {
-                        logWriter.WriteLine($"  - {entry} (Skipped: Could not parse date)");
-                        cmdOutput.WriteLine(1, $"  - {entry} (Skipped: Could not parse date)");
-                    }
-                }
-            }
-            else
-            {
-                logWriter.WriteLine($"Rule003: No old folders or files found for deletion in ({pathKey}).");
-                cmdOutput.WriteLine(1, $"Rule003: No old folders or files found for deletion in ({pathKey}).");
-            }
-
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old folders or files in: {pathKey} => {baseDir} [End]\n");
-            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old folders or files in: {pathKey} => {baseDir} [End]\n");
-        }
         private void Rule003CompressLogFiles_Plan(string pathKey, string baseDir, StreamWriter logWriter)
         {
-            logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CompressLogFiles_Plan");
+            //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CompressLogFiles_Plan");
             cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003 Plan: Listing top-level folders and files in: {pathKey} => {baseDir}");
 
             if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
@@ -272,7 +171,7 @@ namespace ZipLogTool
 
             if (!Directory.Exists(zipOutputDir))
             {
-                logWriter.WriteLine($"Rule003CopyZipBack: The ZIP output directory does not exist: {zipOutputDir}");
+                //logWriter.WriteLine($"Rule003CopyZipBack: The ZIP output directory does not exist: {zipOutputDir}");
                 cmdOutput.WriteLine(1, $"Rule003CopyZipBack: The ZIP output directory does not exist: {zipOutputDir}");
                 return;
             }
@@ -742,9 +641,9 @@ namespace ZipLogTool
                 //cmdOutput.WriteLine(1, $"A default one has been created!");
             }
 
-            LoadAndFilterIniFile();
-            var data = ParseIniFile();
-            ConfigureLogSettings(data);
+            //LoadAndFilterIniFile();
+            //var data = ParseIniFile();
+            //ConfigureLogSettings(data);
 
             // Generate log file path
             string currentDate = DateTime.Now.ToString("yyyy-MM-dd_HHmm");
@@ -775,41 +674,24 @@ Q=2
         }
 
 
-        private void LoadAndFilterIniFile()
-        {
-            var filteredLines = File.ReadLines(iniFilePath, Encoding.UTF8)
-                .Where(line => !line.TrimStart().StartsWith("#"))
-                .ToArray();
-            File.WriteAllLines(tempIniFilePath, filteredLines, Encoding.UTF8);
-        }
 
         public IniData ParseIniFile()
         {
-            var parser = new FileIniDataParser();
-            return parser.ReadFile(tempIniFilePath, Encoding.UTF8);
-        }
-
-        private void ConfigureLogSettings(IniData data)
-        {
-            var pathsSection = data["Paths"];
-            var logSettings = data["LogSettings"];
-
-            var optionsSection = data["Options"];
-            N = int.Parse(optionsSection["N"]);
-            M = int.Parse(optionsSection["M"]);
-            //P = int.Parse(optionsSection["P"]);
-            Q = int.Parse(optionsSection["Q"]);
-
-            //  logPath = logSettings["OutputLogPath"];
-            if (string.IsNullOrWhiteSpace(logPath) || !Directory.Exists(logPath))
+            try
             {
-                cmdOutput.WriteLine(1, $"Processing log {logPath} not existing，going to create one...");
-                string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                logPath = Path.Combine(exeDirectory, logPath);
-                Directory.CreateDirectory(logPath);
-                cmdOutput.WriteLine(1, $"Processing log  {logPath} has been created!");
+
+                var parser = new FileIniDataParser();
+                return parser.ReadFile(iniFilePath);
             }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+
         }
+
+
 
 
         // Method to get the local IP address
@@ -826,137 +708,10 @@ Q=2
             throw new Exception("No network adapters with an IPv4 address in the system!");
         }
 
-        private void Rule002DeleteOldFoldersOrFiles(string pathKey, string baseDir, StreamWriter logWriter)
-        {
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule002: Deleting old folders or files in: {pathKey} => {baseDir} [Start]");
-            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule002: Deleting old folders or files in: {pathKey} => {baseDir} [Start]");
-
-            if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
-            {
-                logWriter.WriteLine($"Rule002: Invalid or non-existent directory: {baseDir}. Skipping deletion!");
-                return;
-            }
-
-            // Calculate the total number of days to subtract (P days + Q months treated as Q * 30 days)
-            int totalDays = P + (Q * 30);
-            DateTime finalDeleteDate = DateTime.Now.AddDays(-totalDays);
-
-            logWriter.WriteLine($"Rule002: Threshold date for deletion is {finalDeleteDate.ToString("yyyy-MM-dd")} ({P + 30 * Q} days ago)");
-            cmdOutput.WriteLine(1, $"Rule002: Threshold date for deletion is {finalDeleteDate.ToString("yyyy-MM-dd")} ({P + 30 * Q} days ago)");
-
-            var entries = Directory.GetFileSystemEntries(baseDir, "*", SearchOption.TopDirectoryOnly)
-                .ToList();
-
-            if (entries.Count > 0)
-            {
-                logWriter.WriteLine("Rule002: Checking the following folders or files for deletion:");
-                cmdOutput.WriteLine(1, "Rule002: Checking the following folders or files for deletion:");
-                foreach (var entry in entries)
-                {
-                    string entryName = Path.GetFileName(entry);
-                    DateTime entryDate;
-
-                    // Attempt to parse the date from the entry name (assuming the format is yyyy-MM-dd)
-                    if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out entryDate))
-                    {
-                        logWriter.WriteLine($"  - {entry}");
-                        //cmdOutput.WriteLine(1,$"  - {entry} (Parsed Date: {entryDate})");
-
-                        if (entryDate < finalDeleteDate)
-                        {
-                            // Calculate how many days old the entry is
-                            int daysOld = (DateTime.Now - entryDate).Days;
-
-                            if (Directory.Exists(entry))
-                            {
-                                Directory.Delete(entry, true); // Delete directory and its contents
-                                logWriter.WriteLine($"  - [Folder] {entry} deleted (Age: {daysOld} days)");
-                                cmdOutput.WriteLine(1, $"  - [Folder] {entry} deleted (Age: {daysOld} days)");
-                            }
-                            else
-                            {
-                                File.Delete(entry); // Delete file
-                                logWriter.WriteLine($"  - [File] {entry} deleted (Age: {daysOld} days)");
-                                cmdOutput.WriteLine(1, $"  - [File] {entry} deleted (Age: {daysOld} days)");
-                            }
-                        }
-                    }
-                    else
-                    {
-                        logWriter.WriteLine($"  - {entry} (Skipped: Could not parse date)");
-                        cmdOutput.WriteLine(1, $"  - {entry} (Skipped: Could not parse date)");
-                    }
-                }
-            }
-            else
-            {
-                logWriter.WriteLine($"Rule002: No old folders or files found for deletion in ({pathKey}).");
-                cmdOutput.WriteLine(1, $"Rule002: No old folders or files found for deletion in ({pathKey}).");
-            }
-
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule002: Deleting old folders or files in: {pathKey} => {baseDir} [End]\n");
-            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule002: Deleting old folders or files in: {pathKey} => {baseDir} [End]\n");
-        }
-
-        private void Rule002CompressLogFiles(string pathKey, string baseDir, StreamWriter logWriter)
-        {
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule002: Compressing log files in: {pathKey} => {baseDir} [Start]");
-            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule002: Compressing log files in: {pathKey} => {baseDir} [Start]");
-
-            if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
-            {
-                logWriter.WriteLine($"Rule002: Invalid or non-existent directory: {baseDir}. Skipping compression!");
-                return;
-            }
-
-            var (zipFiles, deletedItems) = Rule002CompressAndDeleteLogs(baseDir, logWriter);
-
-            if (zipFiles.Count > 0)
-            {
-                logWriter.WriteLine($"Rule002: Successfully created the following ZIP files: {string.Join(", ", zipFiles)}");
-                //cmdOutput.WriteLine(1,$"Rule002: Successfully created the following ZIP files: {string.Join(", ", zipFiles)}");
-            }
-
-            if (deletedItems.Count > 0)
-            {
-                logWriter.WriteLine("Rule002: Deleted the following files:");
-                //cmdOutput.WriteLine(1,"Rule002: Deleted the following files:");
-                foreach (var item in deletedItems)
-                {
-                    logWriter.WriteLine($"  - {item}");
-                    //cmdOutput.WriteLine(1,$"  - {item}");
-                }
-            }
-            else if (Directory.Exists(baseDir))
-            {
-                logWriter.WriteLine($"Rule002: No action required for ({pathKey}).");
-                //cmdOutput.WriteLine(1,$"Rule002: No action required for ({pathKey}).");
-            }
-            else
-            {
-                logWriter.WriteLine($"Rule002: Invalid directory path: {baseDir}");
-                //cmdOutput.WriteLine(1,$"Rule002: Invalid directory path: {baseDir}");
-            }
-
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule002: Compressing log files in: {pathKey} => {baseDir} [End]\n");
-            //cmdOutput.WriteLine(1,$"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule002: Compressing log files in: {pathKey} => {baseDir} [End]\n");
-        }
 
 
 
-        private string Rule002CreateUniqueZipFilePath(string baseDir, string dateString)
-        {
-            int zipSuffix = 0;
-            string zipFilePath = Path.Combine(baseDir, $"{dateString}.zip");
 
-            while (File.Exists(zipFilePath))
-            {
-                zipSuffix++;
-                zipFilePath = Path.Combine(baseDir, $"{dateString}_{zipSuffix}.zip");
-            }
-
-            return zipFilePath;
-        }
         private string CreateUniqueZipFilePath(string baseDir, string dateString)
         {
             int zipSuffix = 0;
@@ -1120,104 +875,6 @@ Q=2
             return hasContentToZip;
         }
 
-        public (List<string> zipFiles, List<string> deletedItems) Rule002CompressAndDeleteLogs(string baseDir, StreamWriter logWriter)
-        {
-            List<string> generatedZipFiles = new List<string>();
-            List<string> deletedItems = new List<string>();
-
-            if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
-            {
-                logWriter.WriteLine($"Invalid or non-existent directory: {baseDir}. Skipping processing!");
-                return (generatedZipFiles, deletedItems);
-            }
-
-            // 設定日期變數
-            DateTime currentDate = DateTime.Now;
-            DateTime nDaysAgo = currentDate.AddDays(-N);
-            DateTime pDaysAgo = currentDate.AddDays(-P);
-            DateTime qMonthsAgo = currentDate.AddMonths(-Q);
-
-            // 計算應刪除的日期
-            DateTime deleteBeforeDate = pDaysAgo < qMonthsAgo ? pDaysAgo : qMonthsAgo;
-
-            // 選取 N 天前的資料夾或檔案（命名規則為 yyyy-MM-dd）
-            var entries = Directory.GetFileSystemEntries(baseDir, "*", SearchOption.AllDirectories)
-                .Where(entry =>
-                {
-                    string entryName = Path.GetFileName(entry);
-                    if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
-                    {
-                        return entryDate <= nDaysAgo;
-                    }
-                    return false;
-                })
-                .OrderByDescending(entry => Path.GetFileName(entry))
-                .ToList();
-
-            // 按 M 天的範圍進行壓縮
-            for (int i = 0; i < entries.Count; i += M)
-            {
-                var entriesToZip = entries.Skip(i).Take(M).ToList();
-                if (entriesToZip.Count > 0)
-                {
-                    string zipFilePath = CreateUniqueZipFilePath(baseDir, currentDate.ToString("yyyy-MM-dd"));
-
-                    using (var zipArchive = ZipFile.Open(zipFilePath, ZipArchiveMode.Create))
-                    {
-                        foreach (var entry in entriesToZip)
-                        {
-                            try
-                            {
-                                if (Directory.Exists(entry))
-                                {
-                                    // Add directory to ZIP
-                                    foreach (var file in Directory.GetFiles(entry, "*", SearchOption.AllDirectories))
-                                    {
-                                        string relativePath = GetRelativePath(baseDir, file);
-                                        zipArchive.CreateEntryFromFile(file, relativePath);
-                                    }
-                                    // Don't delete the folder itself
-                                }
-                                else
-                                {
-                                    zipArchive.CreateEntryFromFile(entry, Path.GetFileName(entry));
-                                    File.Delete(entry); // Delete file after zipping
-                                }
-                                deletedItems.Add(entry);
-                            }
-                            catch (UnauthorizedAccessException ex)
-                            {
-                                cmdOutput.WriteLine(1, $"Error: Access to the path '{entry}' is denied.");
-                                cmdOutput.WriteLine(1, ex.Message);
-                                // Handle or log the exception as needed
-                            }
-                            catch (Exception ex)
-                            {
-                                cmdOutput.WriteLine(1, ex.Message);
-                            }
-                        }
-                    }
-
-                    logWriter.WriteLine($"Created ZIP file: {zipFilePath}");
-                    generatedZipFiles.Add(Path.GetFileName(zipFilePath));
-                }
-            }
-
-            // 刪除 35 天前的 ZIP 檔案
-            var zipFiles = Directory.GetFiles(baseDir, "*.zip", SearchOption.TopDirectoryOnly)
-                .Where(file => File.GetLastWriteTime(file) < deleteBeforeDate)
-                .ToList();
-
-            foreach (var zipFile in zipFiles)
-            {
-                File.Delete(zipFile);
-                deletedItems.Add(zipFile);
-                logWriter.WriteLine($"Deleted old ZIP file: {zipFile}");
-            }
-
-            return (generatedZipFiles, deletedItems);
-        }
-
 
 
         private bool MoveMatchingDirectories(string baseDir, string monthString, string tempDir, StreamWriter logWriter, List<string> originalItems)
@@ -1264,10 +921,10 @@ Q=2
                 int numDashes = 120; // Set this to the number of dashes you want
 
                 var pathsSection = data["Paths"];
-                logWriter.WriteLine($"=== ZipLogTool(ver:{ver}): {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [Start] ===");
+                logWriter.WriteLine($"******* ZipLogTool(ver:{ver}): {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [Start] *******");
                 logWriter.WriteLine(new string('-', numDashes));
 
-                logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Working environment [Start] ");
+                //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Working environment [Start] ");
                 cmdOutput.WriteLine(1, $"\n\n\n=== ZipLogTool(ver:{ver}): {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [Start] ===");
 
                 // Log system and environment information
@@ -1286,27 +943,41 @@ Q=2
                 string computerName = Environment.MachineName;
                 logWriter.WriteLine($"  Name={computerName}");
                 cmdOutput.WriteLine(1, $"  Name={computerName}");
-                logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Working environment [End] ");
+                //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Working environment [End] ");
 
                 logWriter.WriteLine(new string('-', numDashes));
                 cmdOutput.WriteLine(1, $"------------------------------------------");
 
                 // Log the reading of the config file
-                logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Read config.ini [Start] ");
+                //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Read config.ini [Start] ");
                 cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Read config.ini [Start] ");
-
-                logWriter.WriteLine($"[Options]");
-                logWriter.WriteLine($"  N={N} : Number of days before which log files will be compressed.");
-                logWriter.WriteLine($"  M={M} : Number of days of log data to include in each ZIP file.");
-                logWriter.WriteLine($"  Q={Q} : Number of {Q}*30={30 * Q} days before which folders or files will be deleted.");
-
-                logWriter.WriteLine($"[Path]");
+                logWriter.WriteLine($"[Paths]");
                 foreach (var path in pathsSection)
                 {
                     logWriter.WriteLine($"  {path.KeyName}={path.Value}");
                 }
+                logWriter.WriteLine($"[Options]");
+                logWriter.WriteLine($"  N={N} : Number of days before which log files will be compressed.");
+                logWriter.WriteLine($"  M={M} : Number of days of log data to include in each ZIP file.");
+               
+                if (IS_Q)
+                {
 
-                logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Read config.ini [End]");
+                    if (Q <= 0)
+                    {
+                        logWriter.WriteLine($"  Q={Q} : No need to perform deletion.");
+
+                    }
+                    else
+                    {
+                        logWriter.WriteLine($"  Q={Q} : Number of {Q}*30={30 * Q} days before which folders or files will be deleted.");
+
+                    }
+                }
+
+
+
+                //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Read config.ini [End]");
                 logWriter.WriteLine(new string('-', numDashes));
 
 
@@ -1324,13 +995,17 @@ Q=2
 
                     //logWriter.WriteLine($"\n 先不刪 zip");
 
-                    Rule003DeleteOldZipFiles(path.Value, Q, logWriter);
+                    // 另外月份的參數不給或是為零應該就是視為不刪除
+                    if (Q > 0)
+                    {
+                        Rule003DeleteOldZipFiles(path.Value, Q, logWriter);
+                    }
 
-                    logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Processing path [{path.KeyName}]{path.Value} [End]\n");
+                    logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Processing path [{path.KeyName}]{path.Value} [End]");
                     logWriter.WriteLine(new string('-', numDashes));
                 }
 
-                logWriter.WriteLine($"=== ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] ===\n\n");
+                logWriter.WriteLine($"******* ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] *******\n\n\n\n\n");
                 cmdOutput.WriteLine(1, $"=== ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] ===\n\n");
             }
         }
