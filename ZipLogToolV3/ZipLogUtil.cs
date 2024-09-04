@@ -9,7 +9,7 @@ namespace ZipLogTool
     public class ZipLogUtil
     {
         private CmdOutput cmdOutput;
-
+        private LogWriterExt _logWriterExt;
         // Constructor to initialize cmdOutput
         public ZipLogUtil(int verbosityLevel)
         {
