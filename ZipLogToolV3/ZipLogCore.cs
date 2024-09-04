@@ -31,7 +31,7 @@ namespace ZipLogTool
             // Initialize cmdOutput with the verbosity level
             cmdOutput = new CmdOutput(verbosityLevel);
         }
-        private void Rule003DeleteOldZipFiles(string baseDir, int qMonths, StreamWriter logWriter)
+        private void Rule003DeleteOldZipFiles_GOOD(string baseDir, int qMonths, StreamWriter logWriter)
         {
             logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
             cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
@@ -74,6 +74,66 @@ namespace ZipLogTool
                             File.Delete(zipFile);
                             logWriter.WriteLine($"  - [ZIP File] {zipFile} deleted (Age: {daysOld} days)");
                             cmdOutput.WriteLine(1, $"  - [ZIP File] {zipFile} deleted (Age: {daysOld} days)");
+                        }
+                    }
+                    else
+                    {
+                        logWriter.WriteLine($"  - {zipFile} (Skipped: Could not parse 'to' date)");
+                        cmdOutput.WriteLine(1, $"  - {zipFile} (Skipped: Could not parse 'to' date)");
+                    }
+                }
+            }
+            else
+            {
+                logWriter.WriteLine($"Rule003: No old ZIP files found for deletion in ({baseDir}).");
+                cmdOutput.WriteLine(1, $"Rule003: No old ZIP files found for deletion in ({baseDir}).");
+            }
+
+            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [End]\n");
+            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [End]\n");
+        }
+        private void Rule003DeleteOldZipFiles(string baseDir, int qMonths, StreamWriter logWriter)
+        {
+            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
+            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
+
+            if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
+            {
+                logWriter.WriteLine($"Rule003: Invalid or non-existent directory: {baseDir}. Skipping deletion!");
+                return;
+            }
+
+            int totalDays = qMonths * 30;
+            DateTime deleteBeforeDate = DateTime.Now.AddDays(-totalDays);
+
+            logWriter.WriteLine($"Rule003: Threshold date for ZIP file deletion is {deleteBeforeDate.ToString("yyyy-MM-dd")} ({totalDays} days ago)");
+            cmdOutput.WriteLine(1, $"Rule003: Threshold date for ZIP file deletion is {deleteBeforeDate.ToString("yyyy-MM-dd")} ({totalDays} days ago)");
+
+            var zipFiles = Directory.GetFiles(baseDir, "*.zip", SearchOption.TopDirectoryOnly).ToList();
+
+            if (zipFiles.Count > 0)
+            {
+                logWriter.WriteLine("Rule003: Checking the following ZIP files for deletion:");
+                cmdOutput.WriteLine(1, "Rule003: Checking the following ZIP files for deletion:");
+                foreach (var zipFile in zipFiles)
+                {
+                    string zipFileName = Path.GetFileName(zipFile);
+                    DateTime zipFileDate;
+
+                    // Assuming the ZIP file names are in the format {from}_{to}.zip or {from}_{to}_{x}.zip
+                    // Extract the 'to' date from the file name (before any underscore or .zip)
+                    string toDateString = zipFileName.Split('_').Last().Split('.')[0];
+
+                    if (DateTime.TryParseExact(toDateString, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out zipFileDate))
+                    {
+                        int fileAgeInDays = (DateTime.Now - zipFileDate).Days;
+                        logWriter.WriteLine($"  - {zipFile} (Age: {fileAgeInDays} days)");
+
+                        if (zipFileDate < deleteBeforeDate)
+                        {
+                            File.Delete(zipFile);
+                            logWriter.WriteLine($"  - [ZIP File] {zipFile} deleted (Age: {fileAgeInDays} days)");
+                            cmdOutput.WriteLine(1, $"  - [ZIP File] {zipFile} deleted (Age: {fileAgeInDays} days)");
                         }
                     }
                     else
@@ -179,7 +239,7 @@ namespace ZipLogTool
             }
             else
             {
-                logWriter.WriteLine($"  [Rule003CompressLogFiles_Plan]:  Found the following top-level folders and files in: {baseDir}");
+                logWriter.WriteLine($"  [Rule003CompressLogFiles_Plan]:  DIR {baseDir}");
                 cmdOutput.WriteLine(1, $"Rule003 Plan: Found the following top-level folders and files in: {baseDir}");
 
                 foreach (var entry in entries)
@@ -198,14 +258,14 @@ namespace ZipLogTool
 
             }
 
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003 Plan: Listing complete for {pathKey} => {baseDir}\n");
+            //logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003 Plan: Listing complete for {pathKey} => {baseDir}\n");
             cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003 Plan: Listing complete for {pathKey} => {baseDir}\n");
         }
         private void Rule003CopyZipBack(string baseDir, StreamWriter logWriter)
         {
             // Define the _ZIP directory path
             string zipOutputDir = $"{baseDir}_ZIP";
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CopyZipBack: Starting to copy ZIP files back to the original folder from: {zipOutputDir}");
+            //logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CopyZipBack: Starting to copy ZIP files back to the original folder from: {zipOutputDir}");
             cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CopyZipBack: Starting to copy ZIP files back to the original folder from: {zipOutputDir}");
 
             if (!Directory.Exists(zipOutputDir))
@@ -225,12 +285,12 @@ namespace ZipLogTool
                 return;
             }
 
-            logWriter.WriteLine($"Rule003CopyZipBack: Found the following ZIP files in {zipOutputDir} to copy back:");
+            //logWriter.WriteLine($"Rule003CopyZipBack: Found the following ZIP files in {zipOutputDir} to copy back:");
             cmdOutput.WriteLine(1, $"Rule003CopyZipBack: Found the following ZIP files in {zipOutputDir} to copy back:");
-
+            // NOTE: need to clean up after use
             foreach (var zipFile in zipFiles)
             {
-                logWriter.WriteLine($"  - {zipFile}");
+                //logWriter.WriteLine($"  - {zipFile}");
                 cmdOutput.WriteLine(1, $"  - {zipFile}");
             }
 
@@ -240,13 +300,13 @@ namespace ZipLogTool
                 string fileName = Path.GetFileName(zipFile);
                 string destinationPath = Path.Combine(baseDir, fileName);
 
-                logWriter.WriteLine($"Rule003CopyZipBack: Copying {fileName} back to {baseDir}");
+                //logWriter.WriteLine($"Rule003CopyZipBack: Copying {fileName} back to {baseDir}");
                 cmdOutput.WriteLine(1, $"Rule003CopyZipBack: Copying {fileName} back to {baseDir}");
 
                 try
                 {
                     File.Copy(zipFile, destinationPath, overwrite: true);
-                    logWriter.WriteLine($"Rule003CopyZipBack: Successfully copied {fileName} to {destinationPath}");
+                    //logWriter.WriteLine($"Rule003CopyZipBack: Successfully copied {fileName} to {destinationPath}");
                     cmdOutput.WriteLine(1, $"Rule003CopyZipBack: Successfully copied {fileName} to {destinationPath}");
                 }
                 catch (Exception ex)
@@ -260,7 +320,7 @@ namespace ZipLogTool
             try
             {
                 Directory.Delete(zipOutputDir, true);
-                logWriter.WriteLine($"Rule003CopyZipBack: Successfully deleted the _ZIP directory: {zipOutputDir}");
+                //logWriter.WriteLine($"Rule003CopyZipBack: Successfully deleted the _ZIP directory: {zipOutputDir}");
                 cmdOutput.WriteLine(1, $"Rule003CopyZipBack: Successfully deleted the _ZIP directory: {zipOutputDir}");
             }
             catch (Exception ex)
@@ -269,7 +329,7 @@ namespace ZipLogTool
                 cmdOutput.WriteLine(1, $"Rule003CopyZipBack: Error deleting the _ZIP directory: {ex.Message}");
             }
 
-            logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CopyZipBack: Copy operation complete for {baseDir}");
+            //logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CopyZipBack: Copy operation complete for {baseDir}");
             cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CopyZipBack: Copy operation complete for {baseDir}");
         }
 
@@ -453,7 +513,9 @@ namespace ZipLogTool
             var zipInfo = new ZipArchiveInfo(zipOutputDir, fromDate, toDate);
             zipInfo.EnsureUniqueFileName();
 
-            logWriter.WriteLine($"\nCreating ZIP file: {zipInfo.ZipFileName}");
+            // Need to check 
+            // creating..., not actually created
+            //logWriter.WriteLine($"\nCreating ZIP file: {zipInfo.ZipFileName}");
 
             // Retrieve all directories and files in the baseDir that match the date range
             var entriesToZip = Directory.GetFileSystemEntries(baseDir, "*", SearchOption.TopDirectoryOnly)
@@ -508,138 +570,22 @@ namespace ZipLogTool
                 }
             }
 
-            logWriter.WriteLine($"ZIP file created: {zipInfo.ZipFileName}");
-            logWriter.WriteLine("Zipped and deleted items:");
-            foreach (var item in zipInfo.ZippedItems)
+            // 
+            if (zipInfo.ZippedItems.Count > 0)
             {
-                logWriter.WriteLine($"  - {zipInfo.BaseDir}\\{item}");
-            }
-        }
 
-        private void CreateZipFileExt(string baseDir, DateTime fromDate, DateTime toDate, StreamWriter logWriter)
-        {
-            // Set the target directory for storing the ZIP file
-            string zipOutputDir = $"{baseDir}_ZIP";
-            if (!Directory.Exists(zipOutputDir))
-            {
-                Directory.CreateDirectory(zipOutputDir);
-            }
 
-            // Create ZipArchiveInfo, and store the ZIP file in the specified target directory
-            var zipInfo = new ZipArchiveInfo(zipOutputDir, fromDate, toDate);
-            //  zipInfo.EnsureUniqueFileName();
-            // NEED TO FIX FILENAME
-
-            //  zipInfo.ZipFileName=
-
-            logWriter.WriteLine($"\nCreating ZIP file: {zipInfo.ZipFileName}");
-
-            // Get the list of entries to zip based on the date range
-            var entriesToZip = Directory.GetFileSystemEntries(baseDir, "*", SearchOption.TopDirectoryOnly)
-                .Where(entry =>
+                logWriter.WriteLine($"ZIP file created: {zipInfo.ZipFileName}");
+                logWriter.WriteLine("Zipped and deleted items:");
+                foreach (var item in zipInfo.ZippedItems)
                 {
-                    string entryName = Path.GetFileName(entry);
-                    if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
-                    {
-                        return entryDate >= fromDate && entryDate <= toDate;
-                    }
-                    return false;
-                }).ToList();
-
-            using (var zipArchive = ZipFile.Open(zipInfo.ZipFileName, ZipArchiveMode.Create))
-            {
-                foreach (var entry in entriesToZip)
-                {
-                    if (Directory.Exists(entry))
-                    {
-                        foreach (var file in Directory.GetFiles(entry, "*", SearchOption.AllDirectories))
-                        {
-                            if (!file.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
-                            {
-                                string relativePath = GetRelativePath(baseDir, file);
-                                zipArchive.CreateEntryFromFile(file, relativePath);
-                                zipInfo.AddZippedItem(relativePath);
-
-                                // Delete the compressed file
-                                File.Delete(file);
-                            }
-                        }
-
-                        // If all files have been compressed, delete the directory
-                        if (Directory.GetFiles(entry, "*", SearchOption.AllDirectories).Length == 0)
-                        {
-                            Directory.Delete(entry, true);
-                        }
-                    }
-                    else
-                    {
-                        if (!entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
-                        {
-                            string relativePath = GetRelativePath(baseDir, entry);
-                            zipArchive.CreateEntryFromFile(entry, relativePath);
-                            zipInfo.AddZippedItem(relativePath);
-
-                            // Delete the compressed file
-                            File.Delete(entry);
-                        }
-                    }
+                    logWriter.WriteLine($"  - {zipInfo.BaseDir}\\{item}");
                 }
             }
-
-            logWriter.WriteLine($"ZIP file created: {zipInfo.ZipFileName}");
-            logWriter.WriteLine("Zipped and deleted items:");
-            foreach (var item in zipInfo.ZippedItems)
-            {
-                logWriter.WriteLine($"  - {item}");
-            }
         }
 
 
-        private void CreateZipFile(string baseDir, List<string> entriesToZip, DateTime fromDate, DateTime toDate, StreamWriter logWriter)
-        {
-            var zipInfo = new ZipArchiveInfo(baseDir, fromDate, toDate);
-            zipInfo.EnsureUniqueFileName();
 
-            logWriter.WriteLine($"\nCreating ZIP file: {zipInfo.ZipFileName}");
-
-            using (var zipArchive = ZipFile.Open(zipInfo.ZipFileName, ZipArchiveMode.Create))
-            {
-                foreach (var entry in entriesToZip)
-                {
-                    if (Directory.Exists(entry))
-                    {
-                        foreach (var file in Directory.GetFiles(entry, "*", SearchOption.AllDirectories))
-                        {
-                            string relativePath = GetRelativePath(baseDir, file);
-                            zipArchive.CreateEntryFromFile(file, relativePath);
-                            zipInfo.AddZippedItem(relativePath);
-
-                            // Delete the file after adding it to the ZIP archive
-                            File.Delete(file);
-                        }
-
-                        // Optionally, delete the directory itself if all files have been zipped
-                        Directory.Delete(entry, true);
-                    }
-                    else
-                    {
-                        string relativePath = GetRelativePath(baseDir, entry);
-                        zipArchive.CreateEntryFromFile(entry, relativePath);
-                        zipInfo.AddZippedItem(relativePath);
-
-                        // Delete the file after adding it to the ZIP archive
-                        File.Delete(entry);
-                    }
-                }
-            }
-
-            logWriter.WriteLine($"ZIP file created: {zipInfo.ZipFileName}");
-            logWriter.WriteLine("Zipped and deleted items:");
-            foreach (var item in zipInfo.ZippedItems)
-            {
-                logWriter.WriteLine($"  - {item}");
-            }
-        }
 
 
 
@@ -770,7 +716,7 @@ namespace ZipLogTool
             if (File.Exists(iniFilePath))
             {
                 cmdOutput.WriteLine(1, $"config.ini is found!");
-               
+
             }
             else
             {
@@ -1300,7 +1246,7 @@ Q=2
             using (StreamWriter logWriter = new StreamWriter(logFilePath, true, Encoding.UTF8))
             {
                 int numDashes = 120; // Set this to the number of dashes you want
-               
+
                 var pathsSection = data["Paths"];
                 logWriter.WriteLine($"=== ZipLogTool(ver:{ver}): {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [Start] ===");
                 logWriter.WriteLine(new string('-', numDashes));

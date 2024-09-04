@@ -24,9 +24,9 @@ namespace ZipLogTool
             if (args.Length == 0)
             {
                 // Display help when no arguments are provided
-                DisplayHelp();
+                //DisplayHelp();
 
-              
+                zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
             }
             else if (args.Length > 0 && (args[0].Equals("-h", StringComparison.OrdinalIgnoreCase) || args[0].Equals("--help", StringComparison.OrdinalIgnoreCase)))
             {
@@ -59,7 +59,7 @@ namespace ZipLogTool
             else if (args.Length > 0 && args[0].Equals("spec", StringComparison.OrdinalIgnoreCase))
             {
                 // Display the specification for compression and deletion
-                DisplaySpec();
+                //DisplaySpec();
             }
             else
             {
@@ -74,10 +74,10 @@ namespace ZipLogTool
             Console.WriteLine();
             Console.WriteLine("Options:");
             Console.WriteLine("  -h|--help         Display help.");
-            Console.WriteLine("  run               Run main functions.");
             Console.WriteLine("  init              Initialize test cases.");
+            Console.WriteLine("  run               Run main functions.");
             //Console.WriteLine("  unzip             Unzip files as per config.");
-            Console.WriteLine("  spec              Display the requirement.");
+            //Console.WriteLine("  spec              Display the requirement.");
             Console.WriteLine();
             //Console.WriteLine("If no options are provided, the tool runs using the default config.ini.");
         }
