@@ -17,6 +17,10 @@ namespace ZipLogTool
         private const int numberOfDays = 81; // Number of days to create folders or files for
         private string testCaseDir001 = "D:\\LAB\\TESTCASE001";
         private string testCaseDir002 = "D:\\LAB\\TESTCASE002";
+        //private string testCaseDir001 = "LAB\\TESTCASE001";
+        //private string testCaseDir002 = "LAB\\TESTCASE002";
+
+
         private const int fileSizeInKB = 3; // Desired file size in KB
 
         // Method for TESTCASE001: Folder creation basis with log files every 2 hours
