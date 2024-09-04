@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogTool", "ZipLogTool.csproj", "{2819A45B-4E8E-4FCD-9150-7C858A143B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogTool.Tests", "..\ZipLogTool.Tests\ZipLogTool.Tests.csproj", "{85822AA1-9379-46FB-859F-3787014462E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2819A45B-4E8E-4FCD-9150-7C858A143B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2819A45B-4E8E-4FCD-9150-7C858A143B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2819A45B-4E8E-4FCD-9150-7C858A143B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2819A45B-4E8E-4FCD-9150-7C858A143B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85822AA1-9379-46FB-859F-3787014462E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85822AA1-9379-46FB-859F-3787014462E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85822AA1-9379-46FB-859F-3787014462E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85822AA1-9379-46FB-859F-3787014462E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1A63786-CEDD-42AA-8CD3-6E5E77B247AF}
+	EndGlobalSection
+EndGlobal
