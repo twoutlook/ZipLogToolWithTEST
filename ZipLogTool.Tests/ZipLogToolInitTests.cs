@@ -12,7 +12,7 @@ namespace ZipLogTool.Tests
         [SetUp]
         public void Setup()
         {
-            _zipLogTestCase = new ZipLogTestCase();
+            _zipLogTestCase = new ZipLogTestCase(1);
             //_testFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "TESTCASE001");
             _testFolderPath = "D:\\LAB\\TESTCASE001";
 

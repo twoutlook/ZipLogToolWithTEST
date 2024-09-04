@@ -440,68 +440,6 @@ namespace ZipLogTool
             //    CreateZipFile(baseDir, entriesToZip, firstDate.Value, lastDate.Value, logWriter);
             //}
         }
-        private void CreateZipFileExtV2(string baseDir, List<string> entriesToZip, DateTime fromDate, DateTime toDate, StreamWriter logWriter)
-        {
-            // Set the target directory for storing the ZIP file
-            string zipOutputDir = $"{baseDir}_ZIP";
-            if (!Directory.Exists(zipOutputDir))
-            {
-                Directory.CreateDirectory(zipOutputDir);
-            }
-
-            // Create ZipArchiveInfo, and store the ZIP file in the specified target directory
-            var zipInfo = new ZipArchiveInfo(zipOutputDir, fromDate, toDate);
-            zipInfo.EnsureUniqueFileName();
-
-            logWriter.WriteLine($"\nCreating ZIP file: {zipInfo.ZipFileName}");
-
-            using (var zipArchive = ZipFile.Open(zipInfo.ZipFileName, ZipArchiveMode.Create))
-            {
-                foreach (var entry in entriesToZip)
-                {
-                    if (Directory.Exists(entry))
-                    {
-                        foreach (var file in Directory.GetFiles(entry, "*", SearchOption.AllDirectories))
-                        {
-                            if (!file.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
-                            {
-                                string relativePath = GetRelativePath(baseDir, file);
-                                zipArchive.CreateEntryFromFile(file, relativePath);
-                                zipInfo.AddZippedItem(relativePath);
-
-                                // Delete the compressed file
-                                File.Delete(file);
-                            }
-                        }
-
-                        // If all files have been compressed, delete the directory
-                        if (Directory.GetFiles(entry, "*", SearchOption.AllDirectories).Length == 0)
-                        {
-                            Directory.Delete(entry, true);
-                        }
-                    }
-                    else
-                    {
-                        if (!entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
-                        {
-                            string relativePath = GetRelativePath(baseDir, entry);
-                            zipArchive.CreateEntryFromFile(entry, relativePath);
-                            zipInfo.AddZippedItem(relativePath);
-
-                            // Delete the compressed file
-                            File.Delete(entry);
-                        }
-                    }
-                }
-            }
-
-            logWriter.WriteLine($"ZIP file created: {zipInfo.ZipFileName}");
-            logWriter.WriteLine("Zipped and deleted items:");
-            foreach (var item in zipInfo.ZippedItems)
-            {
-                logWriter.WriteLine($"  - {item}");
-            }
-        }
         private void CreateZipFileExtV3(string baseDir, DateTime fromDate, DateTime toDate, StreamWriter logWriter)
         {
             // Set the target directory for storing the ZIP file
@@ -574,7 +512,7 @@ namespace ZipLogTool
             logWriter.WriteLine("Zipped and deleted items:");
             foreach (var item in zipInfo.ZippedItems)
             {
-                logWriter.WriteLine($"  - {item}");
+                logWriter.WriteLine($"  - {zipInfo.BaseDir}\\{item}");
             }
         }
 

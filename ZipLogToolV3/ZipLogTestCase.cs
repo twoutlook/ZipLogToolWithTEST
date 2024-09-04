@@ -25,12 +25,12 @@ namespace ZipLogTool
             // 如果 TESTCASE001 目錄已經存在，則不執行任何操作
             if (Directory.Exists(testCaseDir001))
             {
-                cmdOutput.WriteLine(1,$"Directory '{testCaseDir001}' already exists. Skipping initialization.");
+                cmdOutput.WriteLine(99,$"Directory '{testCaseDir001}' already exists. Skipping initialization.");
                 return;
             }
 
             // Create the TESTCASE001 directory
-            cmdOutput.WriteLine(1,$"Creating directory '{testCaseDir001}'...");
+            cmdOutput.WriteLine(99,$"Creating directory '{testCaseDir001}'...");
             Directory.CreateDirectory(testCaseDir001);
 
             // Create subfolders from today to numberOfDays ago
@@ -57,12 +57,12 @@ namespace ZipLogTool
             // 如果 TESTCASE002 目錄已經存在，則不執行任何操作
             if (Directory.Exists(testCaseDir002))
             {
-                cmdOutput.WriteLine(1,$"Directory '{testCaseDir002}' already exists. Skipping initialization.");
+                cmdOutput.WriteLine(99,$"Directory '{testCaseDir002}' already exists. Skipping initialization.");
                 return;
             }
 
             // Create the TESTCASE002 directory
-            cmdOutput.WriteLine(1,$"Creating directory '{testCaseDir002}'...");
+            cmdOutput.WriteLine(99,$"Creating directory '{testCaseDir002}'...");
             Directory.CreateDirectory(testCaseDir002);
 
             // Create files for each day from today to numberOfDays ago
