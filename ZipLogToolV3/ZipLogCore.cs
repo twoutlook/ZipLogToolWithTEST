@@ -932,30 +932,14 @@ namespace ZipLogTool
         private void CreateDefaultIniFile()
         {
             string defaultContent = @"
-# === Requirement ===
-# 1. 要壓縮 N 天前的 Log.
-# 2. 壓縮內容的天數需要是 M 天的資料.
-#  2-1. 壓縮檔名壓縮日期 (yyyy-mm-dd.zip)
-#  2-2. 檔名若重複則加上流水號 (yyyy-mm-dd_01.zip)
-# 3. 可以刪除 P 天之前的 zip 檔案. (或是輸入Q個月, 程式自動乘上 30天)
-
-# === TESTCASE001 ===
-# N=3
-# M=5
-# P=5
-# Q=1
-
 [Paths]
-Path1=D:\LAB\TESTCASE001
-Path2=D:\LAB\TESTCASE002
-
-
+Path1=d:\Lab\TESTCASE001
+Path2=d:\Lab\TESTCASE002
 
 [Options]
 N=3
 M=5
-P=5
-Q=1
+Q=2
 ";
             File.WriteAllText(iniFilePath, defaultContent, Encoding.UTF8);
         }
@@ -1326,19 +1310,7 @@ Q=1
 
             return zipFilePath;
         }
-        //private string Rule002CreateUniqueZipFilePath(string baseDir, string dateString)
-        //{
-        //    int zipSuffix = 0;
-        //    string zipFilePath = Path.Combine(baseDir, $"{dateString}.zip");
 
-        //    while (File.Exists(zipFilePath))
-        //    {
-        //        zipSuffix++;
-        //        zipFilePath = Path.Combine(baseDir, $"{dateString}_{zipSuffix}.zip");
-        //    }
-
-        //    return zipFilePath;
-        //}
         private (List<string> zipFiles, List<string> deletedItems) ProcessPath_BUG(string pathKey, string baseDir, StreamWriter logWriter)
         {
             List<string> generatedZipFiles = new List<string>();

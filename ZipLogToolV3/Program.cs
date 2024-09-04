@@ -18,7 +18,7 @@ namespace ZipLogTool
 
             string ZipLogToolVer = "0.9.3"; // Incremented version
 
-            var zipLogCore = new ZipLogCore(1);
+            var zipLogCore = new ZipLogCore(2);
             var zipLogUtil = new ZipLogUtil();
 
             if (args.Length == 0)
