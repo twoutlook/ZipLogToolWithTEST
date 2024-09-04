@@ -770,12 +770,14 @@ namespace ZipLogTool
             if (File.Exists(iniFilePath))
             {
                 cmdOutput.WriteLine(1, $"config.ini is found!");
+               
             }
             else
             {
-                cmdOutput.WriteLine(1, $"config.ini not found! ");
-                CreateDefaultIniFile();
-                cmdOutput.WriteLine(1, $"A default one has been created!");
+                cmdOutput.WriteLine(99, $"config.ini not found! ");
+                return;
+                //CreateDefaultIniFile();
+                //cmdOutput.WriteLine(1, $"A default one has been created!");
             }
 
             LoadAndFilterIniFile();

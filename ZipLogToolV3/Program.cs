@@ -48,12 +48,12 @@ namespace ZipLogTool
                 string logFileName = $"{currentDate}_ZipLogTool_Unzip.log";
                 string logFilePath = Path.Combine("logs", logFileName);
 
-                zipLogUtil.UnzipFiles(ZipLogToolVer, data, logFilePath);
+                //zipLogUtil.UnzipFiles(ZipLogToolVer, data, logFilePath);
             }
             else if (args.Length > 0 && args[0].Equals("run", StringComparison.OrdinalIgnoreCase))
             {
                 // Now run the tool with default config.ini
-                Console.WriteLine("Running with default config.ini...");
+                //Console.WriteLine("Running with default config.ini...");
                 zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
             }
             else if (args.Length > 0 && args[0].Equals("spec", StringComparison.OrdinalIgnoreCase))
@@ -76,7 +76,7 @@ namespace ZipLogTool
             Console.WriteLine("  -h|--help         Display help.");
             Console.WriteLine("  run               Run main functions.");
             Console.WriteLine("  init              Initialize test cases.");
-            Console.WriteLine("  unzip             Unzip files as per config.");
+            //Console.WriteLine("  unzip             Unzip files as per config.");
             Console.WriteLine("  spec              Display the requirement.");
             Console.WriteLine();
             //Console.WriteLine("If no options are provided, the tool runs using the default config.ini.");
