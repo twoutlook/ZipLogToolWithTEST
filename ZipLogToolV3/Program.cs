@@ -16,7 +16,7 @@ namespace ZipLogTool
             // Set console output to UTF-8 to handle Chinese characters correctly
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            string ZipLogToolVer = "0.15.0_2024-09-04 17:00"; // Incremented version
+            string ZipLogToolVer = "0.16.0";// fix logs , 
 
             var zipLogCore = new ZipLogCore(2);
             var zipLogUtil = new ZipLogUtil(2);
