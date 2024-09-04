@@ -75,7 +75,7 @@ namespace ZipLogTool
             Console.WriteLine("Options:");
             Console.WriteLine("  -h|--help         Display help.");
             Console.WriteLine("  init              Initialize test cases.");
-            Console.WriteLine("  run               Run main functions.");
+            //Console.WriteLine("  run               Run main functions.");
             //Console.WriteLine("  unzip             Unzip files as per config.");
             //Console.WriteLine("  spec              Display the requirement.");
             Console.WriteLine();
