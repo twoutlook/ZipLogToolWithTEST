@@ -29,6 +29,13 @@ namespace ZipLogTool
         // Constructor to initialize cmdOutput
         public ZipLogCore(int verbosityLevel)
         {
+            if (!Directory.Exists(logPath))
+            {
+                Directory.CreateDirectory(logPath);
+                cmdOutput?.WriteLine(1, $"Log directory created at {logPath}");
+            }
+
+
             ZipLogCore.data = ParseIniFile();
             var pathsSection = data["Paths"];
             //var logSettings = data["LogSettings"];
