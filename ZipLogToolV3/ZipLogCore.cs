@@ -249,6 +249,8 @@ namespace ZipLogTool
                     cmdOutput.WriteLine(1, $"  - [{entryType}] {entry}");
                 }
 
+
+
                 // Process each entry and determine if it should be compressed
                 ProcessEntriesForCompression(baseDir, entries, logWriter);
 
@@ -336,10 +338,24 @@ namespace ZipLogTool
 
         private void ProcessEntriesForCompression(string baseDir, string[] entries, StreamWriter logWriter)
         {
-            var topLevel = new List<TopLevelEntry>();
+            //var topLevel = new List<TopLevelEntry>();
+            var entriesNoZip = entries
+                .Where(entry => !entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            //foreach (var entry in entriesNoZip)
+            //{
+            //    string entryType = Directory.Exists(entry) ? "Folder" : "File";
+            //    logWriter.WriteLine($"  - [{entryType}] {entry}");
+            //    cmdOutput.WriteLine(1, $"  - [{entryType}] {entry}");
+            //}
+
+
+
+
 
             // 過濾並排序項目
-            var filteredEntries = entries
+            var filteredEntries = entriesNoZip
                 .Where(entry =>
                 {
                     string entryName = Path.GetFileName(entry);
