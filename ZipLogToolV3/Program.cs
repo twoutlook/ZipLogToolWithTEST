@@ -11,13 +11,19 @@ namespace ZipLogTool
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             string ZipLogToolVer = "0.9.3"; // Incremented version
 
             var zipLogCore = new ZipLogCore();
             var zipLogUtil = new ZipLogUtil();
+
+            // Check if --help or -h is passed in the arguments
+            if (args.Length > 0 && (args[0].Equals("--help", StringComparison.OrdinalIgnoreCase) || args[0].Equals("-h", StringComparison.OrdinalIgnoreCase)))
+            {
+                DisplayHelp();
+                return;  // Exit after displaying help
+            }
 
             if (args.Length > 0 && args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
             {
@@ -43,6 +49,21 @@ namespace ZipLogTool
             }
         }
 
+        // Method to display help message
+        static void DisplayHelp()
+        {
+            Console.WriteLine("Usage: ZipLogTool [options]");
+            Console.WriteLine("Usage: ZipLogTool [path-to-application]");
+            Console.WriteLine();
+            Console.WriteLine("Options:");
+            Console.WriteLine("  -h|--help         Display help.");
+            Console.WriteLine("  init              Initialize test cases (creates folders and files).");
+            Console.WriteLine("  unzip             Unzip the files as per configuration in the INI file.");
+            Console.WriteLine();
+            Console.WriteLine("path-to-application:");
+            Console.WriteLine("  The path to an application .dll file to execute.");
+            Console.WriteLine();
+            //Console.WriteLine($"ZipLogTool Version: {ZipLogToolVer}");
+        }
     }
-
 }
