@@ -18,14 +18,19 @@ namespace ZipLogTool
             var zipLogCore = new ZipLogCore();
             var zipLogUtil = new ZipLogUtil();
 
-            // Check if --help or -h is passed in the arguments
-            if (args.Length > 0 && (args[0].Equals("--help", StringComparison.OrdinalIgnoreCase) || args[0].Equals("-h", StringComparison.OrdinalIgnoreCase)))
+            if (args.Length == 0)
             {
+                // Display help when no arguments are provided
                 DisplayHelp();
-                return;  // Exit after displaying help
-            }
 
-            if (args.Length > 0 && args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
+              
+            }
+            else if (args.Length > 0 && (args[0].Equals("-h", StringComparison.OrdinalIgnoreCase) || args[0].Equals("--help", StringComparison.OrdinalIgnoreCase)))
+            {
+                // Display help if -h or --help is provided
+                DisplayHelp();
+            }
+            else if (args.Length > 0 && args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
             {
                 // Initialize the ZipLogTestCase and run InitTestCase001 and InitTestCase002 methods
                 var testCase = new ZipLogTestCase();
@@ -42,28 +47,36 @@ namespace ZipLogTool
 
                 zipLogUtil.UnzipFiles(ZipLogToolVer, data, logFilePath);
             }
+            else if (args.Length > 0 && args[0].Equals("run", StringComparison.OrdinalIgnoreCase))
+            {
+                // Now run the tool with default config.ini
+                Console.WriteLine("Running with default config.ini...");
+                zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
+            }
             else
             {
-                // Run Rule 003
-                zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
+                // Run Rule 003 with provided parameters
+              
             }
         }
 
-        // Method to display help message
         static void DisplayHelp()
         {
             Console.WriteLine("Usage: ZipLogTool [options]");
-            Console.WriteLine("Usage: ZipLogTool [path-to-application]");
             Console.WriteLine();
             Console.WriteLine("Options:");
             Console.WriteLine("  -h|--help         Display help.");
-            Console.WriteLine("  init              Initialize test cases (creates folders and files).");
-            Console.WriteLine("  unzip             Unzip the files as per configuration in the INI file.");
+            Console.WriteLine("  run               Run main functions.");
+            Console.WriteLine("  init              Initialize test cases.");
+            Console.WriteLine("  unzip             Unzip files as per config.");
             Console.WriteLine();
-            Console.WriteLine("path-to-application:");
-            Console.WriteLine("  The path to an application .dll file to execute.");
-            Console.WriteLine();
-            //Console.WriteLine($"ZipLogTool Version: {ZipLogToolVer}");
+            Console.WriteLine("If no options are provided, the tool runs using the default config.ini.");
+        }
+
+        static void RunWithDefaultConfig(ZipLogCore zipLogCore, string version)
+        {
+            string defaultConfig = "config.ini";
+            zipLogCore.RunRule(version, defaultConfig, zipLogCore.Rule003ProcessPaths);
         }
     }
 }
