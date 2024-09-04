@@ -7,6 +7,13 @@ namespace ZipLogTool
 {
     public class ZipLogTestCase
     {
+        private CmdOutput cmdOutput;
+
+        public ZipLogTestCase(int verbosityLevel)
+        {
+            // Initialize cmdOutput with the verbosity level
+            cmdOutput = new CmdOutput(verbosityLevel);
+        }
         private const int numberOfDays = 81; // Number of days to create folders or files for
         private string testCaseDir001 = "D:\\LAB\\TESTCASE001";
         private string testCaseDir002 = "D:\\LAB\\TESTCASE002";
@@ -18,12 +25,12 @@ namespace ZipLogTool
             // 如果 TESTCASE001 目錄已經存在，則不執行任何操作
             if (Directory.Exists(testCaseDir001))
             {
-                Console.WriteLine($"Directory '{testCaseDir001}' already exists. Skipping initialization.");
+                cmdOutput.WriteLine(1,$"Directory '{testCaseDir001}' already exists. Skipping initialization.");
                 return;
             }
 
             // Create the TESTCASE001 directory
-            Console.WriteLine($"Creating directory '{testCaseDir001}'...");
+            cmdOutput.WriteLine(1,$"Creating directory '{testCaseDir001}'...");
             Directory.CreateDirectory(testCaseDir001);
 
             // Create subfolders from today to numberOfDays ago
@@ -33,7 +40,7 @@ namespace ZipLogTool
                 string folderName = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
                 string folderPath = Path.Combine(testCaseDir001, folderName);
                 Directory.CreateDirectory(folderPath);
-                Console.WriteLine($"Created folder: {folderPath}");
+                cmdOutput.WriteLine(1,$"Created folder: {folderPath}");
 
                 // Create log files every 2 hours
                 for (int hour = 0; hour < 24; hour += 2)
@@ -50,12 +57,12 @@ namespace ZipLogTool
             // 如果 TESTCASE002 目錄已經存在，則不執行任何操作
             if (Directory.Exists(testCaseDir002))
             {
-                Console.WriteLine($"Directory '{testCaseDir002}' already exists. Skipping initialization.");
+                cmdOutput.WriteLine(1,$"Directory '{testCaseDir002}' already exists. Skipping initialization.");
                 return;
             }
 
             // Create the TESTCASE002 directory
-            Console.WriteLine($"Creating directory '{testCaseDir002}'...");
+            cmdOutput.WriteLine(1,$"Creating directory '{testCaseDir002}'...");
             Directory.CreateDirectory(testCaseDir002);
 
             // Create files for each day from today to numberOfDays ago
@@ -77,7 +84,7 @@ namespace ZipLogTool
             {
                 byte[] data = GenerateContent(fileSizeInKB);
                 fs.Write(data, 0, data.Length);
-                Console.WriteLine($"Created file: {filePath}");
+                cmdOutput.WriteLine(1,$"Created file: {filePath}");
             }
         }
 

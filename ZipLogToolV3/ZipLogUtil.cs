@@ -8,6 +8,14 @@ namespace ZipLogTool
 {
     public class ZipLogUtil
     {
+        private CmdOutput cmdOutput;
+
+        // Constructor to initialize cmdOutput
+        public ZipLogUtil(int verbosityLevel)
+        {
+            // Initialize cmdOutput with the verbosity level
+            cmdOutput = new CmdOutput(verbosityLevel);
+        }
         public void UnzipFiles(string ver, IniData data, string logFilePath)
         {
             using (StreamWriter logWriter = new StreamWriter(logFilePath, true, Encoding.UTF8))

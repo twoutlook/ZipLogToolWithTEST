@@ -29,7 +29,7 @@ namespace ZipLogTool
         public ZipLogCore(int verbosityLevel)
         {
             // Initialize cmdOutput with the verbosity level
-            cmdOutput = new CmdOutput(1);
+            cmdOutput = new CmdOutput(verbosityLevel);
         }
         public void XXXRule003ProcessPaths(string ver, IniData data, string logFilePath)
         {

@@ -19,7 +19,7 @@ namespace ZipLogTool
             string ZipLogToolVer = "0.9.3"; // Incremented version
 
             var zipLogCore = new ZipLogCore(2);
-            var zipLogUtil = new ZipLogUtil();
+            var zipLogUtil = new ZipLogUtil(2);
 
             if (args.Length == 0)
             {
@@ -36,7 +36,7 @@ namespace ZipLogTool
             else if (args.Length > 0 && args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
             {
                 // Initialize the ZipLogTestCase and run InitTestCase001 and InitTestCase002 methods
-                var testCase = new ZipLogTestCase();
+                var testCase = new ZipLogTestCase(2);
                 testCase.InitTestCase001();  // Create folders in TESTCASE001
                 testCase.InitTestCase002();  // Create files in TESTCASE002
             }
@@ -77,7 +77,7 @@ namespace ZipLogTool
             Console.WriteLine("  run               Run main functions.");
             Console.WriteLine("  init              Initialize test cases.");
             Console.WriteLine("  unzip             Unzip files as per config.");
-            Console.WriteLine("  spec              Display the compression and deletion specification.");
+            Console.WriteLine("  spec              Display the requirement.");
             Console.WriteLine();
             //Console.WriteLine("If no options are provided, the tool runs using the default config.ini.");
         }
