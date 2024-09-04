@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogTool", "ZipLogTool.csproj", "{2819A45B-4E8E-4FCD-9150-7C858A143B96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogTool", "ZipLogToolV3\ZipLogTool.csproj", "{2819A45B-4E8E-4FCD-9150-7C858A143B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogTool.Tests", "..\ZipLogTool.Tests\ZipLogTool.Tests.csproj", "{85822AA1-9379-46FB-859F-3787014462E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogTool.Tests", "ZipLogTool.Tests\ZipLogTool.Tests.csproj", "{85822AA1-9379-46FB-859F-3787014462E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

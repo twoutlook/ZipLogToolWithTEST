@@ -1,0 +1,3570 @@
+ Volume in drive D is DATA
+ Volume Serial Number is 1C43-9527
+
+ Directory of D:\ZipLogToolWithTEST
+
+09/04/2024  11:52 AM    <DIR>          .
+09/04/2024  11:17 AM             6,585 .gitignore
+09/04/2024  11:52 AM                 0 dir.txt
+09/04/2024  11:46 AM                25 README.md
+09/04/2024  11:50 AM    <DIR>          ZipLogTool.Tests
+09/04/2024  11:47 AM    <DIR>          ZipLogToolV3
+               3 File(s)          6,610 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git
+
+09/04/2024  11:52 AM    <DIR>          ..
+09/04/2024  11:51 AM                58 COMMIT_EDITMSG
+09/04/2024  11:46 AM               310 config
+09/04/2024  11:46 AM                73 description
+09/04/2024  11:46 AM                21 HEAD
+09/04/2024  11:46 AM    <DIR>          hooks
+09/04/2024  11:51 AM             2,287 index
+09/04/2024  11:46 AM    <DIR>          info
+09/04/2024  11:46 AM    <DIR>          logs
+09/04/2024  11:46 AM    <DIR>          objects
+09/04/2024  11:46 AM    <DIR>          refs
+               5 File(s)          2,749 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\hooks
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM               478 applypatch-msg.sample
+09/04/2024  11:46 AM               896 commit-msg.sample
+09/04/2024  11:46 AM             4,726 fsmonitor-watchman.sample
+09/04/2024  11:46 AM               189 post-update.sample
+09/04/2024  11:46 AM               424 pre-applypatch.sample
+09/04/2024  11:46 AM             1,643 pre-commit.sample
+09/04/2024  11:46 AM               416 pre-merge-commit.sample
+09/04/2024  11:46 AM             1,374 pre-push.sample
+09/04/2024  11:46 AM             4,898 pre-rebase.sample
+09/04/2024  11:46 AM               544 pre-receive.sample
+09/04/2024  11:46 AM             1,492 prepare-commit-msg.sample
+09/04/2024  11:46 AM             2,783 push-to-checkout.sample
+09/04/2024  11:46 AM             3,650 update.sample
+              13 File(s)         23,513 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\info
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM               240 exclude
+               1 File(s)            240 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\logs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:51 AM               751 HEAD
+09/04/2024  11:46 AM    <DIR>          refs
+               1 File(s)            751 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\logs\refs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          heads
+09/04/2024  11:46 AM    <DIR>          remotes
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\logs\refs\heads
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:51 AM               561 main
+               1 File(s)            561 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\logs\refs\remotes
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          origin
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\logs\refs\remotes\origin
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:51 AM               304 main
+               1 File(s)            304 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:47 AM    <DIR>          01
+09/04/2024  11:47 AM    <DIR>          08
+09/04/2024  11:47 AM    <DIR>          09
+09/04/2024  11:47 AM    <DIR>          0a
+09/04/2024  11:46 AM    <DIR>          0e
+09/04/2024  11:47 AM    <DIR>          11
+09/04/2024  11:47 AM    <DIR>          1b
+09/04/2024  11:47 AM    <DIR>          1c
+09/04/2024  11:47 AM    <DIR>          1f
+09/04/2024  11:46 AM    <DIR>          24
+09/04/2024  11:47 AM    <DIR>          29
+09/04/2024  11:47 AM    <DIR>          2b
+09/04/2024  11:47 AM    <DIR>          2c
+09/04/2024  11:47 AM    <DIR>          2d
+09/04/2024  11:47 AM    <DIR>          30
+09/04/2024  11:51 AM    <DIR>          32
+09/04/2024  11:47 AM    <DIR>          34
+09/04/2024  11:47 AM    <DIR>          38
+09/04/2024  11:47 AM    <DIR>          41
+09/04/2024  11:47 AM    <DIR>          46
+09/04/2024  11:47 AM    <DIR>          4c
+09/04/2024  11:47 AM    <DIR>          4d
+09/04/2024  11:47 AM    <DIR>          4f
+09/04/2024  11:47 AM    <DIR>          55
+09/04/2024  11:47 AM    <DIR>          56
+09/04/2024  11:47 AM    <DIR>          58
+09/04/2024  11:47 AM    <DIR>          5a
+09/04/2024  11:47 AM    <DIR>          5d
+09/04/2024  11:47 AM    <DIR>          5e
+09/04/2024  11:47 AM    <DIR>          5f
+09/04/2024  11:47 AM    <DIR>          61
+09/04/2024  11:47 AM    <DIR>          64
+09/04/2024  11:47 AM    <DIR>          65
+09/04/2024  11:47 AM    <DIR>          6a
+09/04/2024  11:47 AM    <DIR>          6e
+09/04/2024  11:47 AM    <DIR>          76
+09/04/2024  11:47 AM    <DIR>          7d
+09/04/2024  11:47 AM    <DIR>          91
+09/04/2024  11:47 AM    <DIR>          94
+09/04/2024  11:51 AM    <DIR>          96
+09/04/2024  11:47 AM    <DIR>          98
+09/04/2024  11:47 AM    <DIR>          99
+09/04/2024  11:47 AM    <DIR>          9a
+09/04/2024  11:47 AM    <DIR>          a1
+09/04/2024  11:47 AM    <DIR>          b1
+09/04/2024  11:47 AM    <DIR>          b5
+09/04/2024  11:47 AM    <DIR>          b6
+09/04/2024  11:47 AM    <DIR>          ba
+09/04/2024  11:51 AM    <DIR>          bc
+09/04/2024  11:47 AM    <DIR>          c8
+09/04/2024  11:47 AM    <DIR>          d1
+09/04/2024  11:47 AM    <DIR>          d2
+09/04/2024  11:51 AM    <DIR>          d8
+09/04/2024  11:47 AM    <DIR>          da
+09/04/2024  11:47 AM    <DIR>          de
+09/04/2024  11:47 AM    <DIR>          e0
+09/04/2024  11:51 AM    <DIR>          e2
+09/04/2024  11:51 AM    <DIR>          e6
+09/04/2024  11:47 AM    <DIR>          e7
+09/04/2024  11:47 AM    <DIR>          ea
+09/04/2024  11:47 AM    <DIR>          ed
+09/04/2024  11:47 AM    <DIR>          ee
+09/04/2024  11:47 AM    <DIR>          f2
+09/04/2024  11:47 AM    <DIR>          f3
+09/04/2024  11:49 AM    <DIR>          f4
+09/04/2024  11:47 AM    <DIR>          f8
+09/04/2024  11:47 AM    <DIR>          fa
+09/04/2024  11:46 AM    <DIR>          info
+09/04/2024  11:46 AM    <DIR>          pack
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\01
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               617 ef3bdcb0d38db1ce04bb5b5e295d61b360340c
+               1 File(s)            617 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\08
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            37,053 659724d4f8534ee97a543e93dd6d3c702fcd15
+               1 File(s)         37,053 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\09
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            62,608 c37a5a3b54d007e0965f52c754c4082c154f82
+               1 File(s)         62,608 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\0a
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             2,209 048bb581c66c5cf5d9b20137fb566972dbb867
+               1 File(s)          2,209 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\0e
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM                40 519fcf87eb3d3f3be3d3547eb506fca8fc8afb
+               1 File(s)             40 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\11
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               106 51832fc9b252e48e7af651a85a53baf7517d37
+               1 File(s)            106 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\1b
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            73,664 74172f9f63045155bca00563190a076df3eb51
+               1 File(s)         73,664 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\1c
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               673 ac079cfe6ac5d972e09525fa920f11185d087a
+               1 File(s)            673 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\1f
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               751 f0c423042b46cb1d617b81efb715defbe8054d
+               1 File(s)            751 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\24
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:46 AM                54 c86055b02c05b12d3f5a526c2aef418ddee084
+               1 File(s)             54 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\29
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               653 28b4dce6f4ea76c4084de6fc63128496f77a34
+               1 File(s)            653 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\2b
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               535 111d016bcc9d5bf87dd1475c7efb1e30af9115
+               1 File(s)            535 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\2c
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             7,019 a735f6ec9b6087e5aac877624c1298f970175d
+               1 File(s)          7,019 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\2d
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM           145,186 5c5b8e1c2815530673b50578e96c410bea70b9
+               1 File(s)        145,186 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\30
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             1,308 6d9aff31f41b7bc59c33158d55e33823d226c0
+               1 File(s)          1,308 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\32
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:51 AM               208 3475b2eff0e4b2f1a1cf1b61568112e4d2c4e2
+               1 File(s)            208 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\34
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM                24 4fdd611e8f58513c432678603695ad72653fd6
+               1 File(s)             24 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\38
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               166 71b184d3f475a3c71d56db9f48c2a193080512
+               1 File(s)            166 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\41
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            55,149 55e1c81a603ff7b2dcb94d8275d055e3bb9c8b
+               1 File(s)         55,149 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\46
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            64,798 171997966f26bda11e58586c51b2817bde5cca
+09/04/2024  11:47 AM            40,998 3423122e9b83f838c3a46f95d36ff1f451a600
+               2 File(s)        105,796 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\4c
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            13,988 e28fdeac6da139573ed0ff356c2df510692cee
+               1 File(s)         13,988 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\4d
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             1,356 12fd71e8f9edddbc8c74893170328a0e54f59e
+               1 File(s)          1,356 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\4f
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            50,102 317b7c48099aba7c75ea3389a1a743c4a65201
+09/04/2024  11:47 AM               129 b33936410dd21c7f7ce7479d6cd52ea250ba9e
+               2 File(s)         50,231 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\55
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            83,459 25e4a3cb1f910e1972bed70ecd13159d381657
+               1 File(s)         83,459 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\56
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               153 efbc7b5f15b5166cc89dae0406895b57de0b67
+               1 File(s)            153 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\58
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            11,164 bee839ea5bb99853cb20ae9e362038fe157f8d
+               1 File(s)         11,164 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\5a
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               745 65e1bc2f253439a04da29fa26334ce4a4b41a0
+               1 File(s)            745 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\5d
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               522 b3bbe43b8199d9bb368bce02e7a34a6bea4813
+               1 File(s)            522 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\5e
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             1,742 02a99d750e7c0c7f4b65bb9b6a5c922cd4299a
+               1 File(s)          1,742 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\5f
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            23,590 b716c696b8c5b3d770cdd9abce7d5573f2df96
+               1 File(s)         23,590 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\61
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               875 d28dd8e9aa0876c0537c3cc86e31297ceb0bea
+09/04/2024  11:47 AM               281 d6eba072af5138e18e1ab0985c513cb224ea40
+               2 File(s)          1,156 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\64
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               897 163164ae0146154ff92a3104e81686da655937
+               1 File(s)            897 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\65
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            19,584 c67c3b5aa4b76c964fbdba6cf1b5df31f0fc32
+               1 File(s)         19,584 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\6a
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             1,922 7cfcffe6659df90281d24850d38b330f604649
+               1 File(s)          1,922 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\6e
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            20,483 4e253752fac98d76c7c6e8f6ab1f05b4c52964
+               1 File(s)         20,483 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\76
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM           159,744 16e14a4f4c41d9844bc34c869622487eefdeda
+09/04/2024  11:47 AM               328 c260a09922ea3f723063d47394632d3912dbb8
+               2 File(s)        160,072 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\7d
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:46 AM               128 3d7e3f3d80709904e34dc8bf5814afaeddcc39
+09/04/2024  11:47 AM             9,528 5e96bc35a2255fb7dab78fd59bcc03c34e0120
+               2 File(s)          9,656 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\91
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            25,880 0f6f62430269eb80ef7881362e44cb76c3d4d1
+               1 File(s)         25,880 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\94
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:48 AM             2,935 91a2fda28342ab358eaf234e1afe0c07a53d62
+               1 File(s)          2,935 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\96
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:51 AM                60 50254df93be31e999cfb57e54066e0bc5e8788
+               1 File(s)             60 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\98
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            16,588 bc24c697894da46b6b9aded3a63b01c68a19da
+               1 File(s)         16,588 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\99
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             1,608 36ce7c9a75fa4776422b65f1bc9174b2b6333f
+               1 File(s)          1,608 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\9a
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             2,153 bc3e856559e1e08113d796abbd88c9b063f4ec
+               1 File(s)          2,153 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\a1
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            32,324 2a492980d7084b5b3ad7c6a20dbe1b0786e0d1
+               1 File(s)         32,324 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\b1
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               652 398b3aa096cc500e9f65f5958cad365386012a
+               1 File(s)            652 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\b5
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM           184,811 3eb4f3d3854c6c21f717c144aade3277defd75
+               1 File(s)        184,811 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\b6
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            18,488 187a69081f288dcc82daf84587e22de789e4d5
+               1 File(s)         18,488 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\ba
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               284 3fa7038a0d846afcdb9dd5647614f362a70f9d
+               1 File(s)            284 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\bc
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:51 AM               158 a39112e6fa1a6e815c4400a21b3f0b1353f86a
+               1 File(s)            158 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\c8
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            38,115 c7d71fd3190ac7d82f4740dab2cebb3c6eee31
+09/04/2024  11:47 AM             8,825 f2e6f599ea17ccdda9fc508abd68f43468f539
+               2 File(s)         46,940 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\d1
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            13,603 9e920fe8f8f14a9fed80b5c1b1731ca526159f
+               1 File(s)         13,603 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\d2
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM           216,238 b8f32dbad13f576865dc507489ebf76450a471
+               1 File(s)        216,238 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\d8
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:51 AM               520 2259c1d28973eac4b56f7605a10b8cfb7176cc
+               1 File(s)            520 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\da
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            19,489 34d390c52444dafce9dc1ae22344ca65911ca0
+               1 File(s)         19,489 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\de
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             9,211 9e12447827d55c3995c3ea6b26f8ef50d1eb65
+               1 File(s)          9,211 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\e0
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            32,966 ab0d015150f2852335346562d66a9f4f0120bb
+               1 File(s)         32,966 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\e2
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM               991 43dcef98eab64105525be677d63bdd843a59b0
+09/04/2024  11:51 AM                60 77601641945f57f8d171138f60af77b478da0d
+               2 File(s)          1,051 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\e6
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM                15 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+09/04/2024  11:51 AM               196 f6508834894ecccd130e919237ba13ca505599
+               2 File(s)            211 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\e7
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            17,239 c234401d816a6537d539c0148bd83d8967925e
+               1 File(s)         17,239 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\ea
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             8,049 aa4d26e9a4d3527e29d02099a099cc92c47ca8
+               1 File(s)          8,049 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\ed
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             2,103 b994e0b4dbc5efb347849796e3a4c36166ef59
+               1 File(s)          2,103 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\ee
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            14,073 ec92852705946904d0e2fa0443d454075781f5
+               1 File(s)         14,073 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\f2
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM            11,784 d83c51416e90dbc31154545b16df3b3f7a7909
+               1 File(s)         11,784 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\f3
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM                70 2591f45e7693d3899ac352f9d83a354b8fd789
+               1 File(s)             70 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\f4
+
+09/04/2024  11:49 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:49 AM               349 c615ae799e50527457e35b49566f1b3b6fd0ca
+               1 File(s)            349 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\f8
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             2,303 5d7600403db5e86caaf63a7e07d832813cf0f3
+               1 File(s)          2,303 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\fa
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+09/04/2024  11:47 AM             4,049 ed301ae9d31ac6b335be8d7ef63bff441ccd9f
+               1 File(s)          4,049 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\info
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\objects\pack
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\refs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:51 AM    <DIR>          heads
+09/04/2024  11:46 AM    <DIR>          remotes
+09/04/2024  11:46 AM    <DIR>          tags
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\refs\heads
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:51 AM                41 main
+               1 File(s)             41 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\refs\remotes
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:51 AM    <DIR>          origin
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\refs\remotes\origin
+
+09/04/2024  11:51 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:51 AM                41 main
+               1 File(s)             41 bytes
+
+ Directory of D:\ZipLogToolWithTEST\.git\refs\tags
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogTool.Tests
+
+09/04/2024  11:50 AM    <DIR>          .
+09/04/2024  11:52 AM    <DIR>          ..
+09/04/2024  11:49 AM               694 .gitignore
+09/04/2024  11:29 AM             1,098 packages.config
+09/04/2024  11:46 AM    <DIR>          Properties
+09/04/2024  11:43 AM             8,982 ZipLogTool.Tests.csproj
+09/04/2024  11:42 AM             1,949 ZipLogToolInitTests.cs
+               4 File(s)         12,723 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogTool.Tests\Properties
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:50 AM    <DIR>          ..
+09/04/2024  11:22 AM               653 AssemblyInfo.cs
+               1 File(s)            653 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3
+
+09/04/2024  11:47 AM    <DIR>          .
+09/04/2024  11:52 AM    <DIR>          ..
+09/04/2024  11:17 AM             2,581 .gitattributes
+09/04/2024  11:17 AM             6,585 .gitignore
+09/04/2024  11:17 AM               189 App.config
+09/04/2024  11:46 AM    <DIR>          bin
+09/04/2024  11:17 AM               864 config.ini
+09/04/2024  11:46 AM    <DIR>          obj
+09/04/2024  11:46 AM    <DIR>          packages
+09/04/2024  11:17 AM               138 packages.config
+09/04/2024  11:17 AM             1,659 Program.cs
+09/04/2024  11:46 AM    <DIR>          Properties
+09/04/2024  11:17 AM             1,079 README.TXT
+09/04/2024  11:17 AM               430 TopLevelEntry.cs
+09/04/2024  11:17 AM             2,367 ZipArchiveInfo.cs
+09/04/2024  11:17 AM           111,719 ZipLogCore.cs
+09/04/2024  11:17 AM             4,156 ZipLogTestCase.cs
+09/04/2024  11:17 AM             4,919 ZipLogTool.csproj
+09/04/2024  11:18 AM               248 ZipLogTool.csproj.user
+09/04/2024  11:29 AM             1,631 ZipLogTool.sln
+09/04/2024  11:17 AM             2,797 ZipLogUtil.cs
+              15 File(s)        141,362 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs
+
+09/04/2024  11:47 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          ZipLogTool
+09/04/2024  11:22 AM             3,712 ZipLogTool.csproj.dtbcache.json
+               1 File(s)          3,712 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:43 AM    <DIR>          FileContentIndex
+09/04/2024  11:43 AM    <DIR>          v17
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool\FileContentIndex
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:18 AM            49,581 3d0eb60f-5af9-4ef6-9eee-13ef04206409.vsidx
+09/04/2024  11:42 AM             5,404 6251a11b-b6cf-4214-9f0c-c4c9d78f9d3e.vsidx
+09/04/2024  11:42 AM             7,795 dd5a84e5-5d8b-472b-a404-6dfcf572d1ac.vsidx
+               3 File(s)         62,780 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool\v17
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:43 AM             4,025 DocumentLayout.json
+09/04/2024  11:46 AM    <DIR>          TestStore
+               1 File(s)          4,025 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool\v17\TestStore
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:32 AM    <DIR>          0
+09/04/2024  11:46 AM    <DIR>          OutputMessages
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool\v17\TestStore\0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:43 AM            55,945 000.testlog
+09/04/2024  11:32 AM                24 testlog.manifest
+               2 File(s)         55,969 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool\v17\TestStore\OutputMessages
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:43 AM    <DIR>          09c51ae8-d177-2f73-cd7c-f5cd172172fe
+09/04/2024  11:43 AM    <DIR>          5407860d-dddc-aca7-1f5d-3e1a97f53507
+09/04/2024  11:43 AM    <DIR>          553b516c-52fe-7f8f-c673-4a6ffeb502f7
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool\v17\TestStore\OutputMessages\09c51ae8-d177-2f73-cd7c-f5cd172172fe
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:43 AM            67,858 StandardOutput.txt
+               1 File(s)         67,858 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool\v17\TestStore\OutputMessages\5407860d-dddc-aca7-1f5d-3e1a97f53507
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:43 AM            67,931 StandardOutput.txt
+               1 File(s)         67,931 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\.vs\ZipLogTool\v17\TestStore\OutputMessages\553b516c-52fe-7f8f-c673-4a6ffeb502f7
+
+09/04/2024  11:43 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\bin
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:47 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          Debug
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\bin\Debug
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          app.publish
+09/04/2024  11:17 AM               864 config.ini
+07/23/2017  08:17 PM            28,672 INIFileParser.dll
+07/23/2017  08:17 PM            53,557 INIFileParser.xml
+09/04/2024  11:46 AM    <DIR>          logs
+09/04/2024  11:30 AM               147 temp_config.ini
+09/04/2024  11:43 AM             1,836 ZipLogTool.application
+09/04/2024  11:43 AM            54,272 ZipLogTool.exe
+09/04/2024  11:17 AM               189 ZipLogTool.exe.config
+09/04/2024  11:43 AM             4,534 ZipLogTool.exe.manifest
+09/04/2024  11:43 AM           118,272 ZipLogTool.pdb
+               9 File(s)        262,343 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\bin\Debug\app.publish
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:43 AM            55,208 ZipLogTool.exe
+               1 File(s)         55,208 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\bin\Debug\logs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:18 AM            76,489 2024-09-04_1118_ZipLogTool.log
+09/04/2024  11:30 AM            11,055 2024-09-04_1130_ZipLogTool.log
+               2 File(s)         87,544 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\obj
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:47 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          Debug
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\obj\Debug
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:17 AM               214 .NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+09/04/2024  11:18 AM             2,216 DesignTimeResolveAssemblyReferencesInput.cache
+09/04/2024  11:17 AM    <DIR>          TempPE
+09/04/2024  11:43 AM             1,836 ZipLogTool.application
+09/04/2024  11:43 AM             5,420 ZipLogTool.csproj.AssemblyReference.cache
+09/04/2024  11:43 AM                66 ZipLogTool.csproj.CoreCompileInputs.cache
+09/04/2024  11:43 AM               903 ZipLogTool.csproj.FileListAbsolute.txt
+09/04/2024  11:43 AM                 0 ZipLogTool.csproj.Up2Date
+09/04/2024  11:43 AM            54,272 ZipLogTool.exe
+09/04/2024  11:43 AM             4,534 ZipLogTool.exe.manifest
+09/04/2024  11:43 AM           118,272 ZipLogTool.pdb
+              10 File(s)        187,733 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\obj\Debug\TempPE
+
+09/04/2024  11:17 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:47 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          Castle.Core.5.1.1
+09/04/2024  11:46 AM    <DIR>          ini-parser.2.5.2
+09/04/2024  11:46 AM    <DIR>          Moq.4.20.71
+09/04/2024  11:46 AM    <DIR>          MSTest.TestAdapter.2.2.10
+09/04/2024  11:46 AM    <DIR>          MSTest.TestFramework.2.2.10
+09/04/2024  11:46 AM    <DIR>          NUnit.4.2.2
+09/04/2024  11:46 AM    <DIR>          NUnit3TestAdapter.4.6.0
+09/04/2024  11:46 AM    <DIR>          System.Buffers.4.5.1
+09/04/2024  11:46 AM    <DIR>          System.Memory.4.5.5
+09/04/2024  11:46 AM    <DIR>          System.Numerics.Vectors.4.5.0
+09/04/2024  11:46 AM    <DIR>          System.Runtime.CompilerServices.Unsafe.4.5.3
+09/04/2024  11:46 AM    <DIR>          System.Threading.Tasks.Extensions.4.5.4
+09/04/2024  11:46 AM    <DIR>          System.ValueTuple.4.5.0
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Castle.Core.5.1.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+12/30/2022  09:22 AM            11,527 .signature.p7s
+12/30/2022  05:15 PM             9,193 ASL - Apache Software Foundation License.txt
+12/30/2022  05:15 PM             3,801 castle-logo.png
+09/04/2024  11:25 AM           800,128 Castle.Core.5.1.1.nupkg
+12/30/2022  05:15 PM            28,477 CHANGELOG.md
+09/04/2024  11:46 AM    <DIR>          lib
+12/30/2022  05:15 PM               592 LICENSE
+12/30/2022  05:15 PM               554 readme.txt
+               7 File(s)        854,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Castle.Core.5.1.1\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net462
+09/04/2024  11:46 AM    <DIR>          net6.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.1
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Castle.Core.5.1.1\lib\net462
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+12/30/2022  05:16 PM           423,936 Castle.Core.dll
+12/30/2022  05:16 PM           429,313 Castle.Core.xml
+               2 File(s)        853,249 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Castle.Core.5.1.1\lib\net6.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+12/30/2022  05:16 PM           385,024 Castle.Core.dll
+12/30/2022  05:16 PM           418,293 Castle.Core.xml
+               2 File(s)        803,317 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Castle.Core.5.1.1\lib\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+12/30/2022  05:16 PM           383,488 Castle.Core.dll
+12/30/2022  05:16 PM           418,293 Castle.Core.xml
+               2 File(s)        801,781 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Castle.Core.5.1.1\lib\netstandard2.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+12/30/2022  05:16 PM           382,976 Castle.Core.dll
+12/30/2022  05:16 PM           418,293 Castle.Core.xml
+               2 File(s)        801,269 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\ini-parser.2.5.2
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+10/29/2018  01:40 AM             9,464 .signature.p7s
+09/04/2024  11:18 AM            38,045 ini-parser.2.5.2.nupkg
+09/04/2024  11:46 AM    <DIR>          lib
+               2 File(s)         47,509 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\ini-parser.2.5.2\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net20
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\ini-parser.2.5.2\lib\net20
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+07/23/2017  08:17 PM            28,672 INIFileParser.dll
+07/23/2017  08:17 PM            11,223 INIFileParser.dll.mdb
+07/23/2017  08:17 PM            53,557 INIFileParser.xml
+               3 File(s)         93,452 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Moq.4.20.71
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/03/2024  05:17 AM            12,942 .signature.p7s
+09/03/2024  12:14 PM             6,829 icon.png
+09/04/2024  11:46 AM    <DIR>          lib
+09/04/2024  11:25 AM           647,244 Moq.4.20.71.nupkg
+09/03/2024  12:16 PM             7,969 readme.md
+               4 File(s)        674,984 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Moq.4.20.71\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net462
+09/04/2024  11:46 AM    <DIR>          net6.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.1
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Moq.4.20.71\lib\net462
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/03/2024  12:15 PM           303,616 Moq.dll
+               1 File(s)        303,616 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Moq.4.20.71\lib\net6.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/03/2024  12:16 PM           312,832 Moq.dll
+               1 File(s)        312,832 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Moq.4.20.71\lib\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/03/2024  12:15 PM           306,176 Moq.dll
+               1 File(s)        306,176 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\Moq.4.20.71\lib\netstandard2.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/03/2024  12:15 PM           310,784 Moq.dll
+               1 File(s)        310,784 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/26/2022  03:07 PM            18,702 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          build
+04/26/2022  09:39 PM             7,006 Icon.png
+09/04/2024  11:22 AM         2,077,954 MSTest.TestAdapter.2.2.10.nupkg
+               3 File(s)      2,103,662 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net45
+09/04/2024  11:46 AM    <DIR>          net46
+09/04/2024  11:46 AM    <DIR>          net5.0
+09/04/2024  11:46 AM    <DIR>          netcoreapp1.0
+09/04/2024  11:46 AM    <DIR>          netstandard1.5
+09/04/2024  11:46 AM    <DIR>          uap10.0
+09/04/2024  11:46 AM    <DIR>          _common
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+02/16/2022  11:03 AM            29,584 Microsoft.TestPlatform.AdapterUtilities.dll
+04/26/2022  09:39 PM             1,955 MSTest.TestAdapter.props
+04/26/2022  09:39 PM             2,767 MSTest.TestAdapter.targets
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               3 File(s)         34,306 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net45\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+02/16/2022  11:03 AM            29,584 Microsoft.TestPlatform.AdapterUtilities.dll
+04/26/2022  09:50 PM           114,576 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+04/26/2022  09:39 PM             1,944 MSTest.TestAdapter.props
+04/26/2022  09:39 PM             2,767 MSTest.TestAdapter.targets
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               4 File(s)        148,871 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:03 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net46\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:04 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+02/16/2022  10:59 AM            28,552 Microsoft.TestPlatform.AdapterUtilities.dll
+04/26/2022  09:50 PM            63,376 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+04/26/2022  09:39 PM               230 MSTest.TestAdapter.props
+04/26/2022  09:39 PM             5,173 MSTest.TestAdapter.targets
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          winui
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               4 File(s)         97,331 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\winui
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/26/2022  09:51 PM            66,960 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+               1 File(s)         66,960 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\net5.0\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+02/16/2022  10:54 AM            29,064 Microsoft.TestPlatform.AdapterUtilities.dll
+04/26/2022  09:50 PM            63,376 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+04/26/2022  09:39 PM             1,944 MSTest.TestAdapter.props
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               3 File(s)         94,384 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            14,208 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,208 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:55 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:55 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:55 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netcoreapp1.0\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:55 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+02/16/2022  10:54 AM            29,064 Microsoft.TestPlatform.AdapterUtilities.dll
+04/26/2022  09:50 PM            63,376 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+04/26/2022  09:39 PM             1,944 MSTest.TestAdapter.props
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               3 File(s)         94,384 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            14,208 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,208 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:55 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:55 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,280 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:54 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:55 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\netstandard1.5\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:55 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+02/16/2022  11:02 AM            30,096 Microsoft.TestPlatform.AdapterUtilities.dll
+04/26/2022  09:50 PM            32,656 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+04/26/2022  09:39 PM             1,944 MSTest.TestAdapter.props
+04/26/2022  09:39 PM             2,992 MSTest.TestAdapter.targets
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               4 File(s)         67,688 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:02 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:02 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:02 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         15,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            14,208 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,208 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:02 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,216 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\uap10.0\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:01 AM            14,208 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+               1 File(s)         14,208 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+02/16/2022  10:59 AM            28,552 Microsoft.TestPlatform.AdapterUtilities.dll
+04/26/2022  09:53 PM           159,144 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+04/26/2022  09:51 PM           114,576 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+04/26/2022  09:49 PM            19,360 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+04/26/2022  09:51 PM            74,128 Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               5 File(s)        395,760 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            15,280 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:04 AM            16,784 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:54 PM            25,000 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:50 PM            18,320 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:03 AM            23,984 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            21,904 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        121,272 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:03 AM            16,784 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:53 PM            26,024 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:51 PM            18,832 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:04 AM            23,952 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            22,416 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        122,224 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:03 AM            16,784 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:54 PM            25,512 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:51 PM            18,832 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:03 AM            23,976 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            21,904 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        121,224 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            15,272 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:04 AM            16,784 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:53 PM            26,032 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:51 PM            18,832 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:04 AM            23,952 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            22,416 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        123,288 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:03 AM            16,808 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:54 PM            26,024 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:51 PM            18,832 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:03 AM            23,952 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            22,416 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        122,248 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:04 AM            17,320 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:53 PM            27,560 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:51 PM            19,344 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:04 AM            24,464 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            23,440 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        126,344 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:03 AM            16,816 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:53 PM            26,536 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:50 PM            18,832 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:03 AM            23,952 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:51 PM            22,416 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        123,800 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:03 AM            16,784 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:53 PM            26,024 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:50 PM            18,832 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:03 AM            24,488 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            22,416 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        123,792 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:03 AM            16,784 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:53 PM            25,512 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:51 PM            18,832 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:03 AM            23,952 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            21,904 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        122,232 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            15,248 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:03 AM            17,296 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:54 PM            29,608 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:50 PM            20,368 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:04 AM            26,000 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            24,464 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        132,984 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:03 AM            16,808 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:54 PM            25,512 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:50 PM            18,832 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:04 AM            23,440 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            21,904 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        120,712 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  11:00 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:04 AM            16,272 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:53 PM            24,480 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:51 PM            18,320 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:04 AM            22,928 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            21,392 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        117,608 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestAdapter.2.2.10\build\_common\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/16/2022  10:59 AM            14,216 Microsoft.TestPlatform.AdapterUtilities.resources.dll
+02/16/2022  11:04 AM            16,784 Microsoft.TestPlatform.CoreUtilities.resources.dll
+04/26/2022  09:53 PM            24,488 Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+04/26/2022  09:50 PM            18,320 Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+02/16/2022  11:03 AM            22,928 Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+04/26/2022  09:50 PM            21,392 Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+               6 File(s)        118,128 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/26/2022  03:07 PM            18,702 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          build
+04/26/2022  09:39 PM             7,006 Icon.png
+09/04/2024  11:46 AM    <DIR>          lib
+09/04/2024  11:22 AM         1,337,686 MSTest.TestFramework.2.2.10.nupkg
+               3 File(s)      1,363,394 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net5.0
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+04/26/2022  09:48 PM            18,336 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+04/26/2022  09:46 PM             9,493 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML
+04/26/2022  09:39 PM               857 MSTest.TestFramework.targets
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          winui
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               3 File(s)         28,686 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,621 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,621 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,647 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,647 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,643 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,643 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,585 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,585 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,621 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,621 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,067 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          6,067 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,755 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,755 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,620 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,620 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,538 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,538 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,857 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          6,857 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,378 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,378 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\winui
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/26/2022  09:48 PM            23,456 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+04/26/2022  09:46 PM            12,319 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML
+               2 File(s)         35,775 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,126 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,126 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\build\net5.0\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,232 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+               1 File(s)          5,232 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net45
+09/04/2024  11:46 AM    <DIR>          net5.0
+09/04/2024  11:46 AM    <DIR>          netstandard1.0
+09/04/2024  11:46 AM    <DIR>          uap10.0
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+04/26/2022  09:51 PM            74,128 Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+04/26/2022  09:52 PM            34,728 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+04/26/2022  09:51 PM            69,512 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML
+04/26/2022  09:49 PM           293,109 Microsoft.VisualStudio.TestPlatform.TestFramework.XML
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               4 File(s)        471,477 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            69,136 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,226 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        304,362 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            72,004 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           244,413 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        316,417 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            71,932 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           237,515 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        309,447 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            71,028 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           238,564 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        309,592 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            70,718 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,312 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        306,030 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            73,896 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           258,334 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        332,230 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            70,673 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           244,218 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        314,891 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            70,806 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           238,359 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        309,165 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            70,649 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           236,892 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        307,541 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            84,993 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           290,664 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        375,657 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            69,361 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,951 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        305,312 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            64,866 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           220,394 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        285,260 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net45\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM            65,661 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           224,459 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        290,120 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+04/26/2022  09:51 PM            74,128 Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+04/26/2022  09:49 PM           293,109 Microsoft.VisualStudio.TestPlatform.TestFramework.XML
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               2 File(s)        367,237 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           235,226 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        235,226 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           244,413 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        244,413 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           237,515 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        237,515 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           238,564 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        238,564 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           235,312 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        235,312 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           258,334 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        258,334 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           244,218 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        244,218 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           238,359 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        238,359 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           236,892 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        236,892 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           290,664 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        290,664 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           235,951 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        235,951 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           220,394 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        220,394 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\net5.0\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM           224,459 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               1 File(s)        224,459 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+04/26/2022  09:51 PM            74,128 Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+04/26/2022  09:48 PM            18,336 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+04/26/2022  09:46 PM             9,493 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML
+04/26/2022  09:49 PM           293,109 Microsoft.VisualStudio.TestPlatform.TestFramework.XML
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               4 File(s)        395,066 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,621 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,226 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        240,847 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,647 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           244,413 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        250,060 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,643 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           237,515 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        243,158 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,585 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           238,564 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        244,149 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,621 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,312 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        240,933 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,067 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           258,334 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        264,401 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,755 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           244,218 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        249,973 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,620 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           238,359 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        243,979 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,538 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           236,892 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        242,430 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,857 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           290,664 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        297,521 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,378 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,951 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        241,329 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,126 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           220,394 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        225,520 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\netstandard1.0\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             5,232 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           224,459 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        229,691 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          cs
+09/04/2024  11:46 AM    <DIR>          de
+09/04/2024  11:46 AM    <DIR>          es
+09/04/2024  11:46 AM    <DIR>          fr
+09/04/2024  11:46 AM    <DIR>          it
+09/04/2024  11:46 AM    <DIR>          ja
+09/04/2024  11:46 AM    <DIR>          ko
+04/26/2022  09:51 PM            74,128 Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+04/26/2022  09:48 PM            20,384 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+04/26/2022  09:46 PM             8,317 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.XML
+04/26/2022  09:49 PM           293,109 Microsoft.VisualStudio.TestPlatform.TestFramework.XML
+09/04/2024  11:46 AM    <DIR>          pl
+09/04/2024  11:46 AM    <DIR>          pt-BR
+09/04/2024  11:46 AM    <DIR>          ru
+09/04/2024  11:46 AM    <DIR>          tr
+09/04/2024  11:46 AM    <DIR>          zh-Hans
+09/04/2024  11:46 AM    <DIR>          zh-Hant
+               4 File(s)        395,938 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\cs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,805 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,226 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        242,031 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\de
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,820 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           244,413 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        251,233 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\es
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,872 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           237,515 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        244,387 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\fr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,801 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           238,564 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        245,365 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\it
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,793 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,312 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        242,105 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\ja
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             7,278 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           258,334 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        265,612 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\ko
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,942 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           244,218 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        251,160 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\pl
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,808 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           238,359 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        245,167 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\pt-BR
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,737 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           236,892 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        243,629 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\ru
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             8,196 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           290,664 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        298,860 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\tr
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,547 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           235,951 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        242,498 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\zh-Hans
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,247 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           220,394 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        226,641 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\MSTest.TestFramework.2.2.10\lib\uap10.0\zh-Hant
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+04/20/2017  04:31 AM             6,389 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+04/20/2017  04:31 AM           224,459 Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+               2 File(s)        230,848 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit.4.2.2
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+08/31/2024  11:02 AM            12,953 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          build
+04/07/2023  08:46 PM            16,371 icon.png
+09/04/2024  11:46 AM    <DIR>          lib
+05/08/2024  12:38 AM             1,090 LICENSE.txt
+05/08/2024  12:38 AM               481 NOTICES.md
+09/04/2024  11:24 AM           702,845 NUnit.4.2.2.nupkg
+08/29/2024  06:37 PM             5,905 README.md
+07/04/2024  03:36 AM             1,577 THIRD_PARTY_NOTICES.md
+               7 File(s)        741,222 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit.4.2.2\build
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/08/2024  12:38 AM               176 NUnit.props
+               1 File(s)            176 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit.4.2.2\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net462
+09/04/2024  11:46 AM    <DIR>          net6.0
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit.4.2.2\lib\net462
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+08/31/2024  05:55 PM           479,232 nunit.framework.dll
+08/31/2024  05:55 PM            62,464 nunit.framework.legacy.dll
+08/31/2024  05:55 PM           156,154 nunit.framework.legacy.xml
+08/31/2024  05:55 PM           983,483 nunit.framework.xml
+               4 File(s)      1,681,333 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit.4.2.2\lib\net6.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+08/31/2024  05:55 PM           478,720 nunit.framework.dll
+08/31/2024  05:55 PM            60,416 nunit.framework.legacy.dll
+08/31/2024  05:55 PM           156,154 nunit.framework.legacy.xml
+08/31/2024  05:55 PM           984,620 nunit.framework.xml
+               4 File(s)      1,679,910 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit3TestAdapter.4.6.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+07/25/2024  05:27 PM            12,954 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          build
+09/04/2024  11:46 AM    <DIR>          docs
+09/04/2024  11:24 AM           512,620 NUnit3TestAdapter.4.6.0.nupkg
+02/06/2023  04:38 AM            16,371 nunit_256.png
+               3 File(s)        541,945 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit3TestAdapter.4.6.0\build
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net462
+09/04/2024  11:46 AM    <DIR>          netcoreapp3.1
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit3TestAdapter.4.6.0\build\net462
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+07/18/2024  02:53 PM            18,432 nunit.engine.api.dll
+07/18/2024  02:53 PM           103,424 nunit.engine.core.dll
+07/18/2024  02:53 PM            77,312 nunit.engine.dll
+07/25/2024  11:05 PM           136,704 NUnit3.TestAdapter.dll
+07/25/2024  11:05 PM            45,476 NUnit3.TestAdapter.pdb
+12/16/2023  10:05 PM             1,620 NUnit3TestAdapter.props
+03/06/2023  01:31 AM           176,640 testcentric.engine.metadata.dll
+               7 File(s)        559,608 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit3TestAdapter.4.6.0\build\netcoreapp3.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+07/18/2024  02:53 PM            17,920 nunit.engine.api.dll
+07/18/2024  02:53 PM            82,432 nunit.engine.core.dll
+07/18/2024  02:53 PM            45,568 nunit.engine.dll
+07/25/2024  11:06 PM           135,680 NUnit3.TestAdapter.dll
+07/25/2024  11:06 PM            54,024 NUnit3.TestAdapter.pdb
+07/05/2023  01:43 AM             1,620 NUnit3TestAdapter.props
+03/06/2023  01:31 AM           177,664 testcentric.engine.metadata.dll
+               7 File(s)        514,908 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\NUnit3TestAdapter.4.6.0\docs
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+07/25/2024  11:05 PM             3,506 README.md
+               1 File(s)          3,506 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+03/24/2020  09:10 PM            18,702 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          lib
+02/19/2020  06:05 PM             1,139 LICENSE.TXT
+09/04/2024  11:46 AM    <DIR>          ref
+09/04/2024  11:24 AM            93,737 System.Buffers.4.5.1.nupkg
+02/19/2020  06:05 PM            15,835 THIRD-PARTY-NOTICES.TXT
+02/19/2020  06:05 PM                 0 useSharedDesignerContext.txt
+02/19/2020  06:05 PM                42 version.txt
+               6 File(s)        129,455 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net461
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.0
+09/04/2024  11:46 AM    <DIR>          netstandard1.1
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          uap10.0.16299
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\lib\net461
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            20,856 System.Buffers.dll
+02/19/2020  06:05 PM             3,481 System.Buffers.xml
+               2 File(s)         24,337 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\lib\netcoreapp2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\lib\netstandard1.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            20,864 System.Buffers.dll
+02/19/2020  06:05 PM             3,481 System.Buffers.xml
+               2 File(s)         24,345 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\lib\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            21,376 System.Buffers.dll
+02/19/2020  06:05 PM             3,481 System.Buffers.xml
+               2 File(s)         24,857 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\lib\uap10.0.16299
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\ref
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net45
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.0
+09/04/2024  11:46 AM    <DIR>          netstandard1.1
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          uap10.0.16299
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\ref\net45
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            14,720 System.Buffers.dll
+02/19/2020  06:05 PM             3,481 System.Buffers.xml
+               2 File(s)         18,201 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\ref\netcoreapp2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\ref\netstandard1.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            14,712 System.Buffers.dll
+02/19/2020  06:05 PM             3,481 System.Buffers.xml
+               2 File(s)         18,193 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\ref\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            14,720 System.Buffers.dll
+02/19/2020  06:05 PM             3,481 System.Buffers.xml
+               2 File(s)         18,201 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Buffers.4.5.1\ref\uap10.0.16299
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Memory.4.5.5
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/26/2022  08:29 PM            18,702 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          lib
+05/08/2022  11:31 AM             1,139 LICENSE.TXT
+09/04/2024  11:46 AM    <DIR>          ref
+09/04/2024  11:24 AM           208,978 System.Memory.4.5.5.nupkg
+05/08/2022  11:31 AM            15,835 THIRD-PARTY-NOTICES.TXT
+05/08/2022  11:31 AM                 0 useSharedDesignerContext.txt
+05/08/2022  11:31 AM                42 version.txt
+               6 File(s)        244,696 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Memory.4.5.5\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net461
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.1
+09/04/2024  11:46 AM    <DIR>          netstandard1.1
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Memory.4.5.5\lib\net461
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/08/2022  11:31 AM           142,240 System.Memory.dll
+05/08/2022  11:31 AM            13,950 System.Memory.xml
+               2 File(s)        156,190 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Memory.4.5.5\lib\netcoreapp2.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/08/2022  11:31 AM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Memory.4.5.5\lib\netstandard1.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/08/2022  11:31 AM           138,144 System.Memory.dll
+05/08/2022  11:31 AM            13,950 System.Memory.xml
+               2 File(s)        152,094 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Memory.4.5.5\lib\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/08/2022  11:31 AM           142,752 System.Memory.dll
+05/08/2022  11:31 AM            13,950 System.Memory.xml
+               2 File(s)        156,702 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Memory.4.5.5\ref
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.1
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Memory.4.5.5\ref\netcoreapp2.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/08/2022  11:31 AM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+12/18/2018  12:03 AM            22,354 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          lib
+05/15/2018  09:29 PM             1,139 LICENSE.TXT
+09/04/2024  11:46 AM    <DIR>          ref
+09/04/2024  11:24 AM           382,792 System.Numerics.Vectors.4.5.0.nupkg
+05/15/2018  09:29 PM            15,835 THIRD-PARTY-NOTICES.TXT
+05/15/2018  09:29 PM                 0 useSharedDesignerContext.txt
+05/15/2018  09:29 PM                42 version.txt
+               6 File(s)        422,162 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          MonoAndroid10
+09/04/2024  11:46 AM    <DIR>          MonoTouch10
+09/04/2024  11:46 AM    <DIR>          net46
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.0
+09/04/2024  11:46 AM    <DIR>          netstandard1.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          portable-net45+win8+wp8+wpa81
+09/04/2024  11:46 AM    <DIR>          uap10.0.16299
+09/04/2024  11:46 AM    <DIR>          xamarinios10
+09/04/2024  11:46 AM    <DIR>          xamarinmac20
+09/04/2024  11:46 AM    <DIR>          xamarintvos10
+09/04/2024  11:46 AM    <DIR>          xamarinwatchos10
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\MonoAndroid10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\MonoTouch10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\net46
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM           115,856 System.Numerics.Vectors.dll
+05/15/2018  09:29 PM           183,484 System.Numerics.Vectors.xml
+               2 File(s)        299,340 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\netcoreapp2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\netstandard1.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM           160,912 System.Numerics.Vectors.dll
+05/15/2018  09:29 PM           183,484 System.Numerics.Vectors.xml
+               2 File(s)        344,396 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM           163,464 System.Numerics.Vectors.dll
+05/15/2018  09:29 PM           183,484 System.Numerics.Vectors.xml
+               2 File(s)        346,948 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\portable-net45+win8+wp8+wpa81
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM           160,912 System.Numerics.Vectors.dll
+05/15/2018  09:29 PM           183,484 System.Numerics.Vectors.xml
+               2 File(s)        344,396 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\uap10.0.16299
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\xamarinios10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\xamarinmac20
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\xamarintvos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\lib\xamarinwatchos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          MonoAndroid10
+09/04/2024  11:46 AM    <DIR>          MonoTouch10
+09/04/2024  11:46 AM    <DIR>          net45
+09/04/2024  11:46 AM    <DIR>          net46
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.0
+09/04/2024  11:46 AM    <DIR>          netstandard1.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          uap10.0.16299
+09/04/2024  11:46 AM    <DIR>          xamarinios10
+09/04/2024  11:46 AM    <DIR>          xamarinmac20
+09/04/2024  11:46 AM    <DIR>          xamarintvos10
+09/04/2024  11:46 AM    <DIR>          xamarinwatchos10
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\MonoAndroid10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\MonoTouch10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\net45
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            38,032 System.Numerics.Vectors.dll
+05/15/2018  09:29 PM           183,484 System.Numerics.Vectors.xml
+               2 File(s)        221,516 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\net46
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            29,320 System.Numerics.Vectors.dll
+05/15/2018  09:29 PM           183,484 System.Numerics.Vectors.xml
+               2 File(s)        212,804 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\netcoreapp2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\netstandard1.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            38,272 System.Numerics.Vectors.dll
+05/15/2018  09:29 PM           183,484 System.Numerics.Vectors.xml
+               2 File(s)        221,756 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            38,272 System.Numerics.Vectors.dll
+05/15/2018  09:29 PM           183,484 System.Numerics.Vectors.xml
+               2 File(s)        221,756 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\uap10.0.16299
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\xamarinios10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\xamarinmac20
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\xamarintvos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Numerics.Vectors.4.5.0\ref\xamarinwatchos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+03/24/2020  09:10 PM            18,702 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          lib
+02/19/2020  06:05 PM             1,139 LICENSE.TXT
+09/04/2024  11:46 AM    <DIR>          ref
+09/04/2024  11:24 AM           102,160 System.Runtime.CompilerServices.Unsafe.4.5.3.nupkg
+02/19/2020  06:05 PM            15,835 THIRD-PARTY-NOTICES.TXT
+02/19/2020  06:05 PM                 0 useSharedDesignerContext.txt
+02/19/2020  06:05 PM                42 version.txt
+               6 File(s)        137,878 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net461
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.0
+09/04/2024  11:46 AM    <DIR>          netstandard1.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            16,768 System.Runtime.CompilerServices.Unsafe.dll
+02/19/2020  06:05 PM            14,080 System.Runtime.CompilerServices.Unsafe.xml
+               2 File(s)         30,848 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netcoreapp2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            16,248 System.Runtime.CompilerServices.Unsafe.dll
+02/19/2020  06:05 PM            14,080 System.Runtime.CompilerServices.Unsafe.xml
+               2 File(s)         30,328 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard1.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            16,768 System.Runtime.CompilerServices.Unsafe.dll
+02/19/2020  06:05 PM            14,080 System.Runtime.CompilerServices.Unsafe.xml
+               2 File(s)         30,848 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            16,768 System.Runtime.CompilerServices.Unsafe.dll
+02/19/2020  06:05 PM            14,080 System.Runtime.CompilerServices.Unsafe.xml
+               2 File(s)         30,848 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          net461
+09/04/2024  11:46 AM    <DIR>          netstandard1.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\net461
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            16,248 System.Runtime.CompilerServices.Unsafe.dll
+02/19/2020  06:05 PM            14,080 System.Runtime.CompilerServices.Unsafe.xml
+               2 File(s)         30,328 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\netstandard1.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            16,248 System.Runtime.CompilerServices.Unsafe.dll
+02/19/2020  06:05 PM            14,080 System.Runtime.CompilerServices.Unsafe.xml
+               2 File(s)         30,328 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\ref\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            16,976 System.Runtime.CompilerServices.Unsafe.dll
+02/19/2020  06:05 PM            14,080 System.Runtime.CompilerServices.Unsafe.xml
+               2 File(s)         31,056 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+03/24/2020  09:10 PM            18,703 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          lib
+02/19/2020  06:05 PM             1,139 LICENSE.TXT
+09/04/2024  11:46 AM    <DIR>          ref
+09/04/2024  11:24 AM            89,582 System.Threading.Tasks.Extensions.4.5.4.nupkg
+02/19/2020  06:05 PM            15,835 THIRD-PARTY-NOTICES.TXT
+02/19/2020  06:05 PM                 0 useSharedDesignerContext.txt
+02/19/2020  06:05 PM                42 version.txt
+               6 File(s)        125,301 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          MonoAndroid10
+09/04/2024  11:46 AM    <DIR>          MonoTouch10
+09/04/2024  11:46 AM    <DIR>          net461
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.1
+09/04/2024  11:46 AM    <DIR>          netstandard1.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          portable-net45+win8+wp8+wpa81
+09/04/2024  11:46 AM    <DIR>          xamarinios10
+09/04/2024  11:46 AM    <DIR>          xamarinmac20
+09/04/2024  11:46 AM    <DIR>          xamarintvos10
+09/04/2024  11:46 AM    <DIR>          xamarinwatchos10
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\MonoAndroid10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\MonoTouch10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            25,984 System.Threading.Tasks.Extensions.dll
+02/19/2020  06:05 PM            10,147 System.Threading.Tasks.Extensions.xml
+               2 File(s)         36,131 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\netcoreapp2.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\netstandard1.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            25,984 System.Threading.Tasks.Extensions.dll
+02/19/2020  06:05 PM            10,147 System.Threading.Tasks.Extensions.xml
+               2 File(s)         36,131 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            25,984 System.Threading.Tasks.Extensions.dll
+02/19/2020  06:05 PM            10,147 System.Threading.Tasks.Extensions.xml
+               2 File(s)         36,131 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\portable-net45+win8+wp8+wpa81
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM            25,984 System.Threading.Tasks.Extensions.dll
+02/19/2020  06:05 PM            10,147 System.Threading.Tasks.Extensions.xml
+               2 File(s)         36,131 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinios10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinmac20
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarintvos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinwatchos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\ref
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          MonoAndroid10
+09/04/2024  11:46 AM    <DIR>          MonoTouch10
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.1
+09/04/2024  11:46 AM    <DIR>          xamarinios10
+09/04/2024  11:46 AM    <DIR>          xamarinmac20
+09/04/2024  11:46 AM    <DIR>          xamarintvos10
+09/04/2024  11:46 AM    <DIR>          xamarinwatchos10
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\ref\MonoAndroid10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\ref\MonoTouch10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\ref\netcoreapp2.1
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinios10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinmac20
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarintvos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinwatchos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+02/19/2020  06:05 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+12/18/2018  12:20 AM            22,354 .signature.p7s
+09/04/2024  11:46 AM    <DIR>          lib
+05/15/2018  09:29 PM             1,139 LICENSE.TXT
+09/04/2024  11:46 AM    <DIR>          ref
+09/04/2024  11:24 AM           204,904 System.ValueTuple.4.5.0.nupkg
+05/15/2018  09:29 PM            15,835 THIRD-PARTY-NOTICES.TXT
+05/15/2018  09:29 PM                 0 useSharedDesignerContext.txt
+05/15/2018  09:29 PM                42 version.txt
+               6 File(s)        244,274 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          MonoAndroid10
+09/04/2024  11:46 AM    <DIR>          MonoTouch10
+09/04/2024  11:46 AM    <DIR>          net461
+09/04/2024  11:46 AM    <DIR>          net47
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.0
+09/04/2024  11:46 AM    <DIR>          netstandard1.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          portable-net40+sl4+win8+wp8
+09/04/2024  11:46 AM    <DIR>          uap10.0.16299
+09/04/2024  11:46 AM    <DIR>          xamarinios10
+09/04/2024  11:46 AM    <DIR>          xamarinmac20
+09/04/2024  11:46 AM    <DIR>          xamarintvos10
+09/04/2024  11:46 AM    <DIR>          xamarinwatchos10
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\MonoAndroid10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\MonoTouch10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\net461
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            78,992 System.ValueTuple.dll
+05/15/2018  09:29 PM            85,027 System.ValueTuple.xml
+               2 File(s)        164,019 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\net47
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            25,232 System.ValueTuple.dll
+05/15/2018  09:29 PM               142 System.ValueTuple.xml
+               2 File(s)         25,374 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\netcoreapp2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\netstandard1.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            78,992 System.ValueTuple.dll
+05/15/2018  09:29 PM            85,027 System.ValueTuple.xml
+               2 File(s)        164,019 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            79,496 System.ValueTuple.dll
+05/15/2018  09:29 PM            85,027 System.ValueTuple.xml
+               2 File(s)        164,523 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\uap10.0.16299
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\xamarinios10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\xamarinmac20
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\xamarintvos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\lib\xamarinwatchos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+09/04/2024  11:46 AM    <DIR>          MonoAndroid10
+09/04/2024  11:46 AM    <DIR>          MonoTouch10
+09/04/2024  11:46 AM    <DIR>          net461
+09/04/2024  11:46 AM    <DIR>          net47
+09/04/2024  11:46 AM    <DIR>          netcoreapp2.0
+09/04/2024  11:46 AM    <DIR>          netstandard2.0
+09/04/2024  11:46 AM    <DIR>          portable-net40+sl4+win8+wp8
+09/04/2024  11:46 AM    <DIR>          uap10.0.16299
+09/04/2024  11:46 AM    <DIR>          xamarinios10
+09/04/2024  11:46 AM    <DIR>          xamarinmac20
+09/04/2024  11:46 AM    <DIR>          xamarintvos10
+09/04/2024  11:46 AM    <DIR>          xamarinwatchos10
+               0 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\MonoAndroid10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\MonoTouch10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\net461
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            40,592 System.ValueTuple.dll
+               1 File(s)         40,592 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\net47
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            21,648 System.ValueTuple.dll
+               1 File(s)         21,648 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\netcoreapp2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\netstandard2.0
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\portable-net40+sl4+win8+wp8
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM            41,616 System.ValueTuple.dll
+               1 File(s)         41,616 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\uap10.0.16299
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\xamarinios10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\xamarinmac20
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\xamarintvos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\packages\System.ValueTuple.4.5.0\ref\xamarinwatchos10
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:46 AM    <DIR>          ..
+05/15/2018  09:29 PM                 0 _._
+               1 File(s)              0 bytes
+
+ Directory of D:\ZipLogToolWithTEST\ZipLogToolV3\Properties
+
+09/04/2024  11:46 AM    <DIR>          .
+09/04/2024  11:47 AM    <DIR>          ..
+09/04/2024  11:17 AM             1,427 AssemblyInfo.cs
+               1 File(s)          1,427 bytes
+
+     Total Files Listed:
+             685 File(s)     42,255,101 bytes
+            1227 Dir(s)  966,066,257,920 bytes free
