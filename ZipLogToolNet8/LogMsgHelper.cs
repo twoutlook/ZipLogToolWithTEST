@@ -20,7 +20,7 @@ namespace ZipLogToolNet8
         }
         public string msg(string tag, string message)
         {
-            return $"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|{tag}|{message}";
+            return $"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.FFFFF")}|{tag}|{message}";
         }
         public string msg( string message)
         {

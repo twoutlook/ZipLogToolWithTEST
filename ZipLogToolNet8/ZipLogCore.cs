@@ -925,82 +925,83 @@ namespace ZipLogTool
                     return false;
                 })
                 .ToList();
-
-            using (var zipArchive = ZipFile.Open(zipInfo.ZipFileName, ZipArchiveMode.Create))
+            try
             {
-                log.Add(m.msg($"  即將使用 {zipInfo.ZipFileName} 來壓入以下的目錄或檔案"));
-                foreach (var entry in entriesToZip)
+
+
+                using (var zipArchive = ZipFile.Open(zipInfo.ZipFileName, ZipArchiveMode.Create))
                 {
-                    log.Add(m.msg($"  看到 {entry}, 要先判斷是目錄或是檔案?"));
-                    if (Directory.Exists(entry))//目錄
+                    log.Add(m.msg($"  即將使用 {zipInfo.ZipFileName} 來壓入以下的目錄或檔案"));
+                    foreach (var entry in entriesToZip)
                     {
-                        log.Add(m.msg($"    是目錄"));
-                        foreach (var file in Directory.GetFiles(entry, "*", SearchOption.AllDirectories))
+                        log.Add(m.msg($"  看到 {entry}, 要先判斷是目錄或是檔案?"));
+                        if (Directory.Exists(entry))//目錄
                         {
-                            if (!file.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
+                            log.Add(m.msg($"    是目錄"));
+                            foreach (var file in Directory.GetFiles(entry, "*", SearchOption.AllDirectories))
                             {
-                                string relativePath = GetRelativePath(baseDir, file);
-                                zipArchive.CreateEntryFromFile(file, relativePath);
-                                log.Add(m.msg($"  zipArchive.CreateEntryFromFile(file, relativePath) ({file.ToString()},{relativePath.ToString()} )"));
+                                if (!file.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
+                                {
+                                    string relativePath = GetRelativePath(baseDir, file);
+
+                                    log.Add(m.msg($"    準備將目錄 {entry}"));
+                                    log.Add(m.msg($"    壓入 {zipInfo.ZipFileName} 其內部路徑成為 {relativePath}"));
 
 
-                                zipInfo.AddZippedItem(relativePath);
+                                    zipArchive.CreateEntryFromFile(file, relativePath);
+                                    //log.Add(m.msg($"  zipArchive.CreateEntryFromFile(file, relativePath) ({file.ToString()},{relativePath.ToString()} )"));
+                                    log.Add(m.msg($"    完成壓入, 並準備刪除原路徑 {entry}"));
 
-                                //localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|1|{zipInfo.ZipFileName} added {relativePath}!");
+                                    //zipInfo.AddZippedItem(relativePath);
+
+                                    //localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|1|{zipInfo.ZipFileName} added {relativePath}!");
+
+                                    // Delete the compressed file
+                                    File.Delete(file);
+                                    //log.Add(m.msg($" File.Delete(file) {file.ToString()}"));
+                                    log.Add(m.msg($"    刪除成功 "));
+                                    //localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|1|{relativePath} deleted !");
+
+                                }
+                            }
+
+                            // If all files have been compressed, delete the directory 檢查目錄是否已經沒有檔案，如果目錄已經空了，就刪除該目錄。
+                            if (Directory.GetFiles(entry, "*", SearchOption.AllDirectories).Length == 0)
+                            {
+                                Directory.Delete(entry, true);
+                            }
+                        }
+                        else//檔案
+                        {
+                            log.Add(m.msg($"    是檔案"));
+                            if (!entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
+                            {
+                                string relativePath = GetRelativePath(baseDir, entry);
+
+                                //log.Add(m.msg($"檔案  zipArchive.CreateEntryFromFile(entry, relativePath)"));
+                                log.Add(m.msg($"    準備將檔案 {entry}"));
+                                log.Add(m.msg($"    壓入 {zipInfo.ZipFileName} 其內部路徑成為 {relativePath}"));
+                                zipArchive.CreateEntryFromFile(entry, relativePath);
+                                log.Add(m.msg($"    完成壓入, 並準備刪除原始檔案 {entry}"));
+
+                                // zipInfo.AddZippedItem(relativePath);
 
                                 // Delete the compressed file
-                                File.Delete(file);
-                                log.Add(m.msg($" File.Delete(file) {file.ToString()}"));
-                                //localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|1|{relativePath} deleted !");
+                                File.Delete(entry);
+                                log.Add(m.msg($"    刪除成功 "));
 
                             }
                         }
-
-                        // If all files have been compressed, delete the directory 檢查目錄是否已經沒有檔案，如果目錄已經空了，就刪除該目錄。
-                        if (Directory.GetFiles(entry, "*", SearchOption.AllDirectories).Length == 0)
-                        {
-                            Directory.Delete(entry, true);
-                        }
                     }
-                    else//檔案
-                    {                      
-                        log.Add(m.msg($"    是檔案"));
-                        if (!entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
-                        {
-                            string relativePath = GetRelativePath(baseDir, entry);
-
-                            //log.Add(m.msg($"檔案  zipArchive.CreateEntryFromFile(entry, relativePath)"));
-                            log.Add(m.msg($"    準備將檔案 {entry}"));
-                            log.Add(m.msg($"    壓入 {zipInfo.ZipFileName} 其內部路徑成為 {relativePath}"));
-                            zipArchive.CreateEntryFromFile(entry, relativePath);
-                            log.Add(m.msg($"    完成壓入, 並準備刪除原始檔案 {entry}"));
-
-                           // zipInfo.AddZippedItem(relativePath);
-
-                            // Delete the compressed file
-                            File.Delete(entry);
-                            log.Add(m.msg($"     刪除成功 "));
-
-                        }
-                    }
-
-                    //throw new Exception("DEBUG ONLY BY MARK, TO SEE entriesToZip ONLY ONE ENTRY TO RUN");
-                    //log.Add(m.msg("[End]   early break"));
-                    //return log;
+                    log.Add(m.msg($"  壓縮成功的 {zipInfo.ZipFileName} "));
                 }
             }
-
-            // 這是先把所有 zip 生成及其內容 暫存 in memory, then to make log 
-            if (zipInfo.ZippedItems.Count > 0)
+            catch (Exception e)
             {
-                //localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|2|{zipInfo.ZipFileName} zip file created!");
-                //foreach (var item in zipInfo.ZippedItems)
-                //{
-                //    localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|2| - {zipInfo.BaseDir}\\{item} log file deleted!");
-                //    //      logWriter.WriteLine($"  - {zipInfo.BaseDir}\\{item}");
-                //}
+                log.Add(m.msg($"  壓縮失敗! {e.Message} "));
             }
-            log.Add(m.msg("[End]???"));
+
+            log.Add(m.msg("[End]"));
             return log;
         }
 
