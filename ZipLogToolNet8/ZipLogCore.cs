@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Net;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using ZipLogToolNet8;
+using System.Formats.Asn1;
 
 namespace ZipLogTool
 {
@@ -28,6 +29,8 @@ namespace ZipLogTool
         public IniData data;
         // Declare the cmdOutput field correctly
         private CmdOutput cmdOutput;
+        public PropertyCollection pathsSection;
+        public PropertyCollection optionsSection;
 
         //private INIParser iNIParser;
         // Constructor to initialize cmdOutput
@@ -41,10 +44,10 @@ namespace ZipLogTool
 
             // NOTE by Mark, 09/05, 兩個用法有差異
             data = ParseIniFile();
-            var pathsSection = data["Paths"];
+            pathsSection = data["Paths"];
             //var logSettings = data["LogSettings"];
 
-            var optionsSection = data["Options"];
+             optionsSection = data["Options"];
             //N = int.Parse(optionsSection["N"]);
             //M = int.Parse(optionsSection["M"]);
             //P = int.Parse(optionsSection["P"]);
@@ -1187,14 +1190,13 @@ Q=2
             return hasContentToZip;
         }
 
-
         public void Rule003ProcessPaths(string ver, IniData data, string logFilePath)
         {
             using (StreamWriter logWriter = new StreamWriter(logFilePath, true, Encoding.UTF8))
             {
                 int numDashes = 120; // Set this to the number of dashes you want
 
-                var pathsSection = data["Paths"];
+                //var pathsSection = data["Paths"];
                 //Dictionary<string, string> pathsSection = new Dictionary<string, string>
                 //{
                 //    { "Path1", @"D:\LAB\TESTCASE001" },
@@ -1296,6 +1298,59 @@ Q=2
                 logWriter.WriteLine($"******* ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] *******\n\n\n\n\n");
                 cmdOutput.WriteLine(1, $"=== ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] ===\n\n");
             }
+        }
+
+        public List<string> Rule003Action( )
+        {
+            var log= new List<string>();
+            var tag = "Rule003Action";
+            LogMsgHelper msgHelper = new LogMsgHelper();
+            log.Add(msgHelper.msg(tag, "[Start]"));
+            //using (StreamWriter logWriter = new StreamWriter(logFilePath, true, Encoding.UTF8))
+            if (true)
+            {
+                int numDashes = 120; // Set this to the number of dashes you want
+
+                var pathsSection = data["Paths"];
+                
+                // Process each path: compress and delete logs, then delete old ZIP files
+                foreach (var path in pathsSection)
+                {
+                  //  logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Processing path [{path.Key}]{path.Value} [Start]");
+
+                    // First part: Compress log files based on N and M, and delete original logs
+                    //Rule003CompressLogFiles_Plan(path.Key, path.Value, logWriter);
+                    var baseDir = path.Value;
+                    var localLogs = ZipDirLogBy2Parameters(baseDir, N, M);
+                    log.AddRange(localLogs);
+
+                    //  throw new Exception("by Mark, TESTING ZipDirLogBy2Parameters");
+
+
+
+
+                 //   Rule003CopyZipBack(path.Value, logWriter);
+
+                    // Second part: Delete old ZIP files based on Q
+
+                    //logWriter.WriteLine($"\n 先不刪 zip");
+
+                    // 另外月份的參數不給或是為零應該就是視為不刪除
+                    if (Q > 0)
+                    {
+                        //Rule003DeleteOldZipFiles(path.Value, Q, logWriter);
+                    }
+
+                    //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Processing path [{path.Key}]{path.Value} [End]");
+                    //logWriter.WriteLine(new string('-', numDashes));
+                }
+
+                //logWriter.WriteLine($"******* ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] *******\n\n\n\n\n");
+                //cmdOutput.WriteLine(1, $"=== ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] ===\n\n");
+            }
+            //msgHelper.msg(tag, "[End]");
+            log.Add(msgHelper.msg(tag, "[Start]"));
+            return log;
         }
         public List<string> Rule003ProcessPathsReturnLog(string ver, IniData data, string logFilePath)
         {

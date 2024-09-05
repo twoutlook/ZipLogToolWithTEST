@@ -21,8 +21,18 @@ namespace ZipLogTool
 
             if (args.Length == 0)
             {
-                zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
-            //    zipLogCore.Rule003ProcessPaths(string ver, IniData data, string logFilePath)
+                //zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
+                var log=zipLogCore.Rule003Action();
+              
+                foreach (var x in log)
+                {
+                    var info = x.Split("|");
+                    if (info.Length >= 2 && info[1] != "1")
+                    {
+                        Console.WriteLine(x);
+                    }
+
+                }
             }
             else if (args[0].Equals("-h", StringComparison.OrdinalIgnoreCase) || args[0].Equals("--help", StringComparison.OrdinalIgnoreCase))
             {
