@@ -21,7 +21,7 @@ namespace ZipLogTool
         //private string testCaseDir002 = "LAB\\TESTCASE002";
 
 
-        private const int fileSizeInKB = 130; // Desired file size in KB
+        private const int fileSizeInKB = 40; // Desired file size in KB
         static void DeleteDirectory(string dirPath)
         {
             if (Directory.Exists(dirPath))
