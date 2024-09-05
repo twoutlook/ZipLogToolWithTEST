@@ -29,7 +29,7 @@ namespace ZipLogTool
                     var info = x.Split("|");
                     if (info.Length >= 2 && info[1].Contains( "r3"))
                     {
-                        Console.WriteLine(x);
+                        Console.WriteLine(info[1] + "|" + info[2]);
                     }
 
                 }

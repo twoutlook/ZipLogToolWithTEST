@@ -541,13 +541,13 @@ namespace ZipLogTool
                         // 如果不是同一天，則進行壓縮操作
                         //CreateZipFileExtV2(baseDir, entriesToZip, firstDate.Value, lastDate.Value, logWriter);
                         //CreateZipFileExtV3(baseDir, firstDate.Value, lastDate.Value, logWriter);
-                        log.Add(m.msg($"  to zip {firstDate.Value.ToString("yyyy-MM-dd")}_{lastDate.Value.ToString("yyyy-MM-dd")}"));
+                        log.Add(m.msg($"  to zip {firstDate.Value.ToString("yyyy-MM-dd")}_{lastDate.Value.ToString("yyyy-MM-dd")} 開始"));
 
                         var subLog = CreateZipFileExtrReturnLog(tag, baseDir, firstDate.Value, lastDate.Value);
-
-                        log.Add(m.msg($"  to zip {firstDate.Value.ToString("yyyy-MM-dd")}_{lastDate.Value.ToString("yyyy-MM-dd")} done!"));
-
                         log.AddRange(subLog);
+                        log.Add(m.msg($"  to zip {firstDate.Value.ToString("yyyy-MM-dd")}_{lastDate.Value.ToString("yyyy-MM-dd")} 完成"));
+
+                       
 
 
                         entriesToZip.Clear();
@@ -894,7 +894,7 @@ namespace ZipLogTool
             // Set the target directory for storing the ZIP file
             string zipOutputDir = $"{baseDir}_ZIP";
             log.Add(m.msg($"  baseDir ={baseDir}"));
-            log.Add(m.msg($"  zipOutputDir ={zipOutputDir}"));
+            //log.Add(m.msg($"  zipOutputDir ={zipOutputDir}"));
 
             // 確認了 在.net 8, 是可以直接在 工作目錄 zip 而不會有不必要的干擾
             // 在 4.7 事實上是花了額外時間處理 上述的 干擾
