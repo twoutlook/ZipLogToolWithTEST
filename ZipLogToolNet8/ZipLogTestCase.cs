@@ -23,8 +23,38 @@ namespace ZipLogTool
 
         private const int fileSizeInKB = 3; // Desired file size in KB
 
+
+        static void DeleteDirectory(string dirPath)
+        {
+            if (Directory.Exists(dirPath))
+            {
+                Directory.Delete(dirPath, true); // 'true' to delete the directory and its contents
+                Console.WriteLine($"Deleted directory: {dirPath}");
+            }
+            else
+            {
+                Console.WriteLine($"Directory does not exist: {dirPath}");
+            }
+        }
+
+
+
         // Method for TESTCASE001: Folder creation basis with log files every 2 hours
-        public void InitTestCase001()
+        public void DeleteTestCaseDirs()
+        {
+            try
+            {
+                DeleteDirectory(testCaseDir001);
+                DeleteDirectory(testCaseDir002);
+
+                Console.WriteLine("Directories deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+            public void InitTestCase001()
         {
             // 如果 TESTCASE001 目錄已經存在，則不執行任何操作
             if (Directory.Exists(testCaseDir001))

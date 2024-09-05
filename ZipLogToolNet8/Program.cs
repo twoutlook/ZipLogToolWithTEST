@@ -24,6 +24,16 @@ namespace ZipLogTool
             {
                 DisplayHelp();
             }
+            else if (args[0].Equals("reset", StringComparison.OrdinalIgnoreCase))
+            {
+                var testCase = new ZipLogTestCase(2);
+                testCase.DeleteTestCaseDirs();
+            }
+            else if (args[0].Equals("help", StringComparison.OrdinalIgnoreCase))
+            {
+                DisplayHelp();
+            }
+
             else if (args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
             {
                 var testCase = new ZipLogTestCase(2);
@@ -50,10 +60,12 @@ namespace ZipLogTool
         static void DisplayHelp()
         {
             Console.WriteLine("Usage: ZipLogTool [options]");
+            Console.WriteLine("       without [options] is to run");
             Console.WriteLine();
             Console.WriteLine("Options:");
-            Console.WriteLine("  -h|--help         Display help.");
-            Console.WriteLine("  init              Initialize test cases.");
+            Console.WriteLine("  help    Display help.");
+            Console.WriteLine("  reset   Reset TESTCASE 2 folders. ");
+            Console.WriteLine("  init    Initialize TESTCASE 2 folders.");
             Console.WriteLine();
         }
 

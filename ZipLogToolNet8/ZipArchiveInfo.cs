@@ -11,10 +11,18 @@ namespace ZipLogTool
         public string ZipFileName { get; private set; }
         public List<string> ZippedItems { get; private set; }
         public string BaseDir { get; private set; }
+        public string TempZipBaseDir { get; private set; }
 
         public ZipArchiveInfo(string baseDir, DateTime fromDate, DateTime toDate, int suffix = 0)
         {
             BaseDir = baseDir;
+            ZipFileName = GenerateZipFileName(fromDate, toDate, suffix);
+            ZippedItems = new List<string>();
+        }
+        public ZipArchiveInfo(string baseDir, string tempZipBaseDir, DateTime fromDate, DateTime toDate, int suffix = 0)
+        {
+            BaseDir = baseDir;
+            TempZipBaseDir = tempZipBaseDir;
             ZipFileName = GenerateZipFileName(fromDate, toDate, suffix);
             ZippedItems = new List<string>();
         }
