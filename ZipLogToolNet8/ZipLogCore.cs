@@ -479,14 +479,36 @@ namespace ZipLogTool
                     .Where(entry => !entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
                     .ToList();
                 log.Add(m.msg($"  non-zip count : {entriesNoZip.Count()}"));
-             
+
+                /*
+                 * 
+                @Mark陳炳陵 我初步執行了一下你提交的壓縮程式, 這邊需要跟你確認幾個問題:
+1.把程式跟壓縮的目標放在同一個資料夾下,會報錯.
+2.同樣的壓縮檔名沒有產生 _01...., 壓縮檔被強制蓋過去.
+3.目前這個程式有沒有卡控同一個時間只能執行一次這個程式?
+
+
+1. TODO 程式要排除不要處理的 folder/file
+2. 4.7 還沒實現, .NET8已實現
+3. .NET8 雖然可以兩支同時執行, 但會搶, @bowman隆 指導去檢查 PID 是否在執行, 如果是第二個就不可以執行
+4. 再確認 config.ini 改後是否正常  : 4.7OK, .NET8 NOT OK
+以 4.7 優先
+                */
+
+
 
                 // 過濾並排序項目
+                // BUG, 如有 xxx.txt, 會 DateTime.TryParseExact(entryName.Substring(0, 10) 出錯
                 var filteredEntries = entriesNoZip
                     .Where(entry =>
                     {
                         string entryName = Path.GetFileName(entry);
-                        if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+                        //if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+                        // Check if the file name is at least 10 characters long before attempting to extract the date part
+                        // BUG FIXED 
+                        if (entryName.Length >= 10 &&
+                            DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+
                         {
                             return entryDate <= DateTime.Now.AddDays(-N);
                         }
