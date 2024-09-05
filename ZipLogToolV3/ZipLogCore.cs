@@ -443,11 +443,13 @@ namespace ZipLogTool
         private void CreateZipFileExtV3(string baseDir, DateTime fromDate, DateTime toDate, StreamWriter logWriter)
         {
             // Set the target directory for storing the ZIP file
-            string zipOutputDir = $"{baseDir}_ZIP";
-            if (!Directory.Exists(zipOutputDir))
-            {
-                Directory.CreateDirectory(zipOutputDir);
-            }
+            //string zipOutputDir = $"{baseDir}_ZIP";
+            string zipOutputDir = $"{baseDir}";// NOTE: previous BUG, now it's not a problem
+
+            //if (!Directory.Exists(zipOutputDir))
+            //{
+            //    Directory.CreateDirectory(zipOutputDir);
+            //}
 
             // Create ZipArchiveInfo, and store the ZIP file in the specified target directory
             var zipInfo = new ZipArchiveInfo(baseDir,zipOutputDir, fromDate, toDate);
@@ -516,17 +518,17 @@ namespace ZipLogTool
             }
 
             // 
-            if (zipInfo.ZippedItems.Count > 0)
-            {
+            //if (zipInfo.ZippedItems.Count > 0)
+            //{
 
 
-                logWriter.WriteLine($"ZIP file created: {zipInfo.ZipFileName}");
-                logWriter.WriteLine("Zipped and deleted items:");
-                foreach (var item in zipInfo.ZippedItems)
-                {
-                    logWriter.WriteLine($"  - {zipInfo.BaseDir}\\{item}");
-                }
-            }
+            //    logWriter.WriteLine($"ZIP file created: {zipInfo.ZipFileName}");
+            //    logWriter.WriteLine("Zipped and deleted items:");
+            //    foreach (var item in zipInfo.ZippedItems)
+            //    {
+            //        logWriter.WriteLine($"  - {zipInfo.BaseDir}\\{item}");
+            //    }
+            //}
         }
 
 
@@ -1019,7 +1021,7 @@ Q=2
                     // First part: Compress log files based on N and M, and delete original logs
                     Rule003CompressLogFiles_Plan(path.KeyName, path.Value, logWriter);
 
-                    Rule003CopyZipBack(path.Value, logWriter);
+                  //  Rule003CopyZipBack(path.Value, logWriter);
 
                     // Second part: Delete old ZIP files based on Q
 
