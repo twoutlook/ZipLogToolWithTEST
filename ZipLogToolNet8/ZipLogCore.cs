@@ -454,6 +454,139 @@ namespace ZipLogTool
                 throw;
             }
         }
+        private List<string> ZipDirLogBy2Parameters(string tagCaller, string baseDir, int DaysNotToZip, int ZipEveryDays)
+        {
+            var log = new List<string>();
+            var tag = tagCaller+"-"+"zip";
+            LogMsgHelper m = new LogMsgHelper(tag);
+            log.Add(m.msg("[Start]"));
+            try
+            {
+
+
+
+                var entries = Directory.GetFileSystemEntries(baseDir, "*", SearchOption.TopDirectoryOnly);
+
+                log.Add(m.msg($"ZipDirLogBy2Parameters"));
+                log.Add(m.msg($"baseDir={baseDir}"));
+
+                log.Add(m.msg($"  DaysNotToZip={DaysNotToZip}"));
+                log.Add(m.msg($"  ZipEveryDays={ZipEveryDays}"));
+                log.Add(m.msg($"  count : {entries.Count()}"));
+
+                //var topLevel = new List<TopLevelEntry>();
+                var entriesNoZip = entries
+                    .Where(entry => !entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+                log.Add(m.msg($"  non-zip count : {entriesNoZip.Count()}"));
+             
+
+                // 過濾並排序項目
+                var filteredEntries = entriesNoZip
+                    .Where(entry =>
+                    {
+                        string entryName = Path.GetFileName(entry);
+                        if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+                        {
+                            return entryDate <= DateTime.Now.AddDays(-N);
+                        }
+                        return false;
+                    })
+                    .OrderBy(entry => Path.GetFileName(entry).Substring(0, 10))  // 根據檔案或資料夾名稱中的日期進行排序
+                    .ToList();
+                log.Add(m.msg($"  yyyy-MM-dd count, considered DaysNotToZip : {filteredEntries.Count()}"));
+
+                var entriesToZip = new List<string>();
+                DateTime? firstDate = null;
+                DateTime? lastDate = null;
+                DateTime? flagDate = null;
+
+                bool flagSameDate = true;
+
+                // 當累積了 M 天後，進行壓縮操作
+                bool flag1 = false;
+
+
+                int dayCount = 0;
+
+                for (int i = 0; i < filteredEntries.Count; i++)
+                {
+                    var entry = filteredEntries[i];
+                    string entryName = Path.GetFileName(entry);
+                    DateTime entryDate = DateTime.ParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null);
+
+                    if (firstDate == null)
+                    {
+                        firstDate = entryDate;
+                    }
+
+                    // 累積天數
+                    if (lastDate == null || entryDate != lastDate)
+                    {
+                        dayCount++;
+                        lastDate = entryDate;
+
+                        flagDate = entryDate;
+                    }
+
+                    // 
+                    entriesToZip.Add(entry);
+
+                    // 當累積了 M 天後，進行壓縮操作
+                    if (dayCount == M)
+                    {
+
+                        // TODO to i++ if the same date
+
+                        // 如果不是同一天，則進行壓縮操作
+                        //CreateZipFileExtV2(baseDir, entriesToZip, firstDate.Value, lastDate.Value, logWriter);
+                        //CreateZipFileExtV3(baseDir, firstDate.Value, lastDate.Value, logWriter);
+                        log.Add(m.msg($"  to zip {firstDate.Value.ToString("yyyy-MM-dd")}_{lastDate.Value.ToString("yyyy-MM-dd")}"));
+
+                        var subLog = CreateZipFileExtrReturnLog(tag, baseDir, firstDate.Value, lastDate.Value);
+
+                        log.Add(m.msg($"  to zip {firstDate.Value.ToString("yyyy-MM-dd")}_{lastDate.Value.ToString("yyyy-MM-dd")} done!"));
+
+                        log.AddRange(subLog);
+
+
+                        entriesToZip.Clear();
+                        dayCount = 0;
+                        firstDate = null;
+                        lastDate = null;
+
+
+                        // NOTE by Mark, 一個快轉OK!
+                        //由於  CreateZipFileExtV2
+                        for (int k = 0; k < 100; k++)
+                        {
+
+                            var j = 1 + i;
+                            if (j < filteredEntries.Count)
+                            {
+                                var entryPeek = filteredEntries[j];
+                                string entryNamePeek = Path.GetFileName(entryPeek);
+                                DateTime entryDatePeek = DateTime.ParseExact(entryNamePeek.Substring(0, 10), "yyyy-MM-dd", null);
+                                if (entryDatePeek == flagDate)
+                                {
+                                    i++;
+                                }
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+                log.Add(m.msg("[End]"));
+                return log;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
 
         private void ProcessEntriesForCompression(string baseDir, string[] entries, StreamWriter logWriter)
         {
@@ -658,7 +791,6 @@ namespace ZipLogTool
             }
         }
 
-
         private List<string> CreateZipFileExtrReturnLog(string baseDir, DateTime fromDate, DateTime toDate)
         {
             List<string> localLog = new List<string>();
@@ -747,6 +879,129 @@ namespace ZipLogTool
                 }
             }
             return localLog;
+        }
+
+
+        private List<string> CreateZipFileExtrReturnLog(string tagCaller,string baseDir, DateTime fromDate, DateTime toDate)
+        {
+
+            var log = new List<string>();
+            var tag = tagCaller + "-" + "act";
+            LogMsgHelper m = new LogMsgHelper(tag);
+            log.Add(m.msg("[Start]"));
+
+           
+            // Set the target directory for storing the ZIP file
+            string zipOutputDir = $"{baseDir}_ZIP";
+            log.Add(m.msg($"  baseDir ={baseDir}"));
+            log.Add(m.msg($"  zipOutputDir ={zipOutputDir}"));
+
+            // 確認了 在.net 8, 是可以直接在 工作目錄 zip 而不會有不必要的干擾
+            // 在 4.7 事實上是花了額外時間處理 上述的 干擾
+            //if (!Directory.Exists(zipOutputDir))
+            //{
+            //    Directory.CreateDirectory(zipOutputDir);
+            //}
+
+            // Create ZipArchiveInfo, and store the ZIP file in the specified target directory
+            //var zipInfo = new ZipArchiveInfo(zipOutputDir, fromDate, toDate);
+            var zipInfo = new ZipArchiveInfo(baseDir, $"{baseDir}_ZIP", fromDate, toDate);
+
+            zipInfo.EnsureUniqueFileName();
+
+            // Need to check 
+            // creating..., not actually created
+            //logWriter.WriteLine($"\nCreating ZIP file: {zipInfo.ZipFileName}");
+
+            // Retrieve all directories and files in the baseDir that match the date range
+            var entriesToZip = Directory.GetFileSystemEntries(baseDir, "*", SearchOption.TopDirectoryOnly)
+                .Where(entry =>
+                {
+                    string entryName = Path.GetFileName(entry);
+                    if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+                    {
+                        return entryDate >= fromDate && entryDate <= toDate;
+                    }
+                    return false;
+                })
+                .ToList();
+
+            using (var zipArchive = ZipFile.Open(zipInfo.ZipFileName, ZipArchiveMode.Create))
+            {
+                log.Add(m.msg($"  即將使用 {zipInfo.ZipFileName} 來壓入以下的目錄或檔案"));
+                foreach (var entry in entriesToZip)
+                {
+                    log.Add(m.msg($"  看到 {entry}, 要先判斷是目錄或是檔案?"));
+                    if (Directory.Exists(entry))//目錄
+                    {
+                        log.Add(m.msg($"    是目錄"));
+                        foreach (var file in Directory.GetFiles(entry, "*", SearchOption.AllDirectories))
+                        {
+                            if (!file.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
+                            {
+                                string relativePath = GetRelativePath(baseDir, file);
+                                zipArchive.CreateEntryFromFile(file, relativePath);
+                                log.Add(m.msg($"  zipArchive.CreateEntryFromFile(file, relativePath) ({file.ToString()},{relativePath.ToString()} )"));
+
+
+                                zipInfo.AddZippedItem(relativePath);
+
+                                //localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|1|{zipInfo.ZipFileName} added {relativePath}!");
+
+                                // Delete the compressed file
+                                File.Delete(file);
+                                log.Add(m.msg($" File.Delete(file) {file.ToString()}"));
+                                //localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|1|{relativePath} deleted !");
+
+                            }
+                        }
+
+                        // If all files have been compressed, delete the directory 檢查目錄是否已經沒有檔案，如果目錄已經空了，就刪除該目錄。
+                        if (Directory.GetFiles(entry, "*", SearchOption.AllDirectories).Length == 0)
+                        {
+                            Directory.Delete(entry, true);
+                        }
+                    }
+                    else//檔案
+                    {                      
+                        log.Add(m.msg($"    是檔案"));
+                        if (!entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)) // Exclude .zip files
+                        {
+                            string relativePath = GetRelativePath(baseDir, entry);
+
+                            //log.Add(m.msg($"檔案  zipArchive.CreateEntryFromFile(entry, relativePath)"));
+                            log.Add(m.msg($"    準備將檔案 {entry}"));
+                            log.Add(m.msg($"    壓入 {zipInfo.ZipFileName} 其內部路徑成為 {relativePath}"));
+                            zipArchive.CreateEntryFromFile(entry, relativePath);
+                            log.Add(m.msg($"    完成壓入, 並準備刪除原始檔案 {entry}"));
+
+                           // zipInfo.AddZippedItem(relativePath);
+
+                            // Delete the compressed file
+                            File.Delete(entry);
+                            log.Add(m.msg($"     刪除成功 "));
+
+                        }
+                    }
+
+                    //throw new Exception("DEBUG ONLY BY MARK, TO SEE entriesToZip ONLY ONE ENTRY TO RUN");
+                    //log.Add(m.msg("[End]   early break"));
+                    //return log;
+                }
+            }
+
+            // 這是先把所有 zip 生成及其內容 暫存 in memory, then to make log 
+            if (zipInfo.ZippedItems.Count > 0)
+            {
+                //localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|2|{zipInfo.ZipFileName} zip file created!");
+                //foreach (var item in zipInfo.ZippedItems)
+                //{
+                //    localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.ffff")}|2| - {zipInfo.BaseDir}\\{item} log file deleted!");
+                //    //      logWriter.WriteLine($"  - {zipInfo.BaseDir}\\{item}");
+                //}
+            }
+            log.Add(m.msg("[End]???"));
+            return log;
         }
 
 
@@ -1300,12 +1555,12 @@ Q=2
             }
         }
 
-        public List<string> Rule003Action( )
+        public List<string> R3Action( )
         {
             var log= new List<string>();
-            var tag = "Rule003Action";
-            LogMsgHelper msgHelper = new LogMsgHelper();
-            log.Add(msgHelper.msg(tag, "[Start]"));
+            var tag = "r3";
+            LogMsgHelper m = new LogMsgHelper(tag);
+            log.Add(m.msg("[Start]"));
             //using (StreamWriter logWriter = new StreamWriter(logFilePath, true, Encoding.UTF8))
             if (true)
             {
@@ -1321,7 +1576,7 @@ Q=2
                     // First part: Compress log files based on N and M, and delete original logs
                     //Rule003CompressLogFiles_Plan(path.Key, path.Value, logWriter);
                     var baseDir = path.Value;
-                    var localLogs = ZipDirLogBy2Parameters(baseDir, N, M);
+                    var localLogs = ZipDirLogBy2Parameters(tag, baseDir, N, M);
                     log.AddRange(localLogs);
 
                     //  throw new Exception("by Mark, TESTING ZipDirLogBy2Parameters");
@@ -1349,7 +1604,7 @@ Q=2
                 //cmdOutput.WriteLine(1, $"=== ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] ===\n\n");
             }
             //msgHelper.msg(tag, "[End]");
-            log.Add(msgHelper.msg(tag, "[Start]"));
+            log.Add(m.msg("[End]"));
             return log;
         }
         public List<string> Rule003ProcessPathsReturnLog(string ver, IniData data, string logFilePath)

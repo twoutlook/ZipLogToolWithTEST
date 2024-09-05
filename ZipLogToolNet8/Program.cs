@@ -22,12 +22,12 @@ namespace ZipLogTool
             if (args.Length == 0)
             {
                 //zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
-                var log=zipLogCore.Rule003Action();
+                var log=zipLogCore.R3Action();
               
                 foreach (var x in log)
                 {
                     var info = x.Split("|");
-                    if (info.Length >= 2 && info[1] != "1")
+                    if (info.Length >= 2 && info[1].Contains( "r3"))
                     {
                         Console.WriteLine(x);
                     }
@@ -63,7 +63,7 @@ namespace ZipLogTool
             }
             else if (args[0].Equals("run", StringComparison.OrdinalIgnoreCase))
             {
-                zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
+              //  zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
             }
             else if (args[0].Equals("spec", StringComparison.OrdinalIgnoreCase))
             {
