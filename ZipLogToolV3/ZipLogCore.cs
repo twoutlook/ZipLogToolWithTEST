@@ -59,7 +59,7 @@ namespace ZipLogTool
             // Initialize cmdOutput with the verbosity level
             cmdOutput = new CmdOutput(verbosityLevel);
         }
-         private void Rule003DeleteOldZipFiles(string baseDir, int qMonths, StreamWriter logWriter)
+        private void Rule003DeleteOldZipFiles(string baseDir, int qMonths, StreamWriter logWriter)
         {
             logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
             cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003: Deleting old ZIP files in: {baseDir} [Start]");
@@ -94,7 +94,7 @@ namespace ZipLogTool
                     if (DateTime.TryParseExact(toDateString, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out zipFileDate))
                     {
                         int fileAgeInDays = (DateTime.Now - zipFileDate).Days;
-                       
+
 
                         if (zipFileDate < deleteBeforeDate)
                         {
@@ -128,7 +128,7 @@ namespace ZipLogTool
         private void Rule003CompressLogFiles_Plan(string pathKey, string baseDir, StreamWriter logWriter)
         {
             //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CompressLogFiles_Plan");
-            cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003 Plan: Listing top-level folders and files in: {pathKey} => {baseDir}");
+            cmdOutput.WriteLine(99, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003 Plan: Listing top-level folders and files in: {pathKey} => {baseDir}");
 
             if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
             {
@@ -141,7 +141,7 @@ namespace ZipLogTool
             if (entries.Length == 0)
             {
                 logWriter.WriteLine($" [Rule003CompressLogFiles_Plan]: No folders or files found in the directory: {baseDir}");
-                cmdOutput.WriteLine(1, $"Rule003 Plan: No folders or files found in the directory: {baseDir}");
+                cmdOutput.WriteLine(99, $"Rule003 Plan: No folders or files found in the directory: {baseDir}");
             }
             else
             {
@@ -259,13 +259,18 @@ namespace ZipLogTool
 
 
 
+            //  if (entryName.Length >= 10 &&
+            //DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
 
             // 過濾並排序項目
             var filteredEntries = entriesNoZip
                 .Where(entry =>
                 {
                     string entryName = Path.GetFileName(entry);
-                    if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+                    //     if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+                    if (entryName.Length >= 10 &&
+                        DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+
                     {
                         return entryDate <= DateTime.Now.AddDays(-N);
                     }
@@ -444,7 +449,12 @@ namespace ZipLogTool
                 .Where(entry =>
                 {
                     string entryName = Path.GetFileName(entry);
-                    if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+
+                    // BUG FIXED:  xxx.log 檢查　yyyy-MM-dd　之前尚先確認最小檔案名稱的長度
+                    if (entryName.Length >= 10 &&
+                     DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+
+                        //if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
                     {
                         return entryDate >= fromDate && entryDate <= toDate;
                     }
@@ -966,7 +976,7 @@ Q=2
                 logWriter.WriteLine($"[Options]");
                 logWriter.WriteLine($"  N={N} : Number of days before which log files will be compressed.");
                 logWriter.WriteLine($"  M={M} : Number of days of log data to include in each ZIP file.");
-               
+
                 if (IS_Q)
                 {
 

@@ -21,8 +21,35 @@ namespace ZipLogTool
         //private string testCaseDir002 = "LAB\\TESTCASE002";
 
 
-        private const int fileSizeInKB = 3; // Desired file size in KB
+        private const int fileSizeInKB = 30; // Desired file size in KB
+        static void DeleteDirectory(string dirPath)
+        {
+            if (Directory.Exists(dirPath))
+            {
+                Directory.Delete(dirPath, true); // 'true' to delete the directory and its contents
+                //Console.WriteLine($"Deleted directory: {dirPath}");
+            }
+            else
+            {
+                //Console.WriteLine($"Directory does not exist: {dirPath}");
+            }
+        }
+        public void DeleteTestCaseDirs()
+        {
+            try
+            {
+                DeleteDirectory(testCaseDir001);
+                DeleteDirectory(testCaseDir002);
+                DeleteDirectory(testCaseDir001 + "_ZIP");
+                DeleteDirectory(testCaseDir002 + "_ZIP");
 
+                Console.WriteLine("Reset successfully!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
         // Method for TESTCASE001: Folder creation basis with log files every 2 hours
         public void InitTestCase001()
         {

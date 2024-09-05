@@ -30,7 +30,7 @@ namespace ZipLogTool
                 return; // 結束應用程式
             }
 
-            Console.WriteLine($"[ver{ZipLogToolVer}] 程序開始執行...");
+            Console.WriteLine($".NET8[ver{ZipLogToolVer}] 程序開始執行...");
 
 
 
@@ -51,7 +51,7 @@ namespace ZipLogTool
                     }
 
                 }
-                Console.WriteLine($"[ver{ZipLogToolVer}] 程序執行完成");
+                Console.WriteLine($".NET8[ver{ZipLogToolVer}] 程序執行完成");
             }
             else if (args[0].Equals("-h", StringComparison.OrdinalIgnoreCase) || args[0].Equals("--help", StringComparison.OrdinalIgnoreCase))
             {
@@ -61,6 +61,7 @@ namespace ZipLogTool
             {
                 var testCase = new ZipLogTestCase(2);
                 testCase.DeleteTestCaseDirs();
+                Console.WriteLine($".NET8[ver{ZipLogToolVer}] 程序執行完成");
             }
             else if (args[0].Equals("help", StringComparison.OrdinalIgnoreCase))
             {
@@ -72,6 +73,7 @@ namespace ZipLogTool
                 var testCase = new ZipLogTestCase(2);
                 testCase.InitTestCase001();
                 testCase.InitTestCase002();
+                Console.WriteLine($".NET8[ver{ZipLogToolVer}] 程序執行完成");
             }
             else if (args[0].Equals("unzip", StringComparison.OrdinalIgnoreCase))
             {
@@ -79,6 +81,7 @@ namespace ZipLogTool
                 string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
                 string logFileName = $"{currentDate}_ZipLogTool_Unzip.log";
                 string logFilePath = Path.Combine("logs", logFileName);
+                Console.WriteLine($".NET8[ver{ZipLogToolVer}] 程序執行完成");
             }
             else if (args[0].Equals("run", StringComparison.OrdinalIgnoreCase))
             {
