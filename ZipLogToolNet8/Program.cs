@@ -34,11 +34,12 @@ class Program
 
 
 
-        var zipLogCore = new ZipLogCore(2);
-        var zipLogUtil = new ZipLogUtil(2);
+
 
         if (args.Length == 0)
         {
+            var zipLogCore = new ZipLogCore(2);
+            var zipLogUtil = new ZipLogUtil(2);
             //zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
             var log=zipLogCore.R3Action();
           

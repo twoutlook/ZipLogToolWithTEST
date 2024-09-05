@@ -55,7 +55,8 @@ namespace ZipLogTool
                 //沒設視為0
             }
             //ConfigureLogSettings(data);
-            Console.WriteLine($"--------------");
+            var numDashes = 100;
+            Console.WriteLine(new string('-', numDashes));
             Console.WriteLine("[Paths]");
             foreach (var x in pathsSection)
             {
@@ -68,7 +69,7 @@ namespace ZipLogTool
             {
                 Console.WriteLine($"Q={Q}");
             }
-            Console.WriteLine($"---------------------");
+            Console.WriteLine(new string('-', numDashes));
             // Initialize cmdOutput with the verbosity level
             cmdOutput = new CmdOutput(verbosityLevel);
         }
@@ -115,6 +116,7 @@ namespace ZipLogTool
                             //logWriter.WriteLine($"  - [ZIP File] {zipFile} deleted (Age: {fileAgeInDays} days)");
                             cmdOutput.WriteLine(1, $"  - [ZIP File] {zipFile} deleted (Age: {fileAgeInDays} days)");
                             logWriter.WriteLine($"  - {zipFile} (Age: {fileAgeInDays} days) deleted");
+                            Console.WriteLine($" - {zipFile} (Age: {fileAgeInDays} days) deleted");
                         }
                         else
                         {
@@ -141,7 +143,7 @@ namespace ZipLogTool
         private void Rule003CompressLogFiles_Plan(string pathKey, string baseDir, StreamWriter logWriter)
         {
             //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003CompressLogFiles_Plan");
-            cmdOutput.WriteLine(99, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003 Plan: Listing top-level folders and files in: {pathKey} => {baseDir}");
+            //cmdOutput.WriteLine(99, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Rule003 Plan: Listing top-level folders and files in: {pathKey} => {baseDir}");
 
             if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
             {
@@ -262,21 +264,22 @@ namespace ZipLogTool
                 .Where(entry => !entry.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
                 .ToList();
 
-            //foreach (var entry in entriesNoZip)
-            //{
-            //    string entryType = Directory.Exists(entry) ? "Folder" : "File";
-            //    logWriter.WriteLine($"  - [{entryType}] {entry}");
-            //    cmdOutput.WriteLine(1, $"  - [{entryType}] {entry}");
-            //}
+            // 
+            //var entriesNoZipMustBeLogTxt = entriesNoZip
+            //    .Where(entry => entry.EndsWith(".log", StringComparison.OrdinalIgnoreCase) ||
+            //            entry.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))   // Only include .log or .txt files
+            //    .ToList();
 
 
-
-
-            //  if (entryName.Length >= 10 &&
-            //DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+            var entriesNoZipMustBeLogTxt = entriesNoZip
+    .Where(entry =>
+        entry.EndsWith(".log", StringComparison.OrdinalIgnoreCase) ||   // Include .log files
+        entry.EndsWith(".txt", StringComparison.OrdinalIgnoreCase) ||   // Include .txt files
+        string.IsNullOrEmpty(Path.GetExtension(entry)))                 // Include files with no extension
+    .ToList();
 
             // 過濾並排序項目
-            var filteredEntries = entriesNoZip
+            var filteredEntries = entriesNoZipMustBeLogTxt
                 .Where(entry =>
                 {
                     string entryName = Path.GetFileName(entry);
@@ -289,7 +292,8 @@ namespace ZipLogTool
                     }
                     return false;
                 })
-                .OrderBy(entry => Path.GetFileName(entry).Substring(0, 10))  // 根據檔案或資料夾名稱中的日期進行排序
+                //.OrderBy(entry => Path.GetFileName(entry).Substring(0, 10))  // 根據檔案或資料夾名稱中的日期進行排序
+                .OrderBy(entry => Path.GetFileName(entry))  // just by entire name will do
                 .ToList();
 
             var entriesToZip = new List<string>();
@@ -452,7 +456,7 @@ namespace ZipLogTool
             //}
 
             // Create ZipArchiveInfo, and store the ZIP file in the specified target directory
-            var zipInfo = new ZipArchiveInfo(baseDir,zipOutputDir, fromDate, toDate);
+            var zipInfo = new ZipArchiveInfo(baseDir, zipOutputDir, fromDate, toDate);
             zipInfo.EnsureUniqueFileName();
 
             // Need to check 
@@ -469,7 +473,7 @@ namespace ZipLogTool
                     if (entryName.Length >= 10 &&
                      DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
 
-                        //if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
+                    //if (DateTime.TryParseExact(entryName.Substring(0, 10), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime entryDate))
                     {
                         return entryDate >= fromDate && entryDate <= toDate;
                     }
@@ -515,6 +519,8 @@ namespace ZipLogTool
                         }
                     }
                 }
+
+                Console.WriteLine($" + {zipInfo.ZipFileName} created and all source files deleted!");
             }
 
             // 
@@ -1021,7 +1027,7 @@ Q=2
                     // First part: Compress log files based on N and M, and delete original logs
                     Rule003CompressLogFiles_Plan(path.KeyName, path.Value, logWriter);
 
-                  //  Rule003CopyZipBack(path.Value, logWriter);
+                    //  Rule003CopyZipBack(path.Value, logWriter);
 
                     // Second part: Delete old ZIP files based on Q
 

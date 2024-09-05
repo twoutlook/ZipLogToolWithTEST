@@ -12,7 +12,7 @@ namespace ZipLogTool
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main_GOOD(string[] args)
         {
           
             Console.OutputEncoding = Encoding.UTF8;
@@ -37,11 +37,12 @@ namespace ZipLogTool
 
 
 
-            var zipLogCore = new ZipLogCore(2);
-            var zipLogUtil = new ZipLogUtil(2);
+           
 
             if (args.Length == 0)
             {
+                var zipLogCore = new ZipLogCore(2);
+                var zipLogUtil = new ZipLogUtil(2);
                 // Display help when no arguments are provided
                 //DisplayHelp();
 
@@ -61,16 +62,7 @@ namespace ZipLogTool
                 testCase.InitTestCase002();  // Create files in TESTCASE002
                 Console.WriteLine($"[ver{ZipLogToolVer}] 程序結束!");
             }
-            else if (args.Length ==1 && args[0].Equals("unzip", StringComparison.OrdinalIgnoreCase))
-            {
-                // Load and process the INI file for unzipping
-                var data = zipLogCore.ParseIniFile();
-                string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
-                string logFileName = $"{currentDate}_ZipLogTool_Unzip.log";
-                string logFilePath = Path.Combine("logs", logFileName);
-                Console.WriteLine($"[ver{ZipLogToolVer}] 程序結束!");
-                //zipLogUtil.UnzipFiles(ZipLogToolVer, data, logFilePath);
-            }
+           
             //else if (args.Length ==1 && args[0].Equals("run", StringComparison.OrdinalIgnoreCase))
             //{
             //    // Now run the tool with default config.ini
@@ -89,6 +81,67 @@ namespace ZipLogTool
                 Console.WriteLine($"不支援所使用參數 請使用 help 查看 ");
                 Console.WriteLine($"[ver{ZipLogToolVer}] 程序結束!");
             }
+        }
+        static void Main(string[] args)
+        {
+            string ZipLogToolVer = "0.17.0"; // Bowman checked TODO 1234
+            // Capture the start time
+            DateTime startTime = DateTime.Now;
+
+            // Display start time in the desired format
+            Console.WriteLine($"ver: {ZipLogToolVer} ");
+            Console.WriteLine($"[Start: {startTime:yyyy-MM-dd HH:mm:ss}] 程序開始執行...");
+
+            // Process current running instance
+            Process currentProcess = Process.GetCurrentProcess();
+
+            // Get the running processes by name
+            Process[] runningProcesses = Process.GetProcessesByName(currentProcess.ProcessName);
+
+            // Check if there are other processes running with the same name (excluding the current one)
+            if (runningProcesses.Length > 1)
+            {
+                Console.WriteLine("已有另一個程序正在執行，本次執行將被終止。");
+                return; // Exit the program
+            }
+
+       
+
+            if (args.Length == 0)
+            {
+                var zipLogCore = new ZipLogCore(2);
+                var zipLogUtil = new ZipLogUtil(2);
+                zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
+            }
+            else if (args.Length == 1 && args[0].Equals("help", StringComparison.OrdinalIgnoreCase))
+            {
+                DisplayHelp();
+            }
+            else if (args.Length == 1 && args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
+            {
+                var testCase = new ZipLogTestCase(2);
+                testCase.InitTestCase001();  // Create folders in TESTCASE001
+                testCase.InitTestCase002();  // Create files in TESTCASE002
+            }
+            else if (args.Length == 1 && args[0].Equals("reset", StringComparison.OrdinalIgnoreCase))
+            {
+                var testCase = new ZipLogTestCase(2);
+                testCase.DeleteTestCaseDirs();
+            }
+            else
+            {
+                Console.WriteLine($"不支援所使用參數 請使用 help 查看 ");
+            }
+
+            // Capture the end time
+            DateTime endTime = DateTime.Now;
+
+            // Calculate the total duration in seconds
+            TimeSpan duration = endTime - startTime;
+            //int totalSeconds = (int)duration.TotalSeconds;
+            double totalSeconds = duration.TotalSeconds;
+            // Display end time and the duration in seconds
+            Console.WriteLine($"[End: {endTime:yyyy-MM-dd HH:mm:ss}] 程序結束! 總耗時: {totalSeconds:F3} 秒");
         }
 
         static void DisplayHelp()
@@ -145,4 +198,6 @@ namespace ZipLogTool
         }
 
     }
+
+
 }
