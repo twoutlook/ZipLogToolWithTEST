@@ -1,6 +1,9 @@
-﻿using System;
+﻿using IniParser;
+using System;
 using System.IO;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 //using INIParser;
 //using INIParser.Model;
 
@@ -19,6 +22,7 @@ namespace ZipLogTool
             if (args.Length == 0)
             {
                 zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
+            //    zipLogCore.Rule003ProcessPaths(string ver, IniData data, string logFilePath)
             }
             else if (args[0].Equals("-h", StringComparison.OrdinalIgnoreCase) || args[0].Equals("--help", StringComparison.OrdinalIgnoreCase))
             {
