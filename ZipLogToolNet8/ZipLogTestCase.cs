@@ -29,11 +29,11 @@ namespace ZipLogTool
             if (Directory.Exists(dirPath))
             {
                 Directory.Delete(dirPath, true); // 'true' to delete the directory and its contents
-                Console.WriteLine($"Deleted directory: {dirPath}");
+                //Console.WriteLine($"Deleted directory: {dirPath}");
             }
             else
             {
-                Console.WriteLine($"Directory does not exist: {dirPath}");
+                //Console.WriteLine($"Directory does not exist: {dirPath}");
             }
         }
 
@@ -46,8 +46,10 @@ namespace ZipLogTool
             {
                 DeleteDirectory(testCaseDir001);
                 DeleteDirectory(testCaseDir002);
+                DeleteDirectory(testCaseDir001+"_ZIP");
+                DeleteDirectory(testCaseDir002 + "_ZIP");
 
-                Console.WriteLine("Directories deleted successfully.");
+                Console.WriteLine("Reset successfully!");
             }
             catch (Exception ex)
             {

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using ZipLogToolNet8;
 
 namespace ZipLogTool
 {
@@ -322,17 +323,17 @@ namespace ZipLogTool
         // 在指定目錄, 根據 N M 兩參數, 只看 2024-09-05{any suffix}.log 做 ZIP
         // 在 4.7 在原目錄, 有遇到困難,
         // 在 .Net8 try advance, 包括 lock if possible and necessary
-        private List<string> ZipDirLogBy2Parameters(string baseDir, int DaysNotToZip, int ZipEveryDays)
+        private List<string> ZipDirLogBy2Parameters( string baseDir, int DaysNotToZip, int ZipEveryDays)
         {
             try
             {
                 var localLog = new List<string>();
                 var entries = Directory.GetFileSystemEntries(baseDir, "*", SearchOption.TopDirectoryOnly);
 
-                localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}|1|ZipDirLogBy2Parameters");
-                localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}|1|baseDir={baseDir}");
-                localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}|1|DaysNotToZip={DaysNotToZip}");
-                localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}|1|ZipEveryDays={ZipEveryDays}");
+                localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}|rule3-1|ZipDirLogBy2Parameters");
+                localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}|rule3-1|baseDir={baseDir}");
+                localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}|rule3-1|DaysNotToZip={DaysNotToZip}");
+                localLog.Add($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}|rule3-1|ZipEveryDays={ZipEveryDays}");
 
 
                 //var topLevel = new List<TopLevelEntry>();
@@ -848,7 +849,7 @@ namespace ZipLogTool
                             foreach (var file in Directory.GetFiles(entry, "*", SearchOption.AllDirectories))
                             {
                                 //string relativePath = GetRelativePath(baseDir, file);
-                                string tempZipFileFullPath = GetRelativePath(baseDir+"_ZIP", file);
+                                string tempZipFileFullPath = GetRelativePath(baseDir + "_ZIP", file);
 
                                 zipArchive.CreateEntryFromFile(file, tempZipFileFullPath);
                             }
@@ -1269,18 +1270,9 @@ Q=2
                     //Rule003CompressLogFiles_Plan(path.Key, path.Value, logWriter);
                     var baseDir = path.Value;
                     var localLogs = ZipDirLogBy2Parameters(baseDir, N, M);
-                    foreach (var x in localLogs)
-                    {
-                        var info = x.Split("|");
-                        if (info.Length >= 2 && info[1] == "1")
-                        {
-                            Console.WriteLine(x);
-                        }
 
-                    }
-                    Console.WriteLine("-------------------------");
 
-                    throw new Exception("by Mark, TESTING ZipDirLogBy2Parameters");
+                    //  throw new Exception("by Mark, TESTING ZipDirLogBy2Parameters");
 
 
 
@@ -1304,6 +1296,110 @@ Q=2
                 logWriter.WriteLine($"******* ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] *******\n\n\n\n\n");
                 cmdOutput.WriteLine(1, $"=== ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End] ===\n\n");
             }
+        }
+        public List<string> Rule003ProcessPathsReturnLog(string ver, IniData data, string logFilePath)
+        {
+            var rule3Log = new List<string>();
+            LogMsgHelper msgHelper = new LogMsgHelper();
+            //using (StreamWriter logWriter = new StreamWriter(logFilePath, true, Encoding.UTF8))
+            if (true) // just to replace logWriter using
+            {
+                int numDashes = 120; // Set this to the number of dashes you want
+
+                var pathsSection = data["Paths"];
+                //Dictionary<string, string> pathsSection = new Dictionary<string, string>
+                //{
+                //    { "Path1", @"D:\LAB\TESTCASE001" },
+                //    { "Path2", @"D:\LAB\TESTCASE002" }
+                //};
+
+                //logWriter.WriteLine($"******* ZipLogTool(ver:{ver}): {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [Start] *******");
+                //logWriter.WriteLine(new string('-', numDashes));
+                rule3Log.Add(msgHelper.msg("rule3", "start"));
+
+
+                // Log system and environment information
+                string currentDirectory = Directory.GetCurrentDirectory();
+                rule3Log.Add(msgHelper.msg("rule3", $"  DIR={currentDirectory}"));
+
+                string osInfo = Environment.OSVersion.ToString();
+                rule3Log.Add(msgHelper.msg("rule3", $"  OS={osInfo}"));
+
+                string ipAddress = GetLocalIPAddress();
+                rule3Log.Add(msgHelper.msg("rule3", $"  IP={ipAddress}"));
+
+                string computerName = Environment.MachineName;
+                rule3Log.Add(msgHelper.msg("rule3", $"  Machine Name={computerName}"));
+                //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Working environment [End] ");
+
+                // Log the reading of the config file
+                //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Read config.ini [Start] ");
+                cmdOutput.WriteLine(1, $"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Read config.ini [Start] ");
+
+                //logWriter.WriteLine($"[Paths]");
+
+                rule3Log.Add(msgHelper.msg("rule3", $"[Paths]"));
+
+                foreach (var path in pathsSection)
+                {
+                    //logWriter.WriteLine($" {path.Key}={path.Value}");
+                    rule3Log.Add(msgHelper.msg("rule3", $" {path.Key}={path.Value}"));
+                }
+                rule3Log.Add(msgHelper.msg("rule3", $"[Options]"));
+                rule3Log.Add(msgHelper.msg("rule3", $"  N={N} : Number of days before which log files will be compressed.\""));
+                rule3Log.Add(msgHelper.msg("rule3", $"  M={M} : Number of days of log data to include in each ZIP file."));
+
+                if (IS_Q)
+                {
+
+                    if (Q <= 0)
+                    {
+                        rule3Log.Add(msgHelper.msg("rule3", $"  Q={{Q}} : No need to perform deletion.\""));
+
+                    }
+                    else
+                    {
+                        //logWriter.WriteLine($"  Q={Q} : Number of {Q}*30={30 * Q} days before which folders or files will be deleted.");
+                        rule3Log.Add(msgHelper.msg("rule3", $"  Q={Q} : Number of {Q}*30={30 * Q} days before which folders or files will be deleted."));
+
+                    }
+                }
+
+
+                // Process each path: compress and delete logs, then delete old ZIP files
+                foreach (var path in pathsSection)
+                {
+                    //logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Processing path [{path.Key}]{path.Value} [Start]");
+                    rule3Log.Add(msgHelper.msg("rule3", $"Processing path [{path.Key}]{path.Value} [Start]"));
+
+                    // First part: Compress log files based on N and M, and delete original logs
+                    //Rule003CompressLogFiles_Plan(path.Key, path.Value, logWriter);
+                    var baseDir = path.Value;
+                    var localLogs = ZipDirLogBy2Parameters(baseDir, N, M);
+
+
+                    //  throw new Exception("by Mark, TESTING ZipDirLogBy2Parameters");
+
+
+
+                    // 由 TEMP copy all zip to working dir
+                    //Rule003CopyZipBack(path.Value, logWriter);
+
+                    // Second part: Delete old ZIP files based on Q
+
+                    //logWriter.WriteLine($"\n 先不刪 zip");
+
+                    // 另外月份的參數不給或是為零應該就是視為不刪除
+                    if (Q > 0)
+                    {
+                    //    Rule003DeleteOldZipFiles(path.Value, Q, logWriter);
+                    }
+
+                      rule3Log.Add(msgHelper.msg("rule3", $"Processing path [{path.Key}]{path.Value} [End]"));
+
+                }
+            }
+            return rule3Log;
         }
 
 
