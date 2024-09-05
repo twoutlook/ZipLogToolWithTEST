@@ -11,10 +11,12 @@ namespace ZipLogTool
         public string ZipFileName { get; private set; }
         public List<string> ZippedItems { get; private set; }
         public string BaseDir { get; private set; }
+        public string TempZipBaseDir { get; private set; }
 
-        public ZipArchiveInfo(string baseDir, DateTime fromDate, DateTime toDate, int suffix = 0)
+        public ZipArchiveInfo(string baseDir, string tempZipBaseDir, DateTime fromDate, DateTime toDate, int suffix = 0)
         {
             BaseDir = baseDir;
+            TempZipBaseDir = tempZipBaseDir;
             ZipFileName = GenerateZipFileName(fromDate, toDate, suffix);
             ZippedItems = new List<string>();
         }
@@ -37,6 +39,14 @@ namespace ZipLogTool
         // Method to check if a ZIP file with the same name already exists and adjust the name if necessary
         public void EnsureUniqueFileName()
         {
+            // 確認目前的工作目錄
+            //string currentDirectory = Directory.GetCurrentDirectory();
+            //Console.WriteLine($"EnsureUniqueFileName 當前路徑: {currentDirectory}");
+            //Console.WriteLine($"BASE 路徑: {BaseDir}");
+
+            // Combine BaseDir and ZipFileName to create the full path
+            ZipFileName = Path.Combine(BaseDir, ZipFileName);
+         
             int suffix = 1;
             while (File.Exists(ZipFileName))
             {

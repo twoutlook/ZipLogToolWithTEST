@@ -32,8 +32,7 @@ namespace ZipLogTool
         public PropertyCollection pathsSection;
         public PropertyCollection optionsSection;
 
-        //private INIParser iNIParser;
-        // Constructor to initialize cmdOutput
+
         public ZipLogCore(int verbosityLevel)
         {
             if (!Directory.Exists(logPath))
@@ -47,21 +46,40 @@ namespace ZipLogTool
             pathsSection = data["Paths"];
             //var logSettings = data["LogSettings"];
 
-             optionsSection = data["Options"];
-            //N = int.Parse(optionsSection["N"]);
-            //M = int.Parse(optionsSection["M"]);
+            optionsSection = data["Options"];
+            N = int.Parse(optionsSection["N"]);
+            M = int.Parse(optionsSection["M"]);
             //P = int.Parse(optionsSection["P"]);
-            //try
-            //{
-            //    Q = int.Parse(optionsSection["Q"]);
-            //    IS_Q = true;
-            //}
-            //catch (Exception ex)
-            //{
-            //    IS_Q = false;
-            //    //沒設視為0
-            //}
+            try
+            {
+                Q = int.Parse(optionsSection["Q"]);
+                IS_Q = true;
+            }
+            catch (Exception ex)
+            {
+                IS_Q = false;
+                //沒設視為0
+            }
             //ConfigureLogSettings(data);
+
+            //DOING
+            Console.WriteLine($"--------------");
+            Console.WriteLine("[Paths]");
+            foreach(var x in pathsSection)
+            {
+                Console.WriteLine($"{x.Key}={x.Value} ");
+            }
+            Console.WriteLine("[Options]");
+            Console.WriteLine($"N={N}");
+            Console.WriteLine($"M={M}");
+            if (IS_Q)
+            {
+                Console.WriteLine($"Q={Q}");
+            }
+            Console.WriteLine($"---------------------");
+
+
+
 
             // Initialize cmdOutput with the verbosity level
             cmdOutput = new CmdOutput(verbosityLevel);
@@ -326,7 +344,7 @@ namespace ZipLogTool
         // 在指定目錄, 根據 N M 兩參數, 只看 2024-09-05{any suffix}.log 做 ZIP
         // 在 4.7 在原目錄, 有遇到困難,
         // 在 .Net8 try advance, 包括 lock if possible and necessary
-        private List<string> ZipDirLogBy2Parameters( string baseDir, int DaysNotToZip, int ZipEveryDays)
+        private List<string> ZipDirLogBy2Parameters(string baseDir, int DaysNotToZip, int ZipEveryDays)
         {
             try
             {
@@ -457,7 +475,7 @@ namespace ZipLogTool
         private List<string> ZipDirLogBy2Parameters(string tagCaller, string baseDir, int DaysNotToZip, int ZipEveryDays)
         {
             var log = new List<string>();
-            var tag = tagCaller+"-"+"zip";
+            var tag = tagCaller + "-" + "zip";
             LogMsgHelper m = new LogMsgHelper(tag);
             log.Add(m.msg("[Start]"));
             try
@@ -569,7 +587,7 @@ namespace ZipLogTool
                         log.AddRange(subLog);
                         log.Add(m.msg($"  to zip {firstDate.Value.ToString("yyyy-MM-dd")}_{lastDate.Value.ToString("yyyy-MM-dd")} 完成"));
 
-                       
+
 
 
                         entriesToZip.Clear();
@@ -904,7 +922,7 @@ namespace ZipLogTool
         }
 
 
-        private List<string> CreateZipFileExtrReturnLog(string tagCaller,string baseDir, DateTime fromDate, DateTime toDate)
+        private List<string> CreateZipFileExtrReturnLog(string tagCaller, string baseDir, DateTime fromDate, DateTime toDate)
         {
 
             var log = new List<string>();
@@ -912,7 +930,7 @@ namespace ZipLogTool
             LogMsgHelper m = new LogMsgHelper(tag);
             log.Add(m.msg("[Start]"));
 
-           
+
             // Set the target directory for storing the ZIP file
             string zipOutputDir = $"{baseDir}_ZIP";
             log.Add(m.msg($"  baseDir ={baseDir}"));
@@ -1578,9 +1596,9 @@ Q=2
             }
         }
 
-        public List<string> R3Action( )
+        public List<string> R3Action()
         {
-            var log= new List<string>();
+            var log = new List<string>();
             var tag = "r3";
             LogMsgHelper m = new LogMsgHelper(tag);
             log.Add(m.msg("[Start]"));
@@ -1590,11 +1608,11 @@ Q=2
                 int numDashes = 120; // Set this to the number of dashes you want
 
                 var pathsSection = data["Paths"];
-                
+
                 // Process each path: compress and delete logs, then delete old ZIP files
                 foreach (var path in pathsSection)
                 {
-                  //  logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Processing path [{path.Key}]{path.Value} [Start]");
+                    //  logWriter.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Processing path [{path.Key}]{path.Value} [Start]");
 
                     // First part: Compress log files based on N and M, and delete original logs
                     //Rule003CompressLogFiles_Plan(path.Key, path.Value, logWriter);
@@ -1607,7 +1625,7 @@ Q=2
 
 
 
-                 //   Rule003CopyZipBack(path.Value, logWriter);
+                    //   Rule003CopyZipBack(path.Value, logWriter);
 
                     // Second part: Delete old ZIP files based on Q
 
@@ -1725,10 +1743,10 @@ Q=2
                     // 另外月份的參數不給或是為零應該就是視為不刪除
                     if (Q > 0)
                     {
-                    //    Rule003DeleteOldZipFiles(path.Value, Q, logWriter);
+                        //    Rule003DeleteOldZipFiles(path.Value, Q, logWriter);
                     }
 
-                      rule3Log.Add(msgHelper.msg("rule3", $"Processing path [{path.Key}]{path.Value} [End]"));
+                    rule3Log.Add(msgHelper.msg("rule3", $"Processing path [{path.Key}]{path.Value} [End]"));
 
                 }
             }

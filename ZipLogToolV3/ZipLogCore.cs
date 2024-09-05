@@ -55,7 +55,20 @@ namespace ZipLogTool
                 //沒設視為0
             }
             //ConfigureLogSettings(data);
-
+            Console.WriteLine($"--------------");
+            Console.WriteLine("[Paths]");
+            foreach (var x in pathsSection)
+            {
+                Console.WriteLine($"{x.KeyName}={x.Value} ");
+            }
+            Console.WriteLine("[Options]");
+            Console.WriteLine($"N={N}");
+            Console.WriteLine($"M={M}");
+            if (IS_Q)
+            {
+                Console.WriteLine($"Q={Q}");
+            }
+            Console.WriteLine($"---------------------");
             // Initialize cmdOutput with the verbosity level
             cmdOutput = new CmdOutput(verbosityLevel);
         }
@@ -437,7 +450,7 @@ namespace ZipLogTool
             }
 
             // Create ZipArchiveInfo, and store the ZIP file in the specified target directory
-            var zipInfo = new ZipArchiveInfo(zipOutputDir, fromDate, toDate);
+            var zipInfo = new ZipArchiveInfo(baseDir,zipOutputDir, fromDate, toDate);
             zipInfo.EnsureUniqueFileName();
 
             // Need to check 
