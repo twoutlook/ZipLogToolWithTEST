@@ -1,5 +1,6 @@
 ﻿using IniParser;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
@@ -14,7 +15,24 @@ namespace ZipLogTool
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            string ZipLogToolVer = "0.16.0";
+            string ZipLogToolVer = "0.17.0"; // Bowman checked TODO 1234
+
+            // 取得目前的進程
+            Process currentProcess = Process.GetCurrentProcess();
+
+            // 根據目前執行檔案名稱取得同名的所有進程
+            Process[] runningProcesses = Process.GetProcessesByName(currentProcess.ProcessName);
+
+            // 檢查是否有其他相同名稱的進程正在執行 (排除當前的進程)
+            if (runningProcesses.Length > 1)
+            {
+                Console.WriteLine("已有另一個程序正在執行，本次執行將被終止。");
+                return; // 結束應用程式
+            }
+
+            Console.WriteLine($"[ver{ZipLogToolVer}] 程序開始執行...");
+
+
 
             var zipLogCore = new ZipLogCore(2);
             var zipLogUtil = new ZipLogUtil(2);
@@ -33,6 +51,7 @@ namespace ZipLogTool
                     }
 
                 }
+                Console.WriteLine($"[ver{ZipLogToolVer}] 程序執行完成");
             }
             else if (args[0].Equals("-h", StringComparison.OrdinalIgnoreCase) || args[0].Equals("--help", StringComparison.OrdinalIgnoreCase))
             {
