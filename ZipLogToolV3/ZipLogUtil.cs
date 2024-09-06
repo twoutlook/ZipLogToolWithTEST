@@ -67,6 +67,49 @@ namespace ZipLogTool
                 logWriter.WriteLine($"=== ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End Unzipping] ===\n\n");
             }
         }
+        public void UnzipFiles(string path)
+        {
 
+            string baseDir = path;
+
+            if (string.IsNullOrWhiteSpace(baseDir) || !Directory.Exists(baseDir))
+            {
+                Console.WriteLine($"Invalid or non-existent directory: {baseDir}. Skipping processing!");
+                //  continue;
+            }
+
+
+            var zipFiles = Directory.GetFiles(baseDir, "*.zip", SearchOption.TopDirectoryOnly);
+
+            foreach (var zipFile in zipFiles)
+            {
+                try
+                {
+                    string extractPath = Path.Combine(baseDir, Path.GetFileNameWithoutExtension(zipFile));
+                    if (Directory.Exists(extractPath))
+                    {
+                        Console.WriteLine($"Directory {extractPath} already exists. Skipping unzip for {zipFile}.");
+                        continue;
+                    }
+
+                    ZipFile.ExtractToDirectory(zipFile, extractPath);
+                    //logWriter.WriteLine($"Successfully unzipped {zipFile} to {extractPath}");
+
+                    // Delete the ZIP file after successful extraction
+                    File.Delete(zipFile);
+                    //logWriter.WriteLine($"Deleted ZIP file: {zipFile}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Failed to unzip {zipFile}: {ex.Message}");
+                }
+            }
+
+            //   logWriter.WriteLine($"\n{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} Processing: {path.KeyName} => {path.Value} [End Unzipping]\n");
+        }
+
+        //   logWriter.WriteLine($"=== ZipLogTool(ver:{ver})  {DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} [End Unzipping] ===\n\n");
     }
 }
+
+    

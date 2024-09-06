@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace ZipLogTool
@@ -21,8 +22,8 @@ namespace ZipLogTool
             fileSizeInKB = _fileSizeInKB;
         }
         private const int numberOfDays = 81; // Number of days to create folders or files for
-        private string testCaseDir001 = "D:\\LAB\\TESTCASE001";
-        private string testCaseDir002 = "D:\\LAB\\TESTCASE002";
+        public string TESTCASE_DIR001 = "D:\\LAB\\TESTCASE001";
+        public string testCaseDir002 = "D:\\LAB\\TESTCASE002";
         //private string testCaseDir001 = "LAB\\TESTCASE001";
         //private string testCaseDir002 = "LAB\\TESTCASE002";
 
@@ -44,9 +45,9 @@ namespace ZipLogTool
         {
             try
             {
-                DeleteDirectory(testCaseDir001);
+                DeleteDirectory(TESTCASE_DIR001);
                 DeleteDirectory(testCaseDir002);
-                DeleteDirectory(testCaseDir001 + "_ZIP");
+                DeleteDirectory(TESTCASE_DIR001 + "_ZIP");
                 DeleteDirectory(testCaseDir002 + "_ZIP");
 
                 Console.WriteLine("Reset successfully!");
@@ -60,22 +61,22 @@ namespace ZipLogTool
         public void InitTestCase001()
         {
             // 如果 TESTCASE001 目錄已經存在，則不執行任何操作
-            if (Directory.Exists(testCaseDir001))
+            if (Directory.Exists(TESTCASE_DIR001))
             {
-                cmdOutput.WriteLine(99,$"Directory '{testCaseDir001}' already exists. Skipping initialization.");
+                cmdOutput.WriteLine(99,$"Directory '{TESTCASE_DIR001}' already exists. Skipping initialization.");
                 return;
             }
 
             // Create the TESTCASE001 directory
-            cmdOutput.WriteLine(99,$"Creating directory '{testCaseDir001}'...");
-            Directory.CreateDirectory(testCaseDir001);
+            cmdOutput.WriteLine(99,$"Creating directory '{TESTCASE_DIR001}'...");
+            Directory.CreateDirectory(TESTCASE_DIR001);
 
             // Create subfolders from today to numberOfDays ago
             for (int i = 0; i <= numberOfDays; i++)
             {
                 DateTime date = DateTime.Now.AddDays(-i);
                 string folderName = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-                string folderPath = Path.Combine(testCaseDir001, folderName);
+                string folderPath = Path.Combine(TESTCASE_DIR001, folderName);
                 Directory.CreateDirectory(folderPath);
                 cmdOutput.WriteLine(1,$"Created folder: {folderPath}");
 
@@ -86,8 +87,29 @@ namespace ZipLogTool
                     CreateLogFile(folderPath, fileName);
                 }
             }
+
+            long sizeDir = GetDirectorySize(TESTCASE_DIR001);
+            //long sizeDir002 = GetDirectorySize(testCaseDir002);
+
+            //Console.WriteLine($"  size: {sizeDir / 1024 / 1024} MB (Size:{sizeDir})");
+           // Console.WriteLine($"  size: {sizeDir / 1024 / 1024} MB (Size: {sizeDir:N0} bytes)");
+
+            //Console.WriteLine($"Directory {testCaseDir002} size: {sizeDir002 / 1024 / 1024} MB");
+            Console.WriteLine($"  Size: {sizeDir / 1024 / 1024} MB ({sizeDir:N0} bytes)");
+
         }
 
+        long GetDirectorySize(string folderPath)
+        {
+            if (!Directory.Exists(folderPath))
+            {
+                return 0;
+            }
+
+            // Get the size of all files in the directory, including subdirectories
+            return Directory.GetFiles(folderPath, "*", SearchOption.AllDirectories)
+                            .Sum(file => new FileInfo(file).Length);
+        }
         // Method for TESTCASE002: File creation basis with two sample log files per day
         public void InitTestCase002()
         {
@@ -112,6 +134,12 @@ namespace ZipLogTool
                 CreateLogFile(testCaseDir002, file1Name);
                 CreateLogFile(testCaseDir002, file2Name);
             }
+            long sizeDir = GetDirectorySize(testCaseDir002);
+            //long sizeDir002 = GetDirectorySize(testCaseDir002);
+
+            //Console.WriteLine($"  size: {sizeDir / 1024 / 1024} MB (Size:{sizeDir})");
+            Console.WriteLine($"  Size: {sizeDir / 1024 / 1024} MB ({sizeDir:N0} bytes)");
+
         }
 
         private void CreateLogFile(string folderPath, string fileName)

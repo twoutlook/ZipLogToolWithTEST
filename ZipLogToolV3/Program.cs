@@ -12,7 +12,7 @@ namespace ZipLogTool
 {
     class Program
     {
-          static void Main(string[] args)
+          static void Main_XXX_GOOD(string[] args)
         {
             string ZipLogToolVer = "0.18.0"; // Bowman checked TODO 1234
             // Capture the start time
@@ -78,6 +78,131 @@ namespace ZipLogTool
             // Display end time and the duration in seconds
             Console.WriteLine($"[End: {endTime:yyyy-MM-dd HH:mm:ss}] 程序結束! 總耗時: {totalSeconds:F3} 秒");
         }
+        static void Main(string[] args)
+        {
+            string ZipLogToolVer = "0.18.0";// init2, init3 show cpu/ram/hd and testcase folder size well
+            // Capture the start time
+            DateTime startTime = DateTime.Now;
+
+            // Display start time in the desired format
+            Console.WriteLine($"ver: {ZipLogToolVer} ");
+            Console.WriteLine($"[Start: {startTime:yyyy-MM-dd HH:mm:ss}] 程序開始執行...");
+
+            // Process current running instance
+            Process currentProcess = Process.GetCurrentProcess();
+
+            // Get the running processes by name
+            Process[] runningProcesses = Process.GetProcessesByName(currentProcess.ProcessName);
+
+            // Check if there are other processes running with the same name (excluding the current one)
+            if (runningProcesses.Length > 1)
+            {
+                Console.WriteLine("已有另一個程序正在執行，本次執行將被終止。");
+                return; // Exit the program
+            }
+
+            if (args.Length == 0)
+            {
+                // Display system specs
+                SystemInfo.DisplaySystemSpecs();
+                var zipLogCore = new ZipLogCore(2);
+                var zipLogUtil = new ZipLogUtil(2);
+                zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
+            }
+            //if (args.Length == 1 && args[0].Equals("info", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    // Show working environment and paths size
+            //    DisplaySystemInfo();
+            //}
+            else if (args.Length == 1 && args[0].Equals("help", StringComparison.OrdinalIgnoreCase))
+            {
+                DisplayHelp();
+            }
+            else if (args.Length == 1 && args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
+            {
+                // 40 => 50MB environment
+                SystemInfo.DisplaySystemSpecs();
+                var testCase = new ZipLogTestCase(2, 40);
+                testCase.InitTestCase001();  // Create folders in TESTCASE001
+                testCase.InitTestCase002();  // Create files in TESTCASE002
+
+
+
+
+            }
+            else if (args.Length == 1 && args[0].Equals("init2", StringComparison.OrdinalIgnoreCase))
+            {
+                // 45MB environment
+                SystemInfo.DisplaySystemSpecs();
+                var testCase = new ZipLogTestCase(2, 80);
+                testCase.InitTestCase001();  // Create folders in TESTCASE001
+                testCase.InitTestCase002();  // Create files in TESTCASE002
+            }
+            else if (args.Length == 1 && args[0].Equals("init3", StringComparison.OrdinalIgnoreCase))
+            {
+                // 50MB environment
+                SystemInfo.DisplaySystemSpecs();
+                var testCase = new ZipLogTestCase(2, 160);
+                testCase.InitTestCase001();  // Create folders in TESTCASE001
+                testCase.InitTestCase002();  // Create files in TESTCASE002
+            }
+            else if (args.Length == 1 && args[0].Equals("reset", StringComparison.OrdinalIgnoreCase))
+            {
+                var testCase = new ZipLogTestCase(2);
+                testCase.DeleteTestCaseDirs();
+            }
+            //else if (args.Length == 1 && args[0].Equals("unzip", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    var testCase = new ZipLogTestCase(2, 80);
+            //    var zip = new ZipLogUtil(2);
+            //    zip.UnzipFiles(testCase.TESTCASE_DIR001);
+            //    zip.UnzipFiles(testCase.testCaseDir002);
+
+            //}
+
+            else
+            {
+                Console.WriteLine($"不支援所使用參數 請使用 help 查看 ");
+            }
+
+            // Capture the end time
+            DateTime endTime = DateTime.Now;
+
+            // Calculate the total duration in seconds
+            TimeSpan duration = endTime - startTime;
+            double totalSeconds = duration.TotalSeconds;
+            // Display end time and the duration in seconds
+            Console.WriteLine($"[End: {endTime:yyyy-MM-dd HH:mm:ss}] 程序結束! 總耗時: {totalSeconds:F3} 秒");
+        }
+        static void DisplaySystemInfo()
+        {
+            // Display system specs (CPU, RAM, Disk)
+            SystemInfo.DisplaySystemSpecs();
+
+            // Define paths
+            string testCaseDir001 = @"D:\LAB\TESTCASE001";
+            string testCaseDir002 = @"D:\LAB\TESTCASE002";
+
+            // Calculate sizes of directories
+            long sizeDir001 = GetDirectorySize(testCaseDir001);
+            long sizeDir002 = GetDirectorySize(testCaseDir002);
+
+            // Display the size of the directories
+            Console.WriteLine($"Directory {testCaseDir001} size: {sizeDir001 / 1024 / 1024} MB ({sizeDir001:N0} bytes)");
+            Console.WriteLine($"Directory {testCaseDir002} size: {sizeDir002 / 1024 / 1024} MB ({sizeDir002:N0} bytes)");
+        }
+
+        static long GetDirectorySize(string folderPath)
+        {
+            if (!Directory.Exists(folderPath))
+            {
+                return 0;
+            }
+
+            // Get the size of all files in the directory, including subdirectories (exact size)
+            return Directory.GetFiles(folderPath, "*", SearchOption.AllDirectories)
+                            .Sum(file => new FileInfo(file).Length);
+        }
 
         static void DisplayHelp()
         {
@@ -85,10 +210,15 @@ namespace ZipLogTool
             Console.WriteLine();
             Console.WriteLine("Options:");
             Console.WriteLine("  help    Display help.");
+            //Console.WriteLine("  info    Show working environment and paths size.");  BUG
+
             Console.WriteLine("  reset   Reset TESTCASE 2 folders. ");
-            Console.WriteLine("  init    Initialize test cases.");
+            Console.WriteLine("  init    Initialize test cases  (~44MB total), ref:   6.2 sec");
+            Console.WriteLine("  init2   Initialize test cases  (~88MB total), ref:  41.7 sec.");
+            Console.WriteLine("  init3   Initialize test cases (~187MB total), ref: 188.4 sec.");
+
             //Console.WriteLine("  run               Run main functions.");
-            //Console.WriteLine("  unzip             Unzip files as per config.");
+            //Console.WriteLine("  unzip             Unzip files as per config.");   BUG
             //Console.WriteLine("  spec              Display the requirement.");
             Console.WriteLine();
             //Console.WriteLine("If no options are provided, the tool runs using the default config.ini.");
