@@ -12,79 +12,9 @@ namespace ZipLogTool
 {
     class Program
     {
-        static void Main_GOOD(string[] args)
+          static void Main(string[] args)
         {
-          
-            Console.OutputEncoding = Encoding.UTF8;
-            string ZipLogToolVer = "0.17.0"; // Bowman checked TODO 1234
-
-            // 取得目前的進程
-            Process currentProcess = Process.GetCurrentProcess();
-
-            // 根據目前執行檔案名稱取得同名的所有進程
-            Process[] runningProcesses = Process.GetProcessesByName(currentProcess.ProcessName);
-
-            // 檢查是否有其他相同名稱的進程正在執行 (排除當前的進程)
-            if (runningProcesses.Length > 1)
-            {
-                Console.WriteLine("已有另一個程序正在執行，本次執行將被終止。");
-                return; // 結束應用程式
-            }
-
-            Console.WriteLine($"[ver{ZipLogToolVer}] 程序開始執行...");
-
-
-
-
-
-           
-
-            if (args.Length == 0)
-            {
-                var zipLogCore = new ZipLogCore(2);
-                var zipLogUtil = new ZipLogUtil(2);
-                // Display help when no arguments are provided
-                //DisplayHelp();
-
-                zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
-                Console.WriteLine($"[ver{ZipLogToolVer}] 程序結束!");
-            }
-            else if (args.Length ==1 && (args[0].Equals("help", StringComparison.OrdinalIgnoreCase) ))
-            {
-                // Display help if -h or --help is provided
-                DisplayHelp();
-            }
-            else if (args.Length ==1 && args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
-            {
-                // Initialize the ZipLogTestCase and run InitTestCase001 and InitTestCase002 methods
-                var testCase = new ZipLogTestCase(2);
-                testCase.InitTestCase001();  // Create folders in TESTCASE001
-                testCase.InitTestCase002();  // Create files in TESTCASE002
-                Console.WriteLine($"[ver{ZipLogToolVer}] 程序結束!");
-            }
-           
-            //else if (args.Length ==1 && args[0].Equals("run", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    // Now run the tool with default config.ini
-            //    //Console.WriteLine("Running with default config.ini...");
-            //    zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
-            //}
-            else if (args.Length == 1 && args[0].Equals("reset", StringComparison.OrdinalIgnoreCase))
-            {
-                var testCase = new ZipLogTestCase(2);
-                testCase.DeleteTestCaseDirs();
-                Console.WriteLine($"[ver{ZipLogToolVer}] 程序結束!");
-            }
-            else
-            {
-                // Run Rule 003 with provided parameters
-                Console.WriteLine($"不支援所使用參數 請使用 help 查看 ");
-                Console.WriteLine($"[ver{ZipLogToolVer}] 程序結束!");
-            }
-        }
-        static void Main(string[] args)
-        {
-            string ZipLogToolVer = "0.17.0"; // Bowman checked TODO 1234
+            string ZipLogToolVer = "0.18.0"; // Bowman checked TODO 1234
             // Capture the start time
             DateTime startTime = DateTime.Now;
 
@@ -104,11 +34,13 @@ namespace ZipLogTool
                 Console.WriteLine("已有另一個程序正在執行，本次執行將被終止。");
                 return; // Exit the program
             }
+     
 
-       
 
             if (args.Length == 0)
             {
+                // Display system specs
+                SystemInfo.DisplaySystemSpecs();
                 var zipLogCore = new ZipLogCore(2);
                 var zipLogUtil = new ZipLogUtil(2);
                 zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
@@ -119,7 +51,10 @@ namespace ZipLogTool
             }
             else if (args.Length == 1 && args[0].Equals("init", StringComparison.OrdinalIgnoreCase))
             {
-                var testCase = new ZipLogTestCase(2);
+                // Display system specs
+                SystemInfo.DisplaySystemSpecs();
+                var testCase = new ZipLogTestCase(2, 40);// 40=> 50MB
+
                 testCase.InitTestCase001();  // Create folders in TESTCASE001
                 testCase.InitTestCase002();  // Create files in TESTCASE002
             }

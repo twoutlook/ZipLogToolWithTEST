@@ -8,11 +8,17 @@ namespace ZipLogTool
     public class ZipLogTestCase
     {
         private CmdOutput cmdOutput;
-
+        private int fileSizeInKB = 40; // 在我電腦5 sec
         public ZipLogTestCase(int verbosityLevel)
         {
             // Initialize cmdOutput with the verbosity level
             cmdOutput = new CmdOutput(verbosityLevel);
+        }
+        public ZipLogTestCase(int verbosityLevel, int _fileSizeInKB)
+        {
+            // Initialize cmdOutput with the verbosity level
+            cmdOutput = new CmdOutput(verbosityLevel);
+            fileSizeInKB = _fileSizeInKB;
         }
         private const int numberOfDays = 81; // Number of days to create folders or files for
         private string testCaseDir001 = "D:\\LAB\\TESTCASE001";
@@ -21,7 +27,7 @@ namespace ZipLogTool
         //private string testCaseDir002 = "LAB\\TESTCASE002";
 
 
-        private const int fileSizeInKB = 40; // Desired file size in KB
+     
         static void DeleteDirectory(string dirPath)
         {
             if (Directory.Exists(dirPath))
