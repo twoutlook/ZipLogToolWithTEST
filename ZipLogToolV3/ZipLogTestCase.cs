@@ -95,7 +95,7 @@ namespace ZipLogTool
            // Console.WriteLine($"  size: {sizeDir / 1024 / 1024} MB (Size: {sizeDir:N0} bytes)");
 
             //Console.WriteLine($"Directory {testCaseDir002} size: {sizeDir002 / 1024 / 1024} MB");
-            Console.WriteLine($"  Size: {sizeDir / 1024 / 1024} MB ({sizeDir:N0} bytes)");
+            Console.WriteLine($"  Size: {sizeDir / 1024.0 / 1024.0 :F1} MB ({sizeDir:N0} bytes)");
 
         }
 
@@ -138,8 +138,8 @@ namespace ZipLogTool
             //long sizeDir002 = GetDirectorySize(testCaseDir002);
 
             //Console.WriteLine($"  size: {sizeDir / 1024 / 1024} MB (Size:{sizeDir})");
-            Console.WriteLine($"  Size: {sizeDir / 1024 / 1024} MB ({sizeDir:N0} bytes)");
-
+            //Console.WriteLine($"  Size: {sizeDir / 1024 / 1024} MB ({sizeDir:N0} bytes)");
+            Console.WriteLine($"  Size: {sizeDir / 1024.0 / 1024.0 :F1} MB ({sizeDir:N0} bytes)");
         }
 
         private void CreateLogFile(string folderPath, string fileName)

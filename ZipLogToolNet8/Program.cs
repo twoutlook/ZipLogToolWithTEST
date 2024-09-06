@@ -76,22 +76,22 @@ class Program
             testCase.InitTestCase002();
             Console.WriteLine($".NET8[ver{ZipLogToolVer}] 程序執行完成");
         }
-        else if (args[0].Equals("unzip", StringComparison.OrdinalIgnoreCase))
-        {
-            var data = zipLogCore.ParseIniFile();
-            string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
-            string logFileName = $"{currentDate}_ZipLogTool_Unzip.log";
-            string logFilePath = Path.Combine("logs", logFileName);
-            Console.WriteLine($".NET8[ver{ZipLogToolVer}] 程序執行完成");
-        }
-        else if (args[0].Equals("run", StringComparison.OrdinalIgnoreCase))
-        {
-          //  zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
-        }
-        else if (args[0].Equals("spec", StringComparison.OrdinalIgnoreCase))
-        {
-            DisplaySpec();
-        }
+        //else if (args[0].Equals("unzip", StringComparison.OrdinalIgnoreCase))
+        //{
+        //    var data = zipLogCore.ParseIniFile();
+        //    string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
+        //    string logFileName = $"{currentDate}_ZipLogTool_Unzip.log";
+        //    string logFilePath = Path.Combine("logs", logFileName);
+        //    Console.WriteLine($".NET8[ver{ZipLogToolVer}] 程序執行完成");
+        //}
+        //else if (args[0].Equals("run", StringComparison.OrdinalIgnoreCase))
+        //{
+        //  //  zipLogCore.RunRule(ZipLogToolVer, "by parameters NMQ", zipLogCore.Rule003ProcessPaths);
+        //}
+        //else if (args[0].Equals("spec", StringComparison.OrdinalIgnoreCase))
+        //{
+        //    DisplaySpec();
+        //}
     }
 
     static void DisplayHelp()

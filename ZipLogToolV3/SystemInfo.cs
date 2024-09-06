@@ -25,9 +25,11 @@ namespace ZipLogTool
                 {
                     if (drive.IsReady)
                     {
-                        Console.WriteLine($"Drive {drive.Name} - Available space: {drive.AvailableFreeSpace / 1024 / 1024} MB, Total space: {drive.TotalSize / 1024 / 1024} MB");
+                        Console.WriteLine($"Drive {drive.Name} - Available space: {drive.AvailableFreeSpace / 1024 / 1024:N0} MB, Total space: {drive.TotalSize / 1024 / 1024 :N0} MB");
                     }
                 }
+                Console.WriteLine($"--------------------------------------------------------------------------");
+
             }
             catch (Exception ex)
             {
