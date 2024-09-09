@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogTool", "ZipLogToolV3\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogTool.Tests", "ZipLogTool.Tests\ZipLogTool.Tests.csproj", "{85822AA1-9379-46FB-859F-3787014462E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipLogToolNet8", "ZipLogToolNet8\ZipLogToolNet8.csproj", "{796A43BB-FFB0-4C33-8366-A5358D6EC3A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZipLogToolNet8", "ZipLogToolNet8\ZipLogToolNet8.csproj", "{796A43BB-FFB0-4C33-8366-A5358D6EC3A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocMvc", "DocMvc\DocMvc.csproj", "{012B27BA-0755-48B7-86A9-2877A7DD074C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{796A43BB-FFB0-4C33-8366-A5358D6EC3A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{796A43BB-FFB0-4C33-8366-A5358D6EC3A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{796A43BB-FFB0-4C33-8366-A5358D6EC3A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012B27BA-0755-48B7-86A9-2877A7DD074C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012B27BA-0755-48B7-86A9-2877A7DD074C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012B27BA-0755-48B7-86A9-2877A7DD074C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012B27BA-0755-48B7-86A9-2877A7DD074C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+
+
+    <h1>ZipLogTool 測試與操作說明</h1>
+
+    <div class="section">
+
+        <h3>一、準備工作：</h3>
+        <ol>
+            <li>確保 ZipLogTool 已安裝於目標 Windows 環境中, 以 D:\LAB_EXE 為例, 解壓縮於  ZipLogTool。</li>
+            <li>
+                檢查 config.ini 配置文件，確認路徑與壓縮參數是否正確配置。預設如下:
+                <pre>[Paths]
+Path1=D:\LAB\TESTCASE001
+Path2=D:\LAB\TESTCASE002
+[Options]
+N=3
+M=5
+Q=2    </pre>
+            </li>
+            <li>
+                以預設值做說明:<br />
+                N=3 壓縮 3 天前的日誌。<br />
+                M=5 每 5 天的日誌壓縮成一個 ZIP。<br />
+                Q=2 刪除超過 2 個月的 ZIP 檔案。<br />
+            </li>
+
+
+        </ol>
+
+        <h3>二、測試步驟</h3>
+        <ol>
+            <li>
+                ZipLogTool init 提供自動生成的模擬 log 數據。固定建於
+                <ul>
+                    <li>D:\LAB\TESTCASE001</li>
+                    <li>D:\LAB\TESTCASE002</li>
+                </ul>
+            </li>
+            <li>
+                執行 ZipLogTool
+            </li>
+            <li>
+                手工更動 log  目錄裡的內容
+            </li>
+            <li>
+                執行 ZipLogTool
+            </li>
+            <li>
+                反覆3和4兩動
+            </li>
+            <li>
+                ZipLogTool reset 清空自動生成的模擬 log 數據
+            </li>
+            <li>
+               驗證：
+                <ul>
+                    <li>
+                        檢查指定的 log 目錄是否如預期壓縮和刪除。
+                    </li>
+                    <li>
+                        檢查日誌文件，確認操作是否成功記錄，並觀察任何錯誤或警告信息。
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+      
+    </div>
+
+
+
+    <h3>四、操作說明</h3>
+    <ol>
+        <li>在上述測試步驟的基礎上, 變更 config.ini。</li>
+
+        <li>
+            直接運行  ZipLogTool.exe
+        </li>
+    </ol>
+
+
+    <h2>五、使用 Windows 排程自動執行 </h2>
+
+    <ol>
+        <li>打開 Windows 排程器（Task Scheduler）。</li>
+        <li>選擇右側的 "建立基本任務"。</li>
+        <li>輸入任務名稱（例如 "壓縮日誌任務"），然後點擊 "下一步"。</li>
+        <li>選擇 "每天" 作為觸發條件，然後點擊 "下一步"。</li>
+        <li>選擇 "啟動程式" 作為動作，然後瀏覽到 ZipLogTool.exe 的執行檔案路徑。</li>
+        <li>點擊 "完成" 來創建任務。</li>
+        <li>
+            測試任務：
+            右鍵點選新建的任務，選擇 "執行"，檢查 ZipLogTool 是否按預期運行。
+        </li>
+    </ol>
+
+
+</div>
+
+
