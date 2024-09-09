@@ -89,13 +89,9 @@ namespace ZipLogTool
             }
 
             long sizeDir = GetDirectorySize(TESTCASE_DIR001);
-            //long sizeDir002 = GetDirectorySize(testCaseDir002);
 
-            //Console.WriteLine($"  size: {sizeDir / 1024 / 1024} MB (Size:{sizeDir})");
-           // Console.WriteLine($"  size: {sizeDir / 1024 / 1024} MB (Size: {sizeDir:N0} bytes)");
-
-            //Console.WriteLine($"Directory {testCaseDir002} size: {sizeDir002 / 1024 / 1024} MB");
-            Console.WriteLine($"  Size: {sizeDir / 1024.0 / 1024.0 :F1} MB ({sizeDir:N0} bytes)");
+            // NOTE by Mark, 09/09, 先同 ver: 0.17.0 不顯示
+            //Console.WriteLine($"  Size: {sizeDir / 1024.0 / 1024.0 :F1} MB ({sizeDir:N0} bytes)");
 
         }
 
@@ -135,11 +131,9 @@ namespace ZipLogTool
                 CreateLogFile(testCaseDir002, file2Name);
             }
             long sizeDir = GetDirectorySize(testCaseDir002);
-            //long sizeDir002 = GetDirectorySize(testCaseDir002);
 
-            //Console.WriteLine($"  size: {sizeDir / 1024 / 1024} MB (Size:{sizeDir})");
-            //Console.WriteLine($"  Size: {sizeDir / 1024 / 1024} MB ({sizeDir:N0} bytes)");
-            Console.WriteLine($"  Size: {sizeDir / 1024.0 / 1024.0 :F1} MB ({sizeDir:N0} bytes)");
+            // NOTE by Mark, 09/09, 先同 ver: 0.17.0 不顯示
+            //Console.WriteLine($"  Size: {sizeDir / 1024.0 / 1024.0 :F1} MB ({sizeDir:N0} bytes)");
         }
 
         private void CreateLogFile(string folderPath, string fileName)

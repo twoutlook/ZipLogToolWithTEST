@@ -103,7 +103,20 @@ namespace ZipLogTool
 
                     // Assuming the ZIP file names are in the format {from}_{to}.zip or {from}_{to}_{x}.zip
                     // Extract the 'to' date from the file name (before any underscore or .zip)
-                    string toDateString = zipFileName.Split('_').Last().Split('.')[0];
+                    //string toDateString = zipFileName.Split('_').Last().Split('.')[0];
+
+                    // _01 在以下不能被解析
+
+
+                    string[] parts = zipFileName.Split('_');
+                    string toDateString = parts[parts.Length - 1].Split('.')[0]; // Get the last part and remove the .zip extension
+
+                    // Check if the extracted part contains a numeric suffix (e.g., _01)
+                    if (int.TryParse(toDateString, out _)) // If the last part is numeric, it's a suffix (_01, _02, etc.)
+                    {
+                        toDateString = parts[parts.Length - 2]; // Use the second-to-last part as the date
+                    }
+
 
                     if (DateTime.TryParseExact(toDateString, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out zipFileDate))
                     {
