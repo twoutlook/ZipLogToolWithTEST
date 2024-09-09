@@ -59,12 +59,13 @@ namespace ZipLogTool
             else if (args.Length == 1)
             {
 
-                if (args.Length == 1 && args[0].Equals("info", StringComparison.OrdinalIgnoreCase))
-                {
-                    // Show working environment and paths size
-                    DisplaySystemInfo();
-                }
-                else if (args.Length == 1 && args[0].Equals("help", StringComparison.OrdinalIgnoreCase))
+                //if (args.Length == 1 && args[0].Equals("info", StringComparison.OrdinalIgnoreCase))
+                //{
+                //    // Show working environment and paths size
+                //    DisplaySystemInfo();
+                //}
+                //else 
+                if (args.Length == 1 && args[0].Equals("help", StringComparison.OrdinalIgnoreCase))
                 {
                     DisplayHelp();
                 }
@@ -165,7 +166,7 @@ namespace ZipLogTool
             Console.WriteLine();
             Console.WriteLine("Options:");
             Console.WriteLine("  help    Display help.");
-            Console.WriteLine("  info    Show working environment and paths size.");
+            //Console.WriteLine("  info    Show working environment and paths size.");
 
             Console.WriteLine("  reset   Reset TESTCASE 2 folders. ");
             Console.WriteLine("  init    Initialize test cases  (~44MB total), ref:   6.2 sec");
@@ -173,7 +174,7 @@ namespace ZipLogTool
             //Console.WriteLine("  init3   Initialize test cases (~187MB total), ref: 188.4 sec.");
 
             //Console.WriteLine("  run               Run main functions.");
-            Console.WriteLine("  unzip             Unzip files as per config.");
+            //Console.WriteLine("  unzip             Unzip files as per config.");
             //Console.WriteLine("  spec              Display the requirement.");
             Console.WriteLine();
             //Console.WriteLine("If no options are provided, the tool runs using the default config.ini.");
